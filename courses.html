@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Courses — CertifyPro</title>
+  <meta name="description" content="Browse hands-on, expert-led certification courses across tech, design, and business." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/courses.css" />
+  <link rel="stylesheet" href="css/common.css" />
+</head>
+<body data-page="courses">
+  
+  <!-- NAV -->
+<header class="nav-wrap">
+    <div class="navbar">
+
+        <a href="home.html" class="brand">
+            <span class="brand-mark">C</span>
+            <span>CertifyPro</span>
+        </a>
+
+        <nav class="nav-links" id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="certifications.html">Certifications</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-cta">
+            <button class="btn btn-ghost" data-open-modal="login-modal">
+                Log in
+            </button>
+
+            <button class="btn btn-primary" data-open-modal="signup-modal">
+                Get Started
+            </button>
+
+            <button
+                class="nav-toggle"
+                id="navToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+                aria-controls="navMenu">
+                ☰
+            </button>
+        </div>
+
+    </div>
+</header>
+
+  <!-- HERO -->
+<section class="course-hero">
+
+  <!-- BACKGROUND IMAGE -->
+  <div class="hero-bg"></div>
+  <div class="overlay"></div>
+
+  <div class="container hero-content">
+
+    <span class="chip">📚 Discover Courses</span>
+
+    <h1>
+      Learn skills that actually
+      <span>change your career.</span>
+    </h1>
+
+    <p>
+      Search, explore, and master industry-ready certifications in tech, design, and business.
+    </p>
+
+    <!-- SEARCH BOX -->
+    <div class="search-box">
+      <input type="text" placeholder="Search courses, skills, careers..." />
+      <button>Search</button>
+    </div>
+
+    <!-- CATEGORY CHIPS -->
+    <div class="categories">
+      <span>🔥 Trending: AI</span>
+      <span>☁ Cloud</span>
+      <span>🎨 Design</span>
+      <span>💻 Development</span>
+      <span>📊 Data Science</span>
+      <span>💼 Business</span>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- COURSE GRID -->
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <span class="chip">📚 450+ courses</span>
+        <h2>Find your next certification.</h2>
+        <p>Filter by category, difficulty, or duration — every course ends in a real credential.</p>
+      </div>
+
+      <div class="filter-bar">
+        <button class="btn btn-primary filter" data-filter="all">All</button>
+        <button class="btn filter" data-filter="cloud">Cloud</button>
+        <button class="btn filter" data-filter="ai">AI / ML</button>
+        <button class="btn filter" data-filter="design">Design</button>
+        <button class="btn filter" data-filter="dev">Development</button>
+        <button class="btn filter" data-filter="biz">Business</button>
+      </div>
+
+      <div class="courses-grid" id="course-list">
+        <div class="course" data-cat="cloud"><div class="thumb">☁️</div><div class="course-body"><div class="meta"><span class="tag">Cloud</span><span class="tag">Beginner</span></div><h3>AWS Solutions Architect</h3><p>Master AWS core services and architecture patterns.</p><div class="course-footer"><span class="price">$249</span><button class="btn btn-secondary" data-open-modal="signup-modal">Enroll</button></div></div></div>
+        <div class="course" data-cat="cloud"><div class="thumb">🌐</div><div class="course-body"><div class="meta"><span class="tag">Cloud</span><span class="tag">Advanced</span></div><h3>Google Cloud Engineer</h3><p>Deploy production workloads on GCP with confidence.</p><div class="course-footer"><span class="price">$279</span><button class="btn btn-secondary" data-open-modal="signup-modal">Enroll</button></div></div></div>
+        <div class="course" data-cat="ai"><div class="thumb">🧠</div><div class="course-body"><div class="meta"><span class="tag">AI/ML</span><span class="tag">Intermediate</span></div><h3>Machine Learning Pro</h3><p>Ship 5 production ML projects end-to-end.</p><div class="course-footer"><span class="price">$349</span><button class="btn btn-secondary" data-open-modal="signup-modal">Enroll</button></div></div></div>
+        <div class="course" data-cat="ai"><div class="thumb">🤖</div><div class="course-body"><div class="meta"><span class="tag">AI/ML</span><span class="tag">Advanced</span></div><h3>Generative AI Engineer</h3><p>Build with LLMs, RAG, agents, and evals.</p><div class="course-footer"><span class="price">$399</span><button class="btn btn-secondary" data-open-modal="signup-modal">Enroll</button></div></div></div>
+        <div class="course" data-cat="design"><div class="thumb">🎨</div><div class="course-body"><div class="meta"><span class="tag">Design</span><span class="tag">All levels</span></div><h3>Product Design Master</h3><p>Research, prototype, and ship real digital products.</p><div class="course-footer"><span class="price">$219</span><button class="btn btn-secondary" data-open-modal="signup-modal">Enroll</button></div></div></div>
+        <div class="course" data-cat="design"><div class="thumb">✍️</div><div class="course-body"><div class="meta"><span class="tag">Design</span><span class="tag">Beginner</span></div><h3>UX Research Fundamentals</h3><p>Turn user insights into confident product decisions.</p><div class="course-footer"><span class="price">$179</span><button class="btn btn-secondary" data-open-modal="signup-modal">Enroll</button></div></div></div>
+        <div class="course" data-cat="dev"><div class="thumb">⚛️</div><div class="course-body"><div class="meta"><span class="tag">Dev</span><span class="tag">Intermediate</span></div><h3>Full-Stack React & Node</h3><p>Build and deploy scalable full-stack apps.</p><div class="course-footer"><span class="price">$259</span><button class="btn btn-secondary" data-open-modal="signup-modal">Enroll</button></div></div></div>
+        <div class="course" data-cat="dev"><div class="thumb">🦀</div><div class="course-body"><div class="meta"><span class="tag">Dev</span><span class="tag">Advanced</span></div><h3>Systems with Rust</h3><p>Performance-critical software the modern way.</p><div class="course-footer"><span class="price">$299</span><button class="btn btn-secondary" data-open-modal="signup-modal">Enroll</button></div></div></div>
+        <div class="course" data-cat="biz"><div class="thumb">📈</div><div class="course-body"><div class="meta"><span class="tag">Business</span><span class="tag">All levels</span></div><h3>Product Management Pro</h3><p>Discover, prioritize, and ship features that matter.</p><div class="course-footer"><span class="price">$229</span><button class="btn btn-secondary" data-open-modal="signup-modal">Enroll</button></div></div></div>
+      </div>
+    </div>
+  </section>
+
+<!-- LEARNING PATH -->
+<section class="learning-paths">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="chip">🧭 Learning Paths</span>
+      <h2>Your step-by-step career roadmap</h2>
+      <p>Follow structured paths designed to take you from beginner → job-ready.</p>
+    </div>
+
+    <div class="path-wrapper">
+
+      <div class="path-line"></div>
+
+      <div class="path-scroll">
+
+        <!-- STEP 1 -->
+        <div class="path-node">
+          <div class="node-img">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Beginner">
+          </div>
+          <div class="node-content">
+            <h3>Beginner</h3>
+            <p>Start with fundamentals</p>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="path-node">
+          <div class="node-img">
+            <img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72" alt="Intermediate">
+          </div>
+          <div class="node-content">
+            <h3>Intermediate</h3>
+            <p>Build real projects</p>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="path-node">
+          <div class="node-img">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Advanced">
+          </div>
+          <div class="node-content">
+            <h3>Advanced</h3>
+            <p>Master industry tools</p>
+          </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="path-node">
+          <div class="node-img">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Job Ready">
+          </div>
+          <div class="node-content">
+            <h3>Job Ready</h3>
+            <p>Get hired confidently</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FILTER JOBS -->
+<section class="career-outcomes-light">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="chip">🎯 Career Outcomes</span>
+      <h2>Choose your career goal</h2>
+      <p>We’ll map the fastest path to your dream job.</p>
+    </div>
+
+    <!-- FILTER BAR -->
+    <div class="outcome-filters-light">
+      <button class="active" data-role="all">All Paths</button>
+      <button data-role="highpay">High Salary</button>
+      <button data-role="fast">Job in 3 Months</button>
+      <button data-role="freelance">Freelancing</button>
+      <button data-role="startup">Startup Roles</button>
+    </div>
+
+    <!-- GRID -->
+    <div class="outcome-grid-light">
+
+      <div class="outcome-card-light" data-role="highpay fast">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="">
+        <div class="info">
+          <h3>Software Engineer</h3>
+          <p>₹12–25 LPA</p>
+          <span>High Demand</span>
+        </div>
+      </div>
+
+      <div class="outcome-card-light" data-role="highpay">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="">
+        <div class="info">
+          <h3>Data Scientist</h3>
+          <p>₹15–30 LPA</p>
+          <span>Analytics</span>
+        </div>
+      </div>
+
+      <div class="outcome-card-light" data-role="freelance fast">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="">
+        <div class="info">
+          <h3>UI/UX Designer</h3>
+          <p>₹6–18 LPA</p>
+          <span>Creative</span>
+        </div>
+      </div>
+
+      <div class="outcome-card-light" data-role="startup highpay">
+        <img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72" alt="">
+        <div class="info">
+          <h3>AI Engineer</h3>
+          <p>₹18–40 LPA</p>
+          <span>Future Skill</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- LIVE PROJECTS -->
+
+<section class="projects-showcase">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="chip">🚀 Live Projects</span>
+      <h2>What you will actually build</h2>
+      <p>Real-world projects used in portfolios, startups, and interviews.</p>
+    </div>
+
+    <div class="project-grid">
+
+      <!-- PROJECT 1 -->
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="">
+        <div class="overlay">
+          <h3>AI Analytics Dashboard</h3>
+          <p>Built in Machine Learning Pro</p>
+          <span>📊 Data + AI</span>
+        </div>
+      </div>
+
+      <!-- PROJECT 2 -->
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" alt="">
+        <div class="overlay">
+          <h3>Full-Stack SaaS App</h3>
+          <p>Built in React & Node Course</p>
+          <span>💻 Web Development</span>
+        </div>
+      </div>
+
+      <!-- PROJECT 3 -->
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="">
+        <div class="overlay">
+          <h3>Design System UI Kit</h3>
+          <p>Built in Product Design Master</p>
+          <span>🎨 UI/UX</span>
+        </div>
+      </div>
+
+      <!-- PROJECT 4 -->
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72" alt="">
+        <div class="overlay">
+          <h3>AI Chat Assistant</h3>
+          <p>Built in Generative AI Course</p>
+          <span>🤖 AI Systems</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- COURSE COMPARISION -->
+<section class="course-compare">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="chip">⚖️ Compare Courses</span>
+      <h2>Choose what fits you best</h2>
+      <p>Swipe horizontally to compare top career paths.</p>
+    </div>
+
+    <div class="compare-wrapper">
+
+      <div class="compare-track">
+
+        <!-- CARD 1 -->
+        <div class="compare-card">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="">
+          <div class="info">
+            <h3>AI Engineer</h3>
+            <p>₹18–40 LPA</p>
+
+            <div class="meta">
+              <span>🔥 High Growth</span>
+              <span>⏱ 4–6 Months</span>
+              <span>📈 Hard</span>
+            </div>
+
+            <button>View Path</button>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="compare-card">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="">
+          <div class="info">
+            <h3>Data Scientist</h3>
+            <p>₹15–30 LPA</p>
+
+            <div class="meta">
+              <span>📊 Analytics</span>
+              <span>⏱ 3–5 Months</span>
+              <span>📈 Medium</span>
+            </div>
+
+            <button>View Path</button>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="compare-card">
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" alt="">
+          <div class="info">
+            <h3>Full Stack Dev</h3>
+            <p>₹10–25 LPA</p>
+
+            <div class="meta">
+              <span>💻 Web</span>
+              <span>⏱ 3–4 Months</span>
+              <span>📈 Medium</span>
+            </div>
+
+            <button>View Path</button>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="compare-card">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="">
+          <div class="info">
+            <h3>UI/UX Designer</h3>
+            <p>₹6–18 LPA</p>
+
+            <div class="meta">
+              <span>🎨 Creative</span>
+              <span>⏱ 2–3 Months</span>
+              <span>📈 Easy</span>
+            </div>
+
+            <button>View Path</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="instructor-wall-alt">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="chip">👨‍🏫 Live Instructors</span>
+      <h2>Learn from people shaping the industry</h2>
+      <p>Experts from top companies teaching real skills in real time.</p>
+    </div>
+
+    <div class="wall-alt">
+
+      <!-- LEFT COLUMN -->
+      <div class="col left">
+
+        <div class="instructor small">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e">
+          <div class="info">
+            <h3>Alex Morgan</h3>
+            <span>AI @ Google</span>
+          </div>
+        </div>
+
+        <div class="instructor tall">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2">
+          <div class="info">
+            <h3>Sophia Lee</h3>
+            <span>UX Lead</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CENTER SPOTLIGHT -->
+      <div class="col center">
+
+        <div class="instructor spotlight">
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1">
+          <div class="info">
+            <h3>Daniel Kim</h3>
+            <span>Cloud Architect @ AWS</span>
+            <p>Currently teaching live session</p>
+          </div>
+          <div class="live-dot"></div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="col right">
+
+        <div class="instructor tall">
+          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d">
+          <div class="info">
+            <h3>Priya Sharma</h3>
+            <span>Full Stack Lead</span>
+          </div>
+        </div>
+
+        <div class="instructor small">
+          <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
+          <div class="info">
+            <h3>Emily Carter</h3>
+            <span>Data Scientist</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- INTRECTIVE SECTION -->
+<section class="course-lab">
+  <div class="container">
+
+    <div class="section-head">
+      <span class="chip">🧪 Live Lab Preview</span>
+      <h2>Try the learning environment</h2>
+      <p>Experience how real students build projects inside CertifyPro.</p>
+    </div>
+
+    <div class="lab-wrapper">
+
+      <!-- LEFT: CODE EDITOR -->
+      <div class="lab-panel editor">
+
+        <div class="panel-head">
+          <span>💻 Code Editor</span>
+        </div>
+
+        <textarea id="codeBox">
+function greet() {
+  console.log("Hello CertifyPro 🚀");
+}
+greet();
+        </textarea>
+
+      </div>
+
+      <!-- RIGHT: OUTPUT -->
+      <div class="lab-panel output">
+
+        <div class="panel-head">
+          <span>📦 Output</span>
+        </div>
+
+        <div id="outputBox">
+          Ready to run your code...
+        </div>
+
+        <button onclick="runCode()">Run Code</button>
+
+      </div>
+
+    </div>
+
+    <!-- AI MINI TOOL -->
+    <div class="ai-box">
+
+      <h3>🤖 AI Learning Assistant</h3>
+
+      <input type="text" placeholder="Ask anything about this lesson..." />
+
+      <button>Ask AI</button>
+
+    </div>
+
+  </div>
+</section>
+  
+  <div id="modal-slot"></div>
+
+  <script src="js/courses.js"></script>
+  
+  <script>
+    document.querySelectorAll('.filter').forEach(b => {
+      b.addEventListener('click', () => {
+        document.querySelectorAll('.filter').forEach(x => { x.classList.remove('btn-primary'); });
+        b.classList.add('btn-primary');
+        const f = b.dataset.filter;
+        document.querySelectorAll('#course-list .course').forEach(c => {
+          c.style.display = (f === 'all' || c.dataset.cat === f) ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
