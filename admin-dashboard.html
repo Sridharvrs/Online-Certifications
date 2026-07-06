@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Admin Dashboard · Stackly</title>
+<link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+
+<!-- ================== SIDEBAR ================== -->
+<aside class="sidebar">
+  <div class="brand">
+    <div class="logo">C</div>
+    <div>
+      <h2>Stackly</h2>
+      <small>Admin Console</small>
+    </div>
+  </div>
+
+  <!-- Module 1 -->
+  <div class="module">
+    <div class="module-title"><span><span class="ico">📊</span> Overview</span><span class="chev">›</span></div>
+    <ul class="sections">
+      <li><a href="dashboarderror.html" data-target="v-summary" data-sub="Platform-wide key metrics">Platform Summary</a></li>
+      <li><a href="dashboarderror.html" data-target="v-revenue" data-sub="Revenue trends and breakdowns">Revenue Insights</a></li>
+      <li><a href="dashboarderror.html" data-target="v-live" data-sub="Live sessions and activity">Live Activity</a></li>
+    </ul>
+  </div>
+
+  <!-- Module 2 -->
+  <div class="module">
+    <div class="module-title"><span><span class="ico">👥</span> User Management</span><span class="chev">›</span></div>
+    <ul class="sections">
+      <li><a href="dashboarderror.html" data-target="v-users" data-sub="All registered learners">All Users</a></li>
+      <li><a href="dashboarderror.html" data-target="v-instructors" data-sub="Manage instructors and mentors">Instructors</a></li>
+      <li><a href="dashboarderror.html" data-target="v-roles" data-sub="Roles and permission control">Roles & Permissions</a></li>
+    </ul>
+  </div>
+
+  <!-- Module 3 -->
+  <div class="module">
+    <div class="module-title"><span><span class="ico">📚</span> Course Management</span><span class="chev">›</span></div>
+    <ul class="sections">
+      <li><a href="dashboarderror.html" data-target="v-allcourses" data-sub="All published courses">All Courses</a></li>
+      <li><a href="dashboarderror.html" data-target="v-addcourse" data-sub="Publish a new course">Add New Course</a></li>
+      <li><a href="dashboarderror.html" data-target="v-categories" data-sub="Organize course categories">Categories</a></li>
+    </ul>
+  </div>
+
+  <!-- Module 4 -->
+  <div class="module">
+    <div class="module-title"><span><span class="ico">🏆</span> Certifications</span><span class="chev">›</span></div>
+    <ul class="sections">
+      <li><a href="dashboarderror.html" data-target="v-issued" data-sub="All issued certificates">Issued Certificates</a></li>
+      <li><a href="dashboarderror.html" data-target="v-templates" data-sub="Design certificate templates">Certificate Templates</a></li>
+      <li><a href="dashboarderror.html" data-target="v-revoke" data-sub="Revoke or reissue certificates">Revoke / Reissue</a></li>
+    </ul>
+  </div>
+
+  <!-- Module 5 -->
+  <div class="module">
+    <div class="module-title"><span><span class="ico">📝</span> Assessments</span><span class="chev">›</span></div>
+    <ul class="sections">
+      <li><a href="dashboarderror.html" data-target="v-exams" data-sub="All exams on the platform">All Exams</a></li>
+      <li><a href="dashboarderror.html" data-target="v-qbank" data-sub="Manage question bank">Question Bank</a></li>
+      <li><a href="dashboarderror.html" data-target="v-reports" data-sub="Aggregated exam performance">Exam Reports</a></li>
+    </ul>
+  </div>
+
+  <!-- Module 6 -->
+  <div class="module">
+    <div class="module-title"><span><span class="ico">📈</span> Analytics</span><span class="chev">›</span></div>
+    <ul class="sections">
+      <li><a href="dashboarderror.html" data-target="v-traffic" data-sub="Site traffic breakdown">Traffic</a></li>
+      <li><a href="dashboarderror.html" data-target="v-engage" data-sub="How users engage with content">Engagement</a></li>
+      <li><a href="dashboarderror.html" data-target="v-conversion" data-sub="Enrollments and conversions">Conversion</a></li>
+    </ul>
+  </div>
+
+  <!-- Module 7 -->
+  <div class="module">
+    <div class="module-title"><span><span class="ico">⚙️</span> Settings</span><span class="chev">›</span></div>
+    <ul class="sections">
+      <li><a href="dashboarderror.html" data-target="v-general" data-sub="Site-wide settings">General</a></li>
+      <li><a href="dashboarderror.html" data-target="v-payments" data-sub="Payment gateways">Payments</a></li>
+      <li><a href="dashboarderror.html" data-target="v-notif" data-sub="Notification preferences">Notifications</a></li>
+    </ul>
+  </div>
+</aside>
+
+<!-- ================== MAIN ================== -->
+<main class="main">
+  <header class="topbar">
+    <div class="left">
+      <button class="toggle-btn" id="toggle-btn">☰</button>
+      <div class="search">🔍<input placeholder="Search users, courses, orders..." /></div>
+    </div>
+    <div class="right">
+      <button class="icon-btn">🔔<span class="badge">9</span></button>
+      <button class="icon-btn">⚙️</button>
+      <div class="avatar">AD</div>
+    </div>
+  </header>
+
+  <section class="content">
+    <div class="page-head">
+      <h1 id="page-title">Platform Summary</h1>
+      <p id="page-sub">Platform-wide key metrics</p>
+    </div>
+
+    <!-- SUMMARY -->
+    <div id="v-summary" class="view">
+      <div class="stats-grid">
+        <div class="stat-card"><div><div class="label">Total Users</div><div class="value">24,589</div><div class="delta">▲ 6.2%</div></div><div class="stat-icon">👥</div></div>
+        <div class="stat-card"><div><div class="label">Active Courses</div><div class="value">342</div><div class="delta">▲ 12 new</div></div><div class="stat-icon">📚</div></div>
+        <div class="stat-card"><div><div class="label">Certificates Issued</div><div class="value">8,712</div><div class="delta">▲ 214 this week</div></div><div class="stat-icon">🏆</div></div>
+        <div class="stat-card"><div><div class="label">Revenue (Month)</div><div class="value">$96,420</div><div class="delta">▲ 11.4%</div></div><div class="stat-icon">💰</div></div>
+      </div>
+
+      <div class="grid-2">
+        <div class="panel">
+          <div class="panel-head"><h3>Enrollments · Last 7 days</h3><a href="dashboarderror.html">Export</a></div>
+          <div class="chart">
+            <div class="bar-col" style="height:55%"><span>Mon</span></div>
+            <div class="bar-col" style="height:75%"><span>Tue</span></div>
+            <div class="bar-col" style="height:60%"><span>Wed</span></div>
+            <div class="bar-col" style="height:95%"><span>Thu</span></div>
+            <div class="bar-col" style="height:80%"><span>Fri</span></div>
+            <div class="bar-col" style="height:45%"><span>Sat</span></div>
+            <div class="bar-col" style="height:65%"><span>Sun</span></div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-head"><h3>Top Categories</h3></div>
+          <div class="progress-item"><div class="row"><span>Cloud Computing</span><span>32%</span></div><div class="bar"><span style="width:32%"></span></div></div>
+          <div class="progress-item"><div class="row"><span>Data Science</span><span>26%</span></div><div class="bar"><span style="width:26%"></span></div></div>
+          <div class="progress-item"><div class="row"><span>Web Development</span><span>22%</span></div><div class="bar"><span style="width:22%"></span></div></div>
+          <div class="progress-item"><div class="row"><span>Cybersecurity</span><span>14%</span></div><div class="bar"><span style="width:14%"></span></div></div>
+          <div class="progress-item"><div class="row"><span>Design</span><span>6%</span></div><div class="bar"><span style="width:6%"></span></div></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h3>Recent Enrollments</h3><a href="dashboarderror.html">View all</a></div>
+        <table class="table">
+          <thead><tr><th>User</th><th>Course</th><th>Amount</th><th>Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>Sarah Lee</td><td>AWS Solutions Architect</td><td>$149</td><td>Jul 03, 2026</td><td><span class="pill ok">Paid</span></td></tr>
+            <tr><td>Kevin Zhou</td><td>Data Science Fundamentals</td><td>$99</td><td>Jul 03, 2026</td><td><span class="pill ok">Paid</span></td></tr>
+            <tr><td>Maria Diaz</td><td>Cybersecurity Essentials</td><td>$129</td><td>Jul 02, 2026</td><td><span class="pill pend">Pending</span></td></tr>
+            <tr><td>James Park</td><td>React Advanced Patterns</td><td>$89</td><td>Jul 02, 2026</td><td><span class="pill ok">Paid</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- REVENUE -->
+    <div id="v-revenue" class="view" style="display:none">
+      <div class="stats-grid">
+        <div class="stat-card"><div><div class="label">Today</div><div class="value">$3,140</div></div><div class="stat-icon">💵</div></div>
+        <div class="stat-card"><div><div class="label">This Week</div><div class="value">$18,420</div></div><div class="stat-icon">📅</div></div>
+        <div class="stat-card"><div><div class="label">This Month</div><div class="value">$96,420</div></div><div class="stat-icon">📆</div></div>
+        <div class="stat-card"><div><div class="label">This Year</div><div class="value">$847,320</div></div><div class="stat-icon">🏦</div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><h3>Monthly Revenue</h3></div>
+        <div class="chart">
+          <div class="bar-col" style="height:45%"><span>Jan</span></div>
+          <div class="bar-col" style="height:60%"><span>Feb</span></div>
+          <div class="bar-col" style="height:55%"><span>Mar</span></div>
+          <div class="bar-col" style="height:75%"><span>Apr</span></div>
+          <div class="bar-col" style="height:90%"><span>May</span></div>
+          <div class="bar-col" style="height:96%"><span>Jun</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LIVE -->
+    <div id="v-live" class="view" style="display:none">
+      <div class="stats-grid">
+        <div class="stat-card"><div><div class="label">Online Now</div><div class="value">1,284</div><div class="delta">▲ realtime</div></div><div class="stat-icon">🟢</div></div>
+        <div class="stat-card"><div><div class="label">Live Exams</div><div class="value">37</div></div><div class="stat-icon">📝</div></div>
+        <div class="stat-card"><div><div class="label">Support Tickets</div><div class="value">14</div></div><div class="stat-icon">🎫</div></div>
+      </div>
+    </div>
+
+    <!-- USERS -->
+    <div id="v-users" class="view" style="display:none">
+      <div class="panel">
+        <div class="panel-head"><h3>All Users</h3><button class="btn sm">+ Add User</button></div>
+        <table class="table">
+          <thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Joined</th><th>Status</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td>Sarah Lee</td><td>sarah@mail.com</td><td>Learner</td><td>May 12, 2026</td><td><span class="pill ok">Active</span></td><td><button class="btn sm outline">Edit</button></td></tr>
+            <tr><td>Kevin Zhou</td><td>kevin@mail.com</td><td>Learner</td><td>Apr 30, 2026</td><td><span class="pill ok">Active</span></td><td><button class="btn sm outline">Edit</button></td></tr>
+            <tr><td>Maria Diaz</td><td>maria@mail.com</td><td>Learner</td><td>Mar 22, 2026</td><td><span class="pill pend">Pending</span></td><td><button class="btn sm outline">Edit</button></td></tr>
+            <tr><td>Ana Ruiz</td><td>ana@mail.com</td><td>Instructor</td><td>Feb 10, 2026</td><td><span class="pill ok">Active</span></td><td><button class="btn sm outline">Edit</button></td></tr>
+            <tr><td>Tom Baker</td><td>tom@mail.com</td><td>Learner</td><td>Jan 05, 2026</td><td><span class="pill err">Blocked</span></td><td><button class="btn sm outline">Edit</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- INSTRUCTORS -->
+    <div id="v-instructors" class="view" style="display:none">
+      <div class="grid-3">
+        <div class="panel"><h4 style="color:var(--sky-700)">Dr. Ana Ruiz</h4><p style="color:var(--muted);font-size:13px;margin:6px 0">Cloud Computing · 12 courses</p><button class="btn sm">View Profile</button></div>
+        <div class="panel"><h4 style="color:var(--sky-700)">Prof. Ravi Kumar</h4><p style="color:var(--muted);font-size:13px;margin:6px 0">Data Science · 8 courses</p><button class="btn sm">View Profile</button></div>
+        <div class="panel"><h4 style="color:var(--sky-700)">Emma Chen</h4><p style="color:var(--muted);font-size:13px;margin:6px 0">Web Dev · 15 courses</p><button class="btn sm">View Profile</button></div>
+      </div>
+    </div>
+
+    <!-- ROLES -->
+    <div id="v-roles" class="view" style="display:none">
+      <div class="panel">
+        <table class="table">
+          <thead><tr><th>Role</th><th>Users</th><th>Permissions</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td>Super Admin</td><td>3</td><td>Full access</td><td><button class="btn sm outline">Edit</button></td></tr>
+            <tr><td>Admin</td><td>12</td><td>Manage content & users</td><td><button class="btn sm outline">Edit</button></td></tr>
+            <tr><td>Instructor</td><td>84</td><td>Create/edit own courses</td><td><button class="btn sm outline">Edit</button></td></tr>
+            <tr><td>Learner</td><td>24,490</td><td>Enroll, take exams</td><td><button class="btn sm outline">Edit</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ALL COURSES -->
+    <div id="v-allcourses" class="view" style="display:none">
+      <div class="panel">
+        <div class="panel-head"><h3>All Courses</h3><button class="btn sm">+ Add Course</button></div>
+        <table class="table">
+          <thead><tr><th>Course</th><th>Instructor</th><th>Enrolled</th><th>Price</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AWS Solutions Architect</td><td>Dr. Ana Ruiz</td><td>1,240</td><td>$149</td><td><span class="pill ok">Published</span></td></tr>
+            <tr><td>Data Science Fundamentals</td><td>Prof. Ravi Kumar</td><td>980</td><td>$99</td><td><span class="pill ok">Published</span></td></tr>
+            <tr><td>React Advanced Patterns</td><td>Emma Chen</td><td>612</td><td>$89</td><td><span class="pill ok">Published</span></td></tr>
+            <tr><td>Machine Learning A-Z</td><td>Prof. Ravi Kumar</td><td>0</td><td>$179</td><td><span class="pill pend">Draft</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ADD COURSE -->
+    <div id="v-addcourse" class="view" style="display:none">
+      <div class="panel">
+        <div class="form-grid">
+          <div class="field"><label>Course Title</label><input placeholder="e.g. Advanced Kubernetes" /></div>
+          <div class="field"><label>Instructor</label><select><option>Dr. Ana Ruiz</option><option>Prof. Ravi Kumar</option><option>Emma Chen</option></select></div>
+          <div class="field"><label>Category</label><select><option>Cloud Computing</option><option>Data Science</option><option>Web Development</option></select></div>
+          <div class="field"><label>Price ($)</label><input type="number" placeholder="99" /></div>
+          <div class="field"><label>Duration (hours)</label><input type="number" placeholder="30" /></div>
+          <div class="field"><label>Level</label><select><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select></div>
+          <div class="field full"><label>Description</label><textarea rows="4" placeholder="Write a compelling course summary..."></textarea></div>
+          <div class="full"><button class="btn">Publish Course</button> <button class="btn outline">Save Draft</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORIES -->
+    <div id="v-categories" class="view" style="display:none">
+      <div class="grid-3">
+        <div class="panel"><h4 style="color:var(--sky-700)">☁️ Cloud Computing</h4><p style="color:var(--muted);font-size:13px;margin:6px 0">54 courses</p><button class="btn sm outline">Manage</button></div>
+        <div class="panel"><h4 style="color:var(--sky-700)">📊 Data Science</h4><p style="color:var(--muted);font-size:13px;margin:6px 0">42 courses</p><button class="btn sm outline">Manage</button></div>
+        <div class="panel"><h4 style="color:var(--sky-700)">⚛️ Web Development</h4><p style="color:var(--muted);font-size:13px;margin:6px 0">68 courses</p><button class="btn sm outline">Manage</button></div>
+        <div class="panel"><h4 style="color:var(--sky-700)">🔐 Cybersecurity</h4><p style="color:var(--muted);font-size:13px;margin:6px 0">31 courses</p><button class="btn sm outline">Manage</button></div>
+      </div>
+    </div>
+
+    <!-- ISSUED CERTS -->
+    <div id="v-issued" class="view" style="display:none">
+      <div class="panel">
+        <table class="table">
+          <thead><tr><th>Cert ID</th><th>Holder</th><th>Course</th><th>Issued</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>CP-2026-00123</td><td>John Smith</td><td>Python for Beginners</td><td>May 12, 2026</td><td><span class="pill ok">Valid</span></td></tr>
+            <tr><td>CP-2026-00122</td><td>Alice Wong</td><td>SQL Mastery</td><td>May 10, 2026</td><td><span class="pill ok">Valid</span></td></tr>
+            <tr><td>CP-2026-00121</td><td>Rohit Sen</td><td>HTML & CSS Pro</td><td>May 08, 2026</td><td><span class="pill err">Revoked</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TEMPLATES -->
+    <div id="v-templates" class="view" style="display:none">
+      <div class="grid-3">
+        <div class="cert"><div class="seal">🏆</div><h4>Classic Template</h4><p>Default design</p><br><button class="btn sm">Edit</button></div>
+        <div class="cert"><div class="seal">🎓</div><h4>Modern Template</h4><p>Minimal layout</p><br><button class="btn sm">Edit</button></div>
+        <div class="cert"><div class="seal">⭐</div><h4>Premium Template</h4><p>Gold accents</p><br><button class="btn sm">Edit</button></div>
+      </div>
+    </div>
+
+    <!-- REVOKE -->
+    <div id="v-revoke" class="view" style="display:none">
+      <div class="panel">
+        <div class="form-grid">
+          <div class="field"><label>Certificate ID</label><input placeholder="CP-2026-00123" /></div>
+          <div class="field"><label>Action</label><select><option>Revoke</option><option>Reissue</option></select></div>
+          <div class="field full"><label>Reason</label><textarea rows="3" placeholder="Provide a reason..."></textarea></div>
+          <div class="full"><button class="btn">Submit</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXAMS -->
+    <div id="v-exams" class="view" style="display:none">
+      <div class="panel">
+        <table class="table">
+          <thead><tr><th>Exam</th><th>Course</th><th>Attempts</th><th>Pass Rate</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AWS Final</td><td>AWS Architect</td><td>2,140</td><td>78%</td><td><span class="pill ok">Live</span></td></tr>
+            <tr><td>DS Midterm</td><td>Data Science</td><td>1,680</td><td>65%</td><td><span class="pill ok">Live</span></td></tr>
+            <tr><td>React Quiz</td><td>React Advanced</td><td>940</td><td>82%</td><td><span class="pill pend">Review</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- QUESTION BANK -->
+    <div id="v-qbank" class="view" style="display:none">
+      <div class="panel">
+        <div class="panel-head"><h3>Question Bank</h3><button class="btn sm">+ New Question</button></div>
+        <table class="table">
+          <thead><tr><th>ID</th><th>Question</th><th>Type</th><th>Difficulty</th></tr></thead>
+          <tbody>
+            <tr><td>Q-1023</td><td>What does EC2 stand for?</td><td>MCQ</td><td><span class="pill new">Easy</span></td></tr>
+            <tr><td>Q-1024</td><td>Explain the CAP theorem.</td><td>Essay</td><td><span class="pill pend">Hard</span></td></tr>
+            <tr><td>Q-1025</td><td>Write a SQL join query.</td><td>Code</td><td><span class="pill pend">Medium</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- EXAM REPORTS -->
+    <div id="v-reports" class="view" style="display:none">
+      <div class="panel">
+        <div class="panel-head"><h3>Pass Rates by Course</h3></div>
+        <div class="progress-item"><div class="row"><span>AWS Architect</span><span>78%</span></div><div class="bar"><span style="width:78%"></span></div></div>
+        <div class="progress-item"><div class="row"><span>Data Science</span><span>65%</span></div><div class="bar"><span style="width:65%"></span></div></div>
+        <div class="progress-item"><div class="row"><span>React Advanced</span><span>82%</span></div><div class="bar"><span style="width:82%"></span></div></div>
+        <div class="progress-item"><div class="row"><span>Cybersecurity</span><span>58%</span></div><div class="bar"><span style="width:58%"></span></div></div>
+      </div>
+    </div>
+
+    <!-- TRAFFIC -->
+    <div id="v-traffic" class="view" style="display:none">
+      <div class="stats-grid">
+        <div class="stat-card"><div><div class="label">Visitors Today</div><div class="value">12,480</div></div><div class="stat-icon">🌍</div></div>
+        <div class="stat-card"><div><div class="label">Page Views</div><div class="value">54,120</div></div><div class="stat-icon">👀</div></div>
+        <div class="stat-card"><div><div class="label">Avg. Session</div><div class="value">4m 32s</div></div><div class="stat-icon">⏱️</div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><h3>Traffic Sources</h3></div>
+        <div class="progress-item"><div class="row"><span>Organic Search</span><span>48%</span></div><div class="bar"><span style="width:48%"></span></div></div>
+        <div class="progress-item"><div class="row"><span>Direct</span><span>22%</span></div><div class="bar"><span style="width:22%"></span></div></div>
+        <div class="progress-item"><div class="row"><span>Social Media</span><span>18%</span></div><div class="bar"><span style="width:18%"></span></div></div>
+        <div class="progress-item"><div class="row"><span>Referral</span><span>12%</span></div><div class="bar"><span style="width:12%"></span></div></div>
+      </div>
+    </div>
+
+    <!-- ENGAGE -->
+    <div id="v-engage" class="view" style="display:none">
+      <div class="panel">
+        <div class="panel-head"><h3>Content Engagement</h3></div>
+        <div class="chart">
+          <div class="bar-col" style="height:60%"><span>Videos</span></div>
+          <div class="bar-col" style="height:85%"><span>Quizzes</span></div>
+          <div class="bar-col" style="height:50%"><span>Reads</span></div>
+          <div class="bar-col" style="height:72%"><span>Labs</span></div>
+          <div class="bar-col" style="height:40%"><span>Forum</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONVERSION -->
+    <div id="v-conversion" class="view" style="display:none">
+      <div class="stats-grid">
+        <div class="stat-card"><div><div class="label">Visitor → Signup</div><div class="value">8.4%</div></div><div class="stat-icon">📝</div></div>
+        <div class="stat-card"><div><div class="label">Signup → Enrolled</div><div class="value">36.2%</div></div><div class="stat-icon">🎯</div></div>
+        <div class="stat-card"><div><div class="label">Enrolled → Certified</div><div class="value">62.8%</div></div><div class="stat-icon">🏆</div></div>
+      </div>
+    </div>
+
+    <!-- GENERAL SETTINGS -->
+    <div id="v-general" class="view" style="display:none">
+      <div class="panel">
+        <div class="form-grid">
+          <div class="field"><label>Site Name</label><input value="Stackly" /></div>
+          <div class="field"><label>Support Email</label><input value="support@Stackly.com" /></div>
+          <div class="field"><label>Default Language</label><select><option>English</option><option>Spanish</option><option>French</option></select></div>
+          <div class="field"><label>Timezone</label><select><option>UTC</option><option>GMT+5:30 (IST)</option><option>PST</option></select></div>
+          <div class="full"><button class="btn">Save Settings</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAYMENTS -->
+    <div id="v-payments" class="view" style="display:none">
+      <div class="panel">
+        <table class="table">
+          <thead><tr><th>Gateway</th><th>Status</th><th>Fee</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td>Stripe</td><td><span class="pill ok">Active</span></td><td>2.9% + 30¢</td><td><button class="btn sm outline">Configure</button></td></tr>
+            <tr><td>PayPal</td><td><span class="pill ok">Active</span></td><td>3.5%</td><td><button class="btn sm outline">Configure</button></td></tr>
+            <tr><td>Razorpay</td><td><span class="pill pend">Inactive</span></td><td>2%</td><td><button class="btn sm outline">Configure</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- NOTIFICATIONS -->
+    <div id="v-notif" class="view" style="display:none">
+      <div class="panel">
+        <div class="form-grid">
+          <div class="field full"><label>New Enrollment Email</label><select><option>Enabled</option><option>Disabled</option></select></div>
+          <div class="field full"><label>Certificate Issued Email</label><select><option>Enabled</option><option>Disabled</option></select></div>
+          <div class="field full"><label>Exam Reminder SMS</label><select><option>Enabled</option><option>Disabled</option></select></div>
+          <div class="field full"><label>Weekly Admin Digest</label><select><option>Enabled</option><option>Disabled</option></select></div>
+          <div class="full"><button class="btn">Save Preferences</button></div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>

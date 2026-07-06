@@ -3,22 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About — CertifyPro</title>
+  <title>About — Stackly</title>
   <meta name="description" content="We're on a mission to make quality education radically accessible." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   <link rel="stylesheet" href="css/common.css" />
   <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="auth/auth.css" />
   
 </head>
 <body data-page="about">
+
+    <div id="auth-container"></div>
+
+<div class="bg-gradient"></div>
+<div class="bg-blobs"></div>
+<canvas id="particles"></canvas>
+<div class="cursor-glow"></div>
+
 
   <!-- NAV -->
 <header class="nav-wrap">
     <div class="navbar">
 
         <a href="home.html" class="brand">
-            <span class="brand-mark">C</span>
-            <span>CertifyPro</span>
+            <img src="images/stackly-logo.webp" alt="Stackly" class="brand-img">
         </a>
 
         <nav class="nav-links" id="navMenu">
@@ -30,11 +42,11 @@
         </nav>
 
         <div class="nav-cta">
-            <button class="btn btn-ghost" data-open-modal="login-modal">
+            <button class="btn btn-ghost" onclick="openAuth()">
                 Log in
             </button>
 
-            <button class="btn btn-primary" data-open-modal="signup-modal">
+            <button class="btn btn-primary" onclick="openAuth()">
                 Get Started
             </button>
 
@@ -54,70 +66,148 @@
   <!-- HERO -->
 <section class="about-hero">
 
-    <div class="hero-bg"></div>
+    <!-- Background Elements -->
+    <div class="hero-overlay"></div>
 
-    <div class="container">
+    <div class="hero-blob blob-1"></div>
+    <div class="hero-blob blob-2"></div>
+    <div class="hero-blob blob-3"></div>
 
-        <div class="hero-heading">
+    <div class="container hero-grid">
 
-            <span class="chip">👋 About CertifyPro</span>
+        <!-- LEFT CONTENT -->
 
-            <h1>
-                Building Careers.<br>
-                <span>Creating Futures.</span>
+        <div class="hero-content">
+
+            <span class="hero-chip reveal-left">
+                👋 About Stackly
+            </span>
+
+            <h1 class="hero-title reveal-left">
+                Building Careers
+                <br>
+                <span>Creating Future Leaders.</span>
             </h1>
 
-            <p>
-                Since 2021, we've helped thousands of learners gain practical
-                skills, earn industry-recognized certifications, and build
-                careers they never thought possible.
+            <p class="hero-description reveal-right">
+
+                We empower ambitious learners with practical skills,
+                globally recognized certifications, and real career
+                opportunities. Since 2021 we've helped thousands of
+                students transform their future through industry-ready
+                education.
+
             </p>
 
+            <div class="hero-buttons reveal-up">
+
+                <a href="error.html" class="btn-primary">
+                    Our Story
+                </a>
+
+                <a href="error.html" class="btn-secondary">
+
+                    <span class="play-btn">
+                        ▶
+                    </span>
+
+                    Watch Journey
+
+                </a>
+
+            </div>
+
+            <!-- STATS -->
+
+            <div class="hero-stats">
+
+                <div class="stat-card reveal-pop">
+
+                    <h2 data-target="210000">0</h2>
+
+                    <p>Learners</p>
+
+                </div>
+
+                <div class="stat-card reveal-pop">
+
+                    <h2 data-target="450">0</h2>
+
+                    <p>Courses</p>
+
+                </div>
+
+                <!-- <div class="stat-card reveal-pop">
+
+                    <h2 data-target="98">0</h2>
+
+                    <p>Success Rate</p>
+
+                </div> -->
+
+                <div class="stat-card reveal-pop">
+
+                    <h2 data-target="300">0</h2>
+
+                    <p>Hiring Partners</p>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <!-- HERO IMAGE -->
+        <!-- RIGHT CONTENT -->
 
-        <div class="hero-image">
+        <div class="hero-image-wrapper reveal-right">
 
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600"
-                alt="Students learning together">
+            <img
+                src="images/200,000+ Learners.webp"
+                alt="Students Learning"
+            >
 
-            <div class="hero-tag tag-one">
-                🚀 210K+ Learners
+            <!-- Floating Card -->
+
+            <div class="floating-card card-one">
+
+                ⭐
+
+                <div class="stat reveal-pop">
+
+                    <strong>4.9/5 Rating</strong>
+
+                    <span>Student Reviews</span>
+
+                </div>
+
             </div>
 
-            <div class="hero-tag tag-two">
-                🌍 40+ Countries
+            <div class="floating-card card-two">
+
+                🎓
+
+                <div class="stat reveal-pop">
+
+                    <strong >210K+</strong>
+
+                    <span>Active Learners</span>
+
+                </div>
+
             </div>
 
-            <div class="hero-tag tag-three">
-                ⭐ Rated 4.9/5
-            </div>
+            <div class="floating-card card-three">
 
-        </div>
+                💼
 
-        <!-- STATS -->
+                <div class="stat reveal-pop">
 
-        <div class="hero-stats">
+                    <strong>300+</strong>
 
-            <div class="stat">
-                <h2>210K+</h2>
-                <span>Active Learners</span>
-            </div>
+                    <span>Hiring Partners</span>
 
-            <div class="stat">
-                <h2>450+</h2>
-                <span>Professional Courses</span>
-            </div>
+                </div>
 
-            <div class="stat">
-                <h2>420+</h2>
-                <span>Industry Mentors</span>
-            </div>
-
-            <div class="stat">
-                <h2>300+</h2>
-                <span>Hiring Partners</span>
             </div>
 
         </div>
@@ -132,25 +222,25 @@
     <div class="container">
 
         <div class="section-head">
-            <span class="chip">📖 Our Journey</span>
-            <h2>From a small idea to a global learning community.</h2>
-            <p>Every milestone represents thousands of learners growing their careers with CertifyPro.</p>
+            <span class="chip reveal-left">📖 Our Journey</span>
+            <h2 class="reveal-right">From a small idea to a global learning community.</h2>
+            <p class="reveal-up">Every milestone represents thousands of learners growing their careers with Stackly.</p>
         </div>
 
         <div class="timeline">
 
             <!-- 2021 -->
-            <div class="timeline-item">
+            <div class="timeline-item reveal-pop">
 
                 <div class="timeline-image">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="">
+                    <img src="images/Where Everything Started.jpg" alt="">
                 </div>
 
                 <div class="timeline-content">
                     <span class="year">2021</span>
                     <h3>Where Everything Started</h3>
                     <p>
-                        CertifyPro began with one simple mission—
+                        Stackly began with one simple mission—
                         make career-focused education accessible,
                         practical, and enjoyable for everyone.
                     </p>
@@ -159,10 +249,10 @@
             </div>
 
             <!-- 2022 -->
-            <div class="timeline-item reverse">
+            <div class="timeline-item reverse reveal-pop">
 
                 <div class="timeline-image">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978" alt="">
+                    <img src="images/Where Everything Started-2.webp" alt="">
                 </div>
 
                 <div class="timeline-content">
@@ -170,7 +260,7 @@
                     <h3>10,000 Learners Joined</h3>
                     <p>
                         Students from over 25 countries enrolled,
-                        transforming CertifyPro into a fast-growing
+                        transforming Stackly into a fast-growing
                         learning community.
                     </p>
                 </div>
@@ -178,10 +268,10 @@
             </div>
 
             <!-- 2023 -->
-            <div class="timeline-item">
+            <div class="timeline-item reveal-pop">
 
                 <div class="timeline-image">
-                    <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd" alt="">
+                    <img src="images/Industry Partnerships.webp" alt="">
                 </div>
 
                 <div class="timeline-content">
@@ -197,17 +287,17 @@
             </div>
 
             <!-- 2024 -->
-            <div class="timeline-item reverse">
+            <div class="timeline-item reverse reveal-pop">
 
                 <div class="timeline-image">
-                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="">
+                    <img src="images/200,000+ Learners.webp" alt="">
                 </div>
 
                 <div class="timeline-content">
                     <span class="year">2024</span>
                     <h3>200,000+ Learners</h3>
                     <p>
-                        Today, CertifyPro helps learners worldwide gain
+                        Today, Stackly helps learners worldwide gain
                         practical skills, earn certifications, and build
                         successful careers.
                     </p>
@@ -227,9 +317,9 @@
     <div class="container">
 
         <div class="section-head">
-            <span class="chip">🎥 Behind the Scenes</span>
-            <h2>We don't just record videos.</h2>
-            <p>
+            <span class="chip reveal-left">🎥 Behind the Scenes</span>
+            <h2 class="reveal-right">We don't just record videos.</h2>
+            <p class="reveal-up">
                 Every course is carefully designed with mentors,
                 real projects, student feedback, and production teams
                 working together.
@@ -240,29 +330,29 @@
 
             <!-- Main Image -->
 
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" alt="">
+            <div class="hero-image reveal-pop">
+                <img src="images/AI Model Training.webp" alt="">
             </div>
 
             <!-- Floating Images -->
 
-            <div class="floating top-left">
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="">
+            <div class="floating top-left reveal-pop">
+                <img src="images/Live Mentoring.webp" alt="">
                 <h4>Live Mentoring</h4>
             </div>
 
-            <div class="floating top-right">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978" alt="">
+            <div class="floating top-right reveal-pop">
+                <img src="images/Course Planning.webp" alt="">
                 <h4>Course Planning</h4>
             </div>
 
-            <div class="floating bottom-left">
-                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="">
+            <div class="floating bottom-left reveal-pop">
+                <img src="images/Student Discussions.webp" alt="">
                 <h4>Student Discussions</h4>
             </div>
 
-            <div class="floating bottom-right">
-                <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72" alt="">
+            <div class="floating bottom-right reveal-pop">
+                <img src="images/Live Code Editor.webp" alt="">
                 <h4>Content Production</h4>
             </div>
 
@@ -278,9 +368,9 @@
     <div class="container">
 
         <div class="section-head">
-            <span class="chip">✨ Why Choose CertifyPro</span>
-            <h2>What makes us different</h2>
-            <p>
+            <span class="chip reveal-left">✨ Why Choose Stackly</span>
+            <h2 class="reveal-right">What makes us different</h2>
+            <p class="reveal-up">
                 Education isn't just about watching videos.
                 It's about building skills, confidence, and a career.
             </p>
@@ -288,10 +378,10 @@
 
         <!-- Row 1 -->
 
-        <div class="difference-row">
+        <div class="difference-row reveal-pop">
 
             <div class="difference-image">
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+                <img src="images/laptop background.webp">
             </div>
 
             <div class="difference-text">
@@ -313,10 +403,10 @@
 
         <!-- Row 2 -->
 
-        <div class="difference-row reverse">
+        <div class="difference-row reverse reveal-pop">
 
             <div class="difference-image">
-                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c">
+                <img src="images/Engineer at Startup.webp">
             </div>
 
             <div class="difference-text">
@@ -339,10 +429,10 @@
 
         <!-- Row 3 -->
 
-        <div class="difference-row">
+        <div class="difference-row reveal-pop">
 
             <div class="difference-image">
-                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">
+                <img src="images/UIUX Designer.webp">
             </div>
 
             <div class="difference-text">
@@ -364,10 +454,10 @@
 
         <!-- Row 4 -->
 
-        <div class="difference-row reverse">
+        <div class="difference-row reverse reveal-pop">
 
             <div class="difference-image">
-                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+                <img src="images/Coding.webp">
             </div>
 
             <div class="difference-text">
@@ -397,9 +487,9 @@
     <div class="container">
 
         <div class="section-head">
-            <span class="chip">🏢 Meet Our Workplace</span>
-            <h2>Where ideas become impactful learning.</h2>
-            <p>
+            <span class="chip reveal-left">🏢 Meet Our Workplace</span>
+            <h2 class="reveal-right">Where ideas become impactful learning.</h2>
+            <p class="reveal-up">
                 Every course begins with collaboration, creativity, and a shared passion
                 for helping learners build successful careers.
             </p>
@@ -409,21 +499,21 @@
 
             <!-- Large Image -->
 
-            <div class="workplace-main">
-                <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200" alt="CertifyPro Office">
+            <div class="workplace-main reveal-pop">
+                <img src="images/Machine Learning.webp" alt="Stackly Office">
             </div>
 
             <!-- Right Images -->
 
-            <div class="workplace-side">
+            <div class="workplace-side reveal-pop">
 
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800" alt="Team Collaboration">
+                <img src="images/Analytics Dashboard.webp" alt="Team Collaboration">
 
-                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800" alt="Content Production">
+                <img src="images/Artificial Intelligence.webp" alt="Content Production">
 
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800" alt="Meeting Room">
+                <img src="images/AWS-cloud.webp" alt="Meeting Room">
 
-                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800" alt="Mentoring Session">
+                <img src="images/Software Engineer.webp" alt="Mentoring Session">
 
             </div>
 
@@ -431,7 +521,7 @@
 
         <!-- Tags -->
 
-        <div class="workplace-tags">
+        <div class="workplace-tags reveal-pop">
 
             <span>🎥 Recording Studio</span>
 
@@ -457,9 +547,9 @@
     <div class="container">
 
         <div class="section-head">
-            <span class="chip">⚙️ How We Build Courses</span>
-            <h2>Every course is built through a proven process.</h2>
-            <p>
+            <span class="chip reveal-left">⚙️ How We Build Courses</span>
+            <h2 class="reveal-right">Every course is built through a proven process.</h2>
+            <p class="reveal-up">
                 We combine industry expertise, hands-on learning, and continuous
                 improvements to deliver certifications that truly prepare you for work.
             </p>
@@ -467,7 +557,7 @@
 
         <div class="process-grid">
 
-            <div class="process-card">
+            <div class="process-card reveal-pop">
                 <div class="process-number">01</div>
                 <div class="process-icon">🔍</div>
                 <h3>Industry Research</h3>
@@ -479,7 +569,7 @@
 
             <div class="process-arrow">→</div>
 
-            <div class="process-card">
+            <div class="process-card reveal-pop">
                 <div class="process-number">02</div>
                 <div class="process-icon">👨‍🏫</div>
                 <h3>Expert Collaboration</h3>
@@ -491,7 +581,7 @@
 
             <div class="process-arrow">→</div>
 
-            <div class="process-card">
+            <div class="process-card reveal-pop">
                 <div class="process-number">03</div>
                 <div class="process-icon">🛠️</div>
                 <h3>Project Creation</h3>
@@ -503,7 +593,7 @@
 
             <div class="process-arrow">→</div>
 
-            <div class="process-card">
+            <div class="process-card reveal-pop">
                 <div class="process-number">04</div>
                 <div class="process-icon">🚀</div>
                 <h3>Launch & Improve</h3>
@@ -518,27 +608,191 @@
     </div>
 </section>
 
-<!--  -->
+<!-- TEAM SECTION -->
 
 
+<section class="team-section">
 
-  <section>
-    <div class="container">
-      <div class="section-head">
-        <span class="chip">💛 The team</span>
-        <h2>Humans behind CertifyPro.</h2>
-      </div>
-      <div class="team-grid">
-        <div class="member"><div class="avatar">MA</div><h4>Maya Alvarez</h4><span>CEO & Co-founder</span></div>
-        <div class="member"><div class="avatar">JK</div><h4>Jordan Kim</h4><span>CTO & Co-founder</span></div>
-        <div class="member"><div class="avatar">SP</div><h4>Sam Patel</h4><span>Head of Design</span></div>
-        <div class="member"><div class="avatar">RO</div><h4>Rio Okafor</h4><span>Head of Learning</span></div>
-      </div>
+  <div class="container">
+
+    <div class="section-head">
+      <span class="chip reveal-left">👥 Our Team</span>
+      <h2 class="reveal-right">Meet the minds behind Stackly</h2>
+      <p class="reveal-up">
+        A passionate team building the future of learning, certifications, and career growth.
+      </p>
     </div>
-  </section>
+
+    <div class="team-grid">
+
+      <!-- MEMBER 1 -->
+      <div class="team-card reveal-pop">
+        <div class="avatar">
+          <img src="images/team1.webp" alt="">
+        </div>
+        <h3>Alex Morgan</h3>
+        <span>Founder & CEO</span>
+        <p>Builds product vision and leads strategy for global learning platform.</p>
+        <div class="social">
+          <a href="error.html">in</a>
+          <a href="error.html">𝕏</a>
+          <a href="error.html">✉</a>
+        </div>
+      </div>
+
+      <!-- MEMBER 2 -->
+      <div class="team-card reveal-pop">
+        <div class="avatar">
+          <img src="images/team2.webp" alt="">
+        </div>
+        <h3>Sophia Lee</h3>
+        <span>Head of Design</span>
+        <p>Creates beautiful learning experiences and intuitive UI systems.</p>
+        <div class="social">
+          <a href="error.html">in</a>
+          <a href="error.html">𝕏</a>
+          <a href="error.html">✉</a>
+        </div>
+      </div>
+
+      <!-- MEMBER 3 -->
+      <div class="team-card reveal-pop">
+        <div class="avatar">
+          <img src="images/team3.webp" alt="">
+        </div>
+        <h3>Daniel Kim</h3>
+        <span>Lead Engineer</span>
+        <p>Architects scalable systems powering thousands of learners daily.</p>
+        <div class="social">
+          <a href="error.html">in</a>
+          <a href="error.html">𝕏</a>
+          <a href="error.html">✉</a>
+        </div>
+      </div>
+
+      <!-- MEMBER 4 -->
+      <div class="team-card reveal-pop">
+        <div class="avatar">
+          <img src="images/team4.webp" alt="">
+        </div>
+        <h3>Emily Carter</h3>
+        <span>Data Scientist</span>
+        <p>Improves learning outcomes using analytics and AI insights.</p>
+        <div class="social">
+          <a href="error.html">in</a>
+          <a href="error.html">𝕏</a>
+          <a href="error.html">✉</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="site-footer ">
+
+  <div class="container footer-grid">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">
+         <img src="images/stackly-logo.webp" alt="Stackly Logo">
+      </a>
+      <p>
+        Build real skills, earn industry certifications, and launch your career
+        with confidence. Learn by doing, not just watching.
+      </p>
+
+      <div class="socials">
+            <a onclick="window.location.href = 'error.html'">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a onclick="window.location.href = 'error.html'">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a onclick="window.location.href = 'error.html'">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a onclick="window.location.href = 'error.html'">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+    </div>
+
+    <!-- LINKS -->
+    <div class="footer-col">
+      <h3>Explore</h3>
+      <a href="error.html">Courses</a>
+      <a href="error.html">Certifications</a>
+      <a href="error.html">Learning Paths</a>
+      <a href="error.html">Projects</a>
+      <a href="error.html">Pricing</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Company</h3>
+      <a href="error.html">About Us</a>
+      <a href="error.html">Careers</a>
+      <a href="error.html">Blog</a>
+      <a href="error.html">Partners</a>
+      <a href="error.html">Contact</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Support</h3>
+      <a href="error.html">Help Center</a>
+      <a href="error.html">FAQs</a>
+      <a href="error.html">Terms</a>
+      <a href="error.html">Privacy Policy</a>
+      <a href="error.html">Refund Policy</a>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="footer-newsletter">
+      <h3>Stay Updated</h3>
+      <p>Get new courses, career tips, and updates weekly.</p>
+
+      <div class="newsletter-box">
+        <input type="email" placeholder="Enter your email">
+        <button  onclick="window.location.href = 'error.html'">Subscribe</button>
+      </div>
+
+      <small>No spam. Unsubscribe anytime.</small>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom">
+    <p>© 2026 Stackly. All rights reserved.</p>
+
+    <div class="footer-links">
+      <a href="error.html">Terms</a>
+      <a href="error.html">Privacy</a>
+      <a href="error.html">Cookies</a>
+    </div>
+  </div>
+
+</footer>
 
   
-  <div id="modal-slot"></div>
+      <!-- Scripts -->
+
+    <script>
+        fetch("auth/auth.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("auth-container").innerHTML = html;
+  });
+    </script>
+
   <script src="js/about.js"></script>
+  <script src="js/common.js"></script>
+  <script src="auth/auth.js" defer></script>
+  
 </body>
 </html>

@@ -1,12 +1,23 @@
 /* =========================
    RESET
 ========================= */
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+html,
+body{
+    overflow-x:hidden;
+}
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
+
 
 html{
     scroll-behavior:smooth;
@@ -18,6 +29,7 @@ body{
     color:#1d2939;
     line-height:1.6;
 }
+
 
 a{
     text-decoration:none;
@@ -31,6 +43,9 @@ img{
     width:min(1200px,92%);
     margin:auto;
 }
+
+
+
 
 /* =========================
    BUTTONS
@@ -109,10 +124,10 @@ img{
 
 .chip{
     display:inline-block;
-    background:rgba(255,255,255,.15);
+    background:rgba(255, 115, 0, 0.525);
     padding:10px 20px;
     border-radius:50px;
-    backdrop-filter:blur(15px);
+    backdrop-filter:blur(5px);
     margin-bottom:25px;
     font-weight:700;
 }
@@ -684,7 +699,7 @@ TRUSTED COMPANIES
 
 .journey{
     padding:100px 0;
-    background:#f8faff;
+    /* background:#f8faff; */
     position:relative;
 }
 
@@ -807,7 +822,7 @@ TRUSTED COMPANIES
 
 .career{
     padding:100px 0;
-    background:#f8faff;
+    /* background:#f8faff; */
 }
 
 .career-grid{
@@ -902,7 +917,7 @@ TRUSTED COMPANIES
 
 .dashboard-preview{
     padding:100px 0;
-    background:#f8faff;
+    /* background:#f8faff; */
 }
 
 /* WRAPPER */
@@ -1228,4 +1243,1293 @@ TRUSTED COMPANIES
     .sim-side{
         height:300px;
     }
+}
+
+
+
+
+/* ======================================== COLORFUL ===================================== */
+/*==========================
+  TRUSTED BY COMPANIES
+==========================*/
+
+.trusted{
+
+    padding:120px 80px;
+
+    overflow:hidden;
+
+    /* background:
+        radial-gradient(circle at top left,#eef2ff 0%,transparent 38%),
+        radial-gradient(circle at top right,#ecfeff 0%,transparent 40%),
+        radial-gradient(circle at bottom,#fff7ed 0%,transparent 40%),
+        #f8fbff; */
+
+    position:relative;
+
+}
+
+.trusted::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+    height:350px;
+
+    background:#c7d2fe;
+
+    filter:blur(140px);
+
+    opacity:.45;
+
+    top:-120px;
+    left:-120px;
+
+}
+
+.trusted::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    background:#a5f3fc;
+
+    filter:blur(130px);
+
+    opacity:.45;
+
+    right:-100px;
+    bottom:-120px;
+
+}
+
+/*==========================
+  COMPANY SLIDER
+==========================*/
+
+.company-slider{
+
+    margin-top:60px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.company-track{
+
+    display:flex;
+
+    gap:22px;
+
+    width:max-content;
+
+    will-change:transform;
+
+}
+
+/*==========================
+  COMPANY CARD
+==========================*/
+
+.company-track span{
+
+    min-width:200px;
+
+    padding:18px 30px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:21px;
+
+    font-weight:800;
+
+    letter-spacing:.3px;
+
+    color:#1e293b;
+
+    background:rgba(255,255,255,.72);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.7);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+    cursor:pointer;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* Gradient Border */
+
+.company-track span::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    padding:2px;
+
+    border-radius:18px;
+
+    background:linear-gradient(
+        135deg,
+        #4f46e5,
+        #06b6d4,
+        #10b981,
+        #f59e0b
+    );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+            mask-composite:exclude;
+
+}
+
+/* Shine */
+
+.company-track span::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-130%;
+
+    width:80%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.8),
+        transparent
+    );
+
+    transition:.8s;
+
+}
+
+.company-track span:hover::after{
+
+    left:140%;
+
+}
+
+/* Hover */
+
+.company-track span:hover{
+
+    transform:translateY(-8px) scale(1.05);
+
+    background:linear-gradient(
+        135deg,
+        #4f46e5,
+        #06b6d4
+    );
+
+    color:#fff;
+
+    box-shadow:
+        0 25px 55px rgba(79,70,229,.25);
+
+}
+
+/* ======= SECTION - 3 ======= */
+
+/* =========================
+   JOURNEY SECTION (COLORFUL PRO)
+========================= */
+
+.journey{
+
+    padding:110px 0;
+
+    /* background:
+        radial-gradient(circle at top left,#eef2ff 0%,transparent 40%),
+        radial-gradient(circle at top right,#ecfeff 0%,transparent 45%),
+        radial-gradient(circle at bottom,#fff7ed 0%,transparent 40%),
+        #f8fbff; */
+
+    position:relative;
+
+}
+
+/* GRID */
+
+.journey-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+    position:relative;
+
+}
+
+/* CONNECTOR LINE */
+
+.journey-grid::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:120px;
+
+    left:5%;
+
+    right:5%;
+
+    height:3px;
+
+    background:linear-gradient(90deg,#4f46e5,#06b6d4,#10b981,#f59e0b);
+
+    opacity:.25;
+
+    z-index:0;
+
+}
+
+/* =========================
+   CARD
+========================= */
+
+.journey-card{
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(14px);
+
+    border:1px solid rgba(255,255,255,.7);
+
+    border-radius:26px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+    position:relative;
+
+    z-index:1;
+
+}
+
+/* HOVER */
+
+.journey-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 30px 80px rgba(79,70,229,.15);
+
+}
+
+/* IMAGE */
+
+.img-box{
+
+    height:190px;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.img-box img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+/* IMAGE OVERLAY GRADIENT */
+
+.img-box::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        180deg,
+        transparent,
+        rgba(79,70,229,.25)
+    );
+
+}
+
+.journey-card:hover img{
+    transform:scale(1.08);
+}
+
+/* =========================
+   STEP BADGE (COLORFUL)
+========================= */
+
+.step{
+
+    position:absolute;
+
+    top:15px;
+
+    left:15px;
+
+    padding:7px 14px;
+
+    border-radius:50px;
+
+    font-size:12px;
+
+    font-weight:900;
+
+    color:white;
+
+    background:linear-gradient(135deg,#4f46e5,#06b6d4);
+
+    box-shadow:0 10px 25px rgba(79,70,229,.25);
+
+}
+
+/* =========================
+   TEXT (FIXED READABILITY)
+========================= */
+
+.journey-card h3{
+
+    font-size:20px;
+
+    font-weight:900;
+
+    margin:18px 18px 10px;
+
+    color:#0f172a;
+
+}
+
+.journey-card p{
+
+    font-size:15.5px;
+
+    line-height:1.7;
+
+    color:#64748b;
+
+    padding:0 18px 25px;
+
+}
+
+/* =========================
+   HOVER EFFECT GLOW
+========================= */
+
+.journey-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    /* background:linear-gradient(
+        135deg,
+        rgba(79,70,229,.08),
+        rgba(6,182,212,.08)
+    ); */
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+.journey-card:hover::before{
+    opacity:1;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:992px){
+
+.journey-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.journey-grid::before{
+    display:none;
+}
+
+}
+
+@media(max-width:600px){
+
+.journey-grid{
+    grid-template-columns:1fr;
+}
+
+}
+
+
+/* =========================
+   BASE CARD (COMMON STYLE)
+========================= */
+
+.journey-card{
+
+    background:rgba(255,255,255,.78);
+
+    backdrop-filter:blur(14px);
+
+    border:1px solid rgba(255,255,255,.7);
+
+    border-radius:26px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+    position:relative;
+
+}
+
+/* =========================
+   DIFFERENT COLOR CARDS
+========================= */
+
+/* STEP 1 - BLUE */
+.journey-card:nth-child(1){
+    background:linear-gradient(135deg,#e0e7ff,#ffffff);
+}
+
+.journey-card:nth-child(1) .step{
+    background:linear-gradient(135deg,#4f46e5,#6366f1);
+}
+
+/* STEP 2 - CYAN */
+.journey-card:nth-child(2){
+    background:linear-gradient(135deg,#cffafe,#ffffff);
+}
+
+.journey-card:nth-child(2) .step{
+    background:linear-gradient(135deg,#06b6d4,#0ea5e9);
+}
+
+/* STEP 3 - GREEN */
+.journey-card:nth-child(3){
+    background:linear-gradient(135deg,#dcfce7,#ffffff);
+}
+
+.journey-card:nth-child(3) .step{
+    background:linear-gradient(135deg,#22c55e,#10b981);
+}
+
+/* STEP 4 - ORANGE */
+.journey-card:nth-child(4){
+    background:linear-gradient(135deg,#ffedd5,#ffffff);
+}
+
+.journey-card:nth-child(4) .step{
+    background:linear-gradient(135deg,#f59e0b,#f97316);
+}
+
+/* =========================
+   TEXT (KEEP READABLE)
+========================= */
+
+.journey-card h3{
+    font-size:20px;
+    font-weight:900;
+    margin:18px 18px 10px;
+    color:#0f172a;
+}
+
+.journey-card p{
+    font-size:15.5px;
+    line-height:1.7;
+    color:#64748b;
+    padding:0 18px 25px;
+}
+
+/* =========================
+   STEP BADGE BASE
+========================= */
+
+.step{
+
+    position:absolute;
+
+    top:15px;
+
+    left:15px;
+
+    padding:7px 14px;
+
+    border-radius:50px;
+
+    font-size:12px;
+
+    font-weight:900;
+
+    color:white;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+/* =========================
+   HOVER EFFECT
+========================= */
+
+.journey-card:hover{
+
+    transform:translateY(-12px) scale(1.02);
+
+    box-shadow:0 30px 80px rgba(0,0,0,.12);
+
+}
+
+
+
+/* =========================
+   CAREER SECTION BASE
+========================= */
+
+.career{
+    padding:110px 0;
+    /* background:
+        radial-gradient(circle at top left,#eef2ff 0%,transparent 40%),
+        radial-gradient(circle at bottom right,#ecfeff 0%,transparent 45%),
+        #f8fbff; */
+}
+
+.career-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+
+/* =========================
+   BASE CARD
+========================= */
+
+.career-card{
+    border-radius:26px;
+    overflow:hidden;
+    transition:.35s;
+    box-shadow:0 15px 40px rgba(0,0,0,.06);
+    background:white;
+    position:relative;
+}
+
+/* hover */
+.career-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 30px 70px rgba(0,0,0,.12);
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.career-img{
+    height:200px;
+    overflow:hidden;
+    position:relative;
+}
+
+.career-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.career-card:hover img{
+    transform:scale(1.08);
+}
+
+/* overlay gradient */
+.career-img::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        180deg,
+        transparent,
+        rgba(0,0,0,.25)
+    );
+}
+
+/* =========================
+   BODY
+========================= */
+
+.career-body{
+    padding:22px;
+}
+
+.career-body h3{
+    font-size:22px;
+    font-weight:900;
+    margin-bottom:12px;
+    color:#0f172a;
+}
+
+/* =========================
+   SKILLS TAGS (COMMON)
+========================= */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-bottom:15px;
+}
+
+.skills span{
+    font-size:12px;
+    padding:6px 12px;
+    border-radius:50px;
+    font-weight:700;
+    color:white;
+}
+
+/* =========================
+   EACH CARD COLOR THEME
+========================= */
+
+/* CLOUD ENGINEER */
+.career-card:nth-child(1){
+    background:linear-gradient(135deg,#e0e7ff,#ffffff);
+}
+
+.career-card:nth-child(1) .skills span{
+    background:linear-gradient(135deg,#4f46e5,#6366f1);
+}
+
+/* AI ENGINEER */
+.career-card:nth-child(2){
+    background:linear-gradient(135deg,#dcfce7,#ffffff);
+}
+
+.career-card:nth-child(2) .skills span{
+    background:linear-gradient(135deg,#22c55e,#10b981);
+}
+
+/* CYBER SECURITY */
+.career-card:nth-child(3){
+    background:linear-gradient(135deg,#ffe4e6,#ffffff);
+}
+
+.career-card:nth-child(3) .skills span{
+    background:linear-gradient(135deg,#ef4444,#f97316);
+}
+
+/* =========================
+   SALARY BADGE (COMMON STYLE)
+========================= */
+
+.salary{
+    font-size:16px;
+    font-weight:900;
+    color:#0f172a;
+    margin-bottom:15px;
+}
+
+/* =========================
+   BUTTON IMPROVE (optional polish)
+========================= */
+
+.career-body .btn{
+    width:100%;
+    padding:12px;
+    border-radius:14px;
+    font-weight:800;
+    background:linear-gradient(135deg,#4f46e5,#06b6d4);
+    color:white;
+    border:none;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.career-body .btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 20px 50px rgba(79,70,229,.25);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:992px){
+    .career-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .career-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+/* ================================= */
+
+/* =========================
+   FEATURE CARD BASE
+========================= */
+
+.feature{
+
+    /* background:rgba(255,255,255,.8);
+
+    backdrop-filter:blur(12px); */
+
+    border-radius:24px;
+
+    padding:28px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* hover */
+.feature:hover{
+    transform:translateY(-10px);
+}
+
+/* icon */
+.feature .icon{
+    width:50px;
+    height:50px;
+    display:grid;
+    place-items:center;
+    border-radius:14px;
+    font-size:22px;
+    margin-bottom:14px;
+    color:white;
+}
+
+/* text */
+.feature h3{
+    font-size:18px;
+    font-weight:900;
+    color:#0f172a;
+}
+
+.feature p{
+    font-size:15px;
+    color:#64748b;
+    line-height:1.6;
+    margin-top:8px;
+}
+
+/* =========================
+   INDIVIDUAL COLORS
+========================= */
+
+.feature:nth-child(1) .icon{
+    background:linear-gradient(135deg,#4f46e5,#6366f1);
+}
+
+.feature:nth-child(2) .icon{
+    background:linear-gradient(135deg,#f59e0b,#f97316);
+}
+
+.feature:nth-child(3) .icon{
+    background:linear-gradient(135deg,#06b6d4,#0ea5e9);
+}
+
+.feature:nth-child(4) .icon{
+    background:linear-gradient(135deg,#22c55e,#10b981);
+}
+
+.feature:nth-child(5) .icon{
+    background:linear-gradient(135deg,#ef4444,#f43f5e);
+}
+
+.feature:nth-child(6) .icon{
+    background:linear-gradient(135deg,#a855f7,#6366f1);
+}
+
+
+/* =========================
+   COURSE CARD BASE
+========================= */
+
+.course{
+
+    border-radius:26px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+    background:white;
+
+    position:relative;
+
+}
+
+/* hover */
+.course:hover{
+    transform:translateY(-10px);
+    box-shadow:0 30px 70px rgba(0,0,0,.12);
+}
+
+/* =========================
+   TOP THUMB (COLOR VARIANTS)
+========================= */
+
+.thumb{
+    height:180px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:70px;
+    color:white;
+}
+
+/* each course color */
+.course:nth-child(1) .thumb{
+    background:linear-gradient(135deg,#4f46e5,#06b6d4);
+}
+
+.course:nth-child(2) .thumb{
+    background:linear-gradient(135deg,#22c55e,#10b981);
+}
+
+.course:nth-child(3) .thumb{
+    background:linear-gradient(135deg,#f59e0b,#f97316);
+}
+
+/* =========================
+   BODY
+========================= */
+
+.course-body{
+    padding:28px;
+}
+
+.course-body h3{
+    font-size:20px;
+    font-weight:900;
+    color:#0f172a;
+}
+
+/* tags */
+.tag{
+    font-size:12px;
+    padding:6px 12px;
+    border-radius:50px;
+    color:white;
+}
+
+/* tag colors per card */
+.course:nth-child(1) .tag{
+    background:linear-gradient(135deg,#4f46e5,#06b6d4);
+}
+
+.course:nth-child(2) .tag{
+    background:linear-gradient(135deg,#22c55e,#10b981);
+}
+
+.course:nth-child(3) .tag{
+    background:linear-gradient(135deg,#f59e0b,#f97316);
+}
+
+/* price highlight */
+.price{
+    font-size:26px;
+    font-weight:900;
+    background:linear-gradient(135deg,#4f46e5,#06b6d4);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+
+/* =========================
+   FEATURES GRID
+========================= */
+
+.features-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+/* =========================
+   BASE FEATURE CARD
+========================= */
+
+.feature{
+
+    padding:35px;
+
+    border-radius:26px;
+
+    transition:.35s;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.06);
+
+    position:relative;
+
+    overflow:hidden;
+
+    color:#0f172a;
+
+}
+
+/* hover */
+.feature:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+}
+
+/* =========================
+   ICON BASE
+========================= */
+
+.icon{
+
+    width:52px;
+
+    height:52px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:16px;
+
+    font-size:22px;
+
+    margin-bottom:18px;
+
+    color:white;
+
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.feature h3{
+    margin-bottom:12px;
+    font-size:18px;
+    font-weight:900;
+}
+
+.feature p{
+    font-size:15.5px;
+    line-height:1.6;
+    color:#475467;
+}
+
+/* =========================
+   EACH CARD COLOR THEME
+========================= */
+
+/* 1 */
+.feature:nth-child(1){
+    background:linear-gradient(135deg,#e0e7ff,#ffffff);
+}
+.feature:nth-child(1) .icon{
+    background:linear-gradient(135deg,#4f46e5,#6366f1);
+}
+
+/* 2 */
+.feature:nth-child(2){
+    background:linear-gradient(135deg,#fff7ed,#ffffff);
+}
+.feature:nth-child(2) .icon{
+    background:linear-gradient(135deg,#f59e0b,#f97316);
+}
+
+/* 3 */
+.feature:nth-child(3){
+    background:linear-gradient(135deg,#ecfeff,#ffffff);
+}
+.feature:nth-child(3) .icon{
+    background:linear-gradient(135deg,#06b6d4,#0ea5e9);
+}
+
+/* 4 */
+.feature:nth-child(4){
+    background:linear-gradient(135deg,#dcfce7,#ffffff);
+}
+.feature:nth-child(4) .icon{
+    background:linear-gradient(135deg,#22c55e,#10b981);
+}
+
+/* 5 */
+.feature:nth-child(5){
+    background:linear-gradient(135deg,#ffe4e6,#ffffff);
+}
+.feature:nth-child(5) .icon{
+    background:linear-gradient(135deg,#ef4444,#f43f5e);
+}
+
+/* 6 */
+.feature:nth-child(6){
+    background:linear-gradient(135deg,#ede9fe,#ffffff);
+}
+.feature:nth-child(6) .icon{
+    background:linear-gradient(135deg,#8b5cf6,#6366f1);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:992px){
+    .features-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .features-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+/* ====================== FIXES ====================== */
+
+/* ==========================================
+   MOBILE FIX (0px - 768px)
+========================================== */
+
+@media screen and (max-width:768px){
+
+    html,
+    body{
+        width:100%;
+        overflow-x:hidden;
+    }
+
+    *{
+        max-width:100%;
+    }
+
+    .container{
+        width:100%;
+        padding:0 18px;
+        margin:0 auto;
+    }
+
+    section{
+        padding:70px 0;
+    }
+
+    /* Hero */
+
+    .hero{
+        padding:90px 0 70px;
+    }
+
+    .hero-grid{
+        display:flex;
+        flex-direction:column;
+        gap:40px;
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:38px;
+        line-height:1.2;
+    }
+
+    .lead{
+        font-size:16px;
+        margin:auto;
+        margin-bottom:30px;
+    }
+
+    .hero-actions{
+        justify-content:center;
+    }
+
+    .hero-stats{
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:20px;
+    }
+
+    /* Floating cards */
+
+    .hero-visual{
+        width:100%;
+        height:360px;
+    }
+
+    .card-float{
+        width:150px;
+        padding:14px;
+    }
+
+    .hv-1{
+        left:0;
+        top:0;
+    }
+
+    .hv-2{
+        right:0;
+        top:40px;
+    }
+
+    .hv-3{
+        left:20px;
+        bottom:0;
+    }
+
+    .hv-4{
+        right:20px;
+        bottom:30px;
+    }
+
+    /* All grids */
+
+    .features-grid,
+    .courses-grid,
+    .career-grid,
+    .journey-grid,
+    .sim-grid,
+    .dash-cards{
+        grid-template-columns:1fr;
+    }
+
+    .story-block{
+        grid-template-columns:1fr;
+    }
+
+    .arrow{
+        transform:rotate(90deg);
+    }
+
+    /* Dashboard */
+
+    .dashboard{
+        grid-template-columns:1fr;
+    }
+
+    .dash-sidebar{
+        display:block;
+    }
+
+    .menu{
+        display:flex;
+        overflow-x:auto;
+        gap:10px;
+        padding-bottom:10px;
+    }
+
+    .menu::-webkit-scrollbar{
+        display:none;
+    }
+
+    .menu div{
+        white-space:nowrap;
+        flex-shrink:0;
+    }
+
+    /* CTA */
+
+    .cta-banner{
+        padding:40px 20px;
+    }
+
+    .cta-banner h2{
+        font-size:30px;
+    }
+
+    /* Company Slider */
+
+    .company-track span{
+        min-width:140px;
+        font-size:16px;
+        padding:14px 18px;
+    }
+
+    /* Images */
+
+    img{
+        display:block;
+        width:100%;
+        height:auto;
+    }
+
+    /* Prevent overflow */
+
+    .hero,
+    .trusted,
+    .journey,
+    .career,
+    .dashboard-preview,
+    .simulation{
+        overflow:hidden;
+    }
+
 }

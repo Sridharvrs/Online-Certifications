@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="auth/auth.css" />
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="auth-container"></div>
+
+<div class="bg-gradient"></div>
+<div class="bg-blobs"></div>
+<canvas id="particles"></canvas>
+<div class="cursor-glow"></div>
+
+    
+      <!-- NAV -->
+<header class="nav-wrap">
+    <div class="navbar">
+
+        <a href="home.html" class="brand">
+            <img src="images/stackly-logo.webp" alt="Stackly" class="brand-img">
+        </a>
+
+        <nav class="nav-links" id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="certifications.html">Certifications</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-cta">
+            <button class="btn btn-ghost" onclick="openAuth()">
+                Log in
+            </button>
+
+            <button class="btn btn-primary" onclick="openAuth()">
+                Get Started
+            </button>
+
+            <button
+                class="nav-toggle"
+                id="navToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+                aria-controls="navMenu">
+                ☰
+            </button>
+        </div>
+
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="contact-hero ">
+    <!-- Ambient decorative shapes for background depth -->
+    <div class="hero-shape shape-1"></div>
+    <div class="hero-shape shape-2"></div>
+
+    <div class="hero-container">
+        <!-- Left Side: Copywriting & Value Prop -->
+        <div class="hero-content">
+            <span class="hero-badge  " style="--delay: 1 reveal-left">👋 Get In Touch</span>
+            <h1 class="hero-title  " style="--delay: 2 reveal-right">Let’s Build <span> Something </span> <span class="highlight">Great Together</span></h1>
+            <p class="hero-subtitle  " style="--delay: 3 reveal-up">
+                Have questions about Stackly, need technical support, or want to explore corporate licensing? Drop us a message—our global team is ready to assist you.
+            </p>
+            
+            <!-- Quick Trust Statistics/Badges -->
+            <div class="hero-stats  " style="--delay: 4">
+                <div class="stat-item reveal-pop">
+                    <strong>&lt; 2 Hours</strong>
+                    <span>Average Response</span>
+                </div>
+                <div class="stat-item reveal-pop">
+                    <strong>24/7</strong>
+                    <span>Support Availability</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Clean Glassmorphic Quick-Contact Card -->
+        <div class="hero-card-wrapper anim-fade-left reveal-pop">
+            <div class="quick-contact-card">
+                <h3>Connect Instantly</h3>
+                <p>Pick your preferred channel or use our interactive support portal.</p>
+                
+                <div class="quick-links">
+                    <a href="mailto:support@Stackly.com" class="q-link-item">
+                        <div class="icon-box">✉️</div>
+                        <div class="link-text">
+                            <span class="label">Email Us</span>
+                            <span class="value">support@Stackly.com</span>
+                        </div>
+                    </a>
+                    
+                    <a href="tel:+15550192834" class="q-link-item">
+                        <div class="icon-box">📞</div>
+                        <div class="link-text">
+                            <span class="label">Call Directly</span>
+                            <span class="value">+1 (555) 019-2834</span>
+                        </div>
+                    </a>
+
+                    <a href="#livechat" class="q-link-item chat-highlight">
+                        <div class="icon-box">💬</div>
+                        <div class="link-text">
+                            <span class="label">Live Chat</span>
+                            <span class="value">Agents online now</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HOW WE HELP -->
+<section class="intent-section ">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <span class="chip reveal-left">💬 Support Center</span>
+
+            <h2 class="reveal-right" style="--delay: 1">How can we help you today?</h2>
+
+            <p class="reveal-up">
+                Choose what you need help with. We’ll instantly guide you to the right support team.
+            </p>
+
+        </div>
+
+        <div class="intent-grid">
+
+            <div class="intent-card course reveal-pop  ">
+                <div class="icon">🎓</div>
+                <h3>Course Guidance</h3>
+                <p>Not sure which certification fits you? We’ll recommend the right path.</p>
+            </div>
+
+            <div class="intent-card career reveal-pop">
+                <div class="icon">💼</div>
+                <h3>Career Advice</h3>
+                <p>Plan your career with expert guidance and skill roadmap suggestions.</p>
+            </div>
+
+            <div class="intent-card cert reveal-pop ">
+                <div class="icon">🧾</div>
+                <h3>Certification Help</h3>
+                <p>Verification, downloads, or certificate issues — we’ll fix it fast.</p>
+            </div>
+
+            <div class="intent-card tech reveal-pop ">
+                <div class="icon">🛠</div>
+                <h3>Technical Issue</h3>
+                <p>Login issues, bugs, or errors? Our tech team responds quickly.</p>
+            </div>
+
+            <div class="intent-card partner reveal-pop ">
+                <div class="icon">🤝</div>
+                <h3>Partnership</h3>
+                <p>Hire learners or collaborate with us for training programs.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT FORM -->
+<section class="contact-hub ">
+
+    <div class="container">
+
+        <div class="section-head">
+            <span class="chip reveal-left">✉️ Contact Hub</span>
+            <h2 class="reveal-right">Get help instantly from our team</h2>
+            <p class="reveal-up">Choose your support type and send your message — we respond fast.</p>
+        </div>
+
+        <div class="hub-grid">
+
+            <!-- LEFT: INFO STACK -->
+            <div class="hub-info reveal-pop">
+
+                <div class="info-glow">
+                    ⚡ <h3>Avg response: under 5 mins</h3>
+                </div>
+
+                <div class="info-glow">
+                    🎓 <h3>Experts from top tech companies</h3>
+                </div>
+
+                <div class="info-glow">
+                    🌍 <h3>Global support across time zones</h3>
+                </div>
+
+                <div class="info-glow highlight">
+                    💬 Live chat available 24/7
+                </div>
+
+            </div>
+
+            <!-- RIGHT: FORM CARD -->
+            <div class="hub-form reveal-pop">
+
+                <div class="form-title">
+                    <h3>Send us a message</h3>
+                    <p>We’ll reply with a clear solution, not a template.</p>
+                </div>
+
+                <form>
+
+                    <div class="grid-2">
+                        <input placeholder="Your name">
+                        <input placeholder="Email address">
+                    </div>
+
+                    <div class="grid-2">
+                        <select>
+                            <option>Course Guidance</option>
+                            <option>Career Help</option>
+                            <option>Technical Issue</option>
+                            <option>Partnership</option>
+                        </select>
+
+                        <input placeholder="Subject">
+                    </div>
+
+                    <textarea placeholder="Tell us what you need help with..."></textarea>
+
+                    <button onclick="window.location.href='error.html'">Send Message →</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FAQ -->
+<section class="faq-section ">
+
+    <div class="container">
+
+        <div class="section-head">
+            <span class="chip reveal-left">❓ FAQ</span>
+            <h2 class="reveal-right">Quick answers to common questions</h2>
+            <p class="reveal-up">If you still need help, our support team is just one click away.</p>
+        </div>
+
+        <div class="faq-grid">
+
+            <div class="faq-item reveal-pop">
+                <button class="faq-question">
+                    How fast will I get a response?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    We usually respond within 5–10 minutes during active hours, and within a few hours otherwise.
+                </div>
+            </div>
+
+            <div class="faq-item reveal-pop">
+                <button class="faq-question">
+                    Can I change my course after enrolling?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    Yes, you can switch to another course within 7 days if you haven’t completed more than 20%.
+                </div>
+            </div>
+
+            <div class="faq-item reveal-pop">
+                <button class="faq-question">
+                    Are certificates industry recognized?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    Yes, all certifications are designed with hiring partners and recognized by industry companies.
+                </div>
+            </div>
+
+            <div class="faq-item reveal-pop">
+                <button class="faq-question">
+                    Do you provide job assistance?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    Yes, we offer resume reviews, mock interviews, and hiring partner referrals.
+                </div>
+            </div>
+
+            <div class="faq-item reveal-pop">
+                <button class="faq-question">
+                    Can I learn at my own pace?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    Absolutely. All courses are self-paced with lifetime access and flexible schedules.
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="site-footer ">
+
+  <div class="container footer-grid">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">
+         <img src="images/stackly-logo.webp" alt="Stackly Logo">
+      </a>
+      <p>
+        Build real skills, earn industry certifications, and launch your career
+        with confidence. Learn by doing, not just watching.
+      </p>
+
+      <div class="socials">
+            <a onclick="window.location.href = 'error.html'">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a onclick="window.location.href = 'error.html'">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a onclick="window.location.href = 'error.html'">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a onclick="window.location.href = 'error.html'">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+    </div>
+
+    <!-- LINKS -->
+    <div class="footer-col">
+      <h3>Explore</h3>
+      <a href="error.html">Courses</a>
+      <a href="error.html">Certifications</a>
+      <a href="error.html">Learning Paths</a>
+      <a href="error.html">Projects</a>
+      <a href="error.html">Pricing</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Company</h3>
+      <a href="error.html">About Us</a>
+      <a href="error.html">Careers</a>
+      <a href="error.html">Blog</a>
+      <a href="error.html">Partners</a>
+      <a href="error.html">Contact</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Support</h3>
+      <a href="error.html">Help Center</a>
+      <a href="error.html">FAQs</a>
+      <a href="error.html">Terms</a>
+      <a href="error.html">Privacy Policy</a>
+      <a href="error.html">Refund Policy</a>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="footer-newsletter">
+      <h3>Stay Updated</h3>
+      <p>Get new courses, career tips, and updates weekly.</p>
+
+      <div class="newsletter-box">
+        <input type="email" placeholder="Enter your email">
+        <button  onclick="window.location.href = 'error.html'">Subscribe</button>
+      </div>
+
+      <small>No spam. Unsubscribe anytime.</small>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom">
+    <p>© 2026 Stackly. All rights reserved.</p>
+
+    <div class="footer-links">
+      <a href="error.html">Terms</a>
+      <a href="error.html">Privacy</a>
+      <a href="error.html">Cookies</a>
+    </div>
+  </div>
+
+</footer>
+
+    <!-- Scripts -->
+
+    <script>
+        fetch("auth/auth.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("auth-container").innerHTML = html;
+  });
+    </script>
+
+
+<script src="js/contact.js"></script>
+<script src="js/common.js"></script>
+<script src="auth/auth.js" defer></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

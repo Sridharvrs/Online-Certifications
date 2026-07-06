@@ -1,6 +1,16 @@
 /* ==========================
    GLOBAL
 ========================== */
+html,
+body{
+    overflow-x:hidden;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
 
 *{
     margin:0;
@@ -10,7 +20,7 @@
 
 body{
     font-family:"Inter",sans-serif;
-    background:#f8faff;
+    /* background:#f8faff; */
     color:#1f2937;
 }
 
@@ -392,221 +402,765 @@ font-size:24px;
    LEARNING PATH FLOW
 ========================= */
 
+/*=========================================
+        LEARNING PATHS SECTION
+=========================================*/
+
 .learning-paths{
-    padding:100px 0;
-    background:
-    radial-gradient(circle at top left,#5b8cff 0,#4f46e5 35%,#2d1b69 100%);
-    color:white;
+    padding:120px 80px;
+    position:relative;
     overflow:hidden;
+    background:
+        radial-gradient(circle at top left,#dbeafe 0%,transparent 35%),
+        radial-gradient(circle at bottom right,#ede9fe 0%,transparent 35%),
+        linear-gradient(180deg,#f8fbff,#ffffff);
 }
 
-/* WRAPPER */
+/*=========================================
+        WRAPPER
+=========================================*/
+
 .path-wrapper{
     position:relative;
-    margin-top:60px;
+    margin-top:80px;
 }
 
-/* HORIZONTAL SCROLL */
-.path-scroll{
-    display:flex;
-    gap:60px;
-    overflow-x:auto;
-    padding:40px 20px;
-    scroll-snap-type:x mandatory;
-}
+/*=========================================
+        TIMELINE
+=========================================*/
 
-/* HIDE SCROLLBAR */
-.path-scroll::-webkit-scrollbar{
-    display:none;
-}
-
-/* LINE */
 .path-line{
     position:absolute;
-    top:50%;
-    left:0;
-    right:0;
-    height:3px;
-    background:linear-gradient(90deg,#4f46e5,#22c55e,#4f46e5);
-    opacity:.3;
+    top:95px;
+    left:5%;
+    width:90%;
+    height:8px;
+    border-radius:50px;
+
+    background:linear-gradient(
+        90deg,
+        #3b82f6,
+        #06b6d4,
+        #8b5cf6,
+        #ec4899,
+        #f59e0b
+    );
+
+    background-size:300% 100%;
+    animation:gradientMove 8s linear infinite;
 }
 
-/* NODE */
-.path-node{
-    min-width:220px;
-    text-align:center;
+@keyframes gradientMove{
+
+    0%{
+        background-position:0%;
+    }
+
+    100%{
+        background-position:300%;
+    }
+
+}
+
+/*=========================================
+        GRID
+=========================================*/
+
+.path-scroll{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:40px;
     position:relative;
-    scroll-snap-align:center;
-    transition:.4s;
+    z-index:2;
+
 }
 
-/* IMAGE */
-.node-img{
-    width:140px;
-    height:140px;
-    margin:0 auto;
-    border-radius:50%;
+/*=========================================
+        CARD
+=========================================*/
+
+.path-node{
+
+    position:relative;
+
+    padding:30px;
+
+    border-radius:30px;
+
+    backdrop-filter:blur(18px);
+
+    background:rgba(255,255,255,.72);
+
+    border:1px solid rgba(255,255,255,.5);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.08);
+
+    transition:.45s ease;
+
     overflow:hidden;
-    border:3px solid rgba(255,255,255,.2);
-    box-shadow:0 20px 50px rgba(0,0,0,.4);
-    transition:.4s;
+
+}
+
+/* Decorative Glow */
+
+.path-node::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:160px;
+    height:160px;
+
+    border-radius:50%;
+
+    top:-80px;
+    right:-80px;
+
+    opacity:.18;
+
+}
+
+/* Hover */
+
+.path-node:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:
+        0 35px 80px rgba(0,0,0,.14);
+
+}
+
+/*=========================================
+        IMAGE
+=========================================*/
+
+.node-img{
+
+    width:110px;
+    height:110px;
+
+    margin:0 auto 25px;
+
+    padding:5px;
+
+    border-radius:50%;
+
+    position:relative;
+
 }
 
 .node-img img{
+
     width:100%;
     height:100%;
+
     object-fit:cover;
+
+    border-radius:50%;
+
+    display:block;
+
 }
 
-/* HOVER EFFECT */
-.path-node:hover .node-img{
-    transform:scale(1.1);
-    border-color:#4f46e5;
+/*=========================================
+        CONTENT
+=========================================*/
+
+.node-content{
+
+    text-align:center;
+
 }
 
-/* CONTENT */
 .node-content h3{
-    margin-top:15px;
-    font-size:18px;
+
+    font-size:26px;
+
+    font-weight:800;
+
+    margin-bottom:12px;
+
+    color:#0f172a;
+
 }
 
 .node-content p{
-    font-size:13px;
-    color:#9ca3af;
+
+    color:#64748b;
+
+    line-height:1.8;
+
+    font-size:16px;
+
 }
 
-/* DOT CONNECTOR */
-.path-node::before{
-    content:"";
-    position:absolute;
-    top:70px;
-    left:50%;
-    width:14px;
-    height:14px;
-    background:#4f46e5;
-    border-radius:50%;
-    transform:translateX(-50%);
-    box-shadow:0 0 20px #4f46e5;
+/*=========================================
+        STEP COLORS
+=========================================*/
+
+/* STEP 1 */
+
+.path-node:nth-child(1){
+
+    background:linear-gradient(135deg,#eff6ff,#ffffff);
+
+    border-top:6px solid #3b82f6;
+
 }
 
-/* ACTIVE EFFECT ON HOVER */
-.path-node:hover{
-    transform:translateY(-10px);
+.path-node:nth-child(1)::before{
+
+    background:#3b82f6;
+
 }
 
-/* RESPONSIVE */
+.path-node:nth-child(1) .node-img{
+
+    background:linear-gradient(135deg,#2563eb,#60a5fa);
+
+}
+
+/* STEP 2 */
+
+.path-node:nth-child(2){
+
+    background:linear-gradient(135deg,#ecfeff,#ffffff);
+
+    border-top:6px solid #06b6d4;
+
+}
+
+.path-node:nth-child(2)::before{
+
+    background:#06b6d4;
+
+}
+
+.path-node:nth-child(2) .node-img{
+
+    background:linear-gradient(135deg,#0891b2,#22d3ee);
+
+}
+
+/* STEP 3 */
+
+.path-node:nth-child(3){
+
+    background:linear-gradient(135deg,#f5f3ff,#ffffff);
+
+    border-top:6px solid #8b5cf6;
+
+}
+
+.path-node:nth-child(3)::before{
+
+    background:#8b5cf6;
+
+}
+
+.path-node:nth-child(3) .node-img{
+
+    background:linear-gradient(135deg,#7c3aed,#a78bfa);
+
+}
+
+/* STEP 4 */
+
+.path-node:nth-child(4){
+
+    background:linear-gradient(135deg,#fff7ed,#ffffff);
+
+    border-top:6px solid #f59e0b;
+
+}
+
+.path-node:nth-child(4)::before{
+
+    background:#f59e0b;
+
+}
+
+.path-node:nth-child(4) .node-img{
+
+    background:linear-gradient(135deg,#ea580c,#fb923c);
+
+}
+
+/*=========================================
+        RESPONSIVE
+=========================================*/
+
+@media(max-width:1100px){
+
+.path-scroll{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.path-line{
+
+display:none;
+
+}
+
+}
+
 @media(max-width:768px){
-    .path-scroll{
-        gap:30px;
-    }
 
-    .path-node{
-        min-width:180px;
-    }
+.learning-paths{
+
+padding:90px 20px;
+
 }
 
-/*  */
-/* =========================
-   CAREER OUTCOMES LIGHT
-========================= */
+.path-scroll{
+
+grid-template-columns:1fr;
+
+gap:25px;
+
+}
+
+.path-node{
+
+padding:24px;
+
+}
+
+.node-img{
+
+width:90px;
+height:90px;
+
+}
+
+.node-content h3{
+
+font-size:22px;
+
+}
+
+}
+
+
+/*====================================================
+            CAREER OUTCOMES SECTION
+====================================================*/
 
 .career-outcomes-light{
-    padding:100px 0;
-    background:#f8fafc;
-    color:#0f172a;
+    position:relative;
+    padding:120px 80px;
+    overflow:hidden;
+    /* background:
+        radial-gradient(circle at top left,#dbeafe 0%,transparent 35%),
+        radial-gradient(circle at bottom right,#ede9fe 0%,transparent 35%),
+        linear-gradient(180deg,#f8fbff,#ffffff); */
 }
 
-/* FILTER BAR */
+/* Decorative Blobs */
+
+.career-outcomes-light::before,
+.career-outcomes-light::after{
+
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    filter:blur(90px);
+    opacity:.18;
+    pointer-events:none;
+
+}
+
+.career-outcomes-light::before{
+
+    width:320px;
+    height:320px;
+
+    background:#3b82f6;
+
+    top:-100px;
+    left:-120px;
+
+}
+
+.career-outcomes-light::after{
+
+    width:280px;
+    height:280px;
+
+    background:#8b5cf6;
+
+    bottom:-100px;
+    right:-100px;
+
+}
+
+/*====================================================
+                FILTERS
+====================================================*/
+
 .outcome-filters-light{
+
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    gap:10px;
-    margin-top:40px;
+    gap:18px;
+    margin:60px 0;
+
 }
 
 .outcome-filters-light button{
-    padding:10px 18px;
-    border-radius:50px;
-    border:1px solid #e2e8f0;
-    background:white;
-    color:#334155;
+
+    border:none;
+    outline:none;
     cursor:pointer;
-    transition:.3s;
-    font-weight:600;
+
+    padding:14px 28px;
+
+    border-radius:60px;
+
+    background:#fff;
+
+    color:#475569;
+
+    font-weight:700;
+
+    font-size:15px;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+
 }
 
 .outcome-filters-light button:hover{
-    background:#eef2ff;
+
     transform:translateY(-3px);
-    border-color:#c7d2fe;
+
 }
 
-.outcome-filters-light .active{
-    background:#4f46e5;
-    color:white;
-    border-color:#4f46e5;
+.outcome-filters-light button.active{
+
+    background:linear-gradient(135deg,#4f46e5,#8b5cf6);
+
+    color:#fff;
+
+    box-shadow:0 18px 35px rgba(99,102,241,.35);
+
 }
 
-/* GRID */
+/*====================================================
+                GRID
+====================================================*/
+
 .outcome-grid-light{
+
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:22px;
-    margin-top:60px;
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+
 }
 
-/* CARD */
+/*====================================================
+                CARD
+====================================================*/
+
 .outcome-card-light{
-    background:white;
-    border-radius:22px;
+
+    position:relative;
+
     overflow:hidden;
-    box-shadow:0 10px 30px rgba(15,23,42,.08);
-    transition:.4s;
+
+    border-radius:34px;
+
+    min-height:380px;
+
     cursor:pointer;
+
+    transition:.45s;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.08);
+
 }
 
-.outcome-card-light:hover{
-    transform:translateY(-10px);
-    box-shadow:0 20px 50px rgba(15,23,42,.15);
-}
+/* Image */
 
-/* IMAGE */
 .outcome-card-light img{
+
     width:100%;
-    height:200px;
+    height:100%;
     object-fit:cover;
+    display:block;
+
+    transition:.6s;
+
 }
 
-/* INFO */
+/* Dark Overlay */
+
+.outcome-card-light::after{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(15,23,42,.92),
+            rgba(15,23,42,.45),
+            rgba(15,23,42,.1)
+        );
+
+}
+
+/* Floating Gradient Glow */
+
+.outcome-card-light::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:240px;
+    height:240px;
+
+    border-radius:50%;
+
+    top:-120px;
+    right:-120px;
+
+    opacity:.25;
+
+    filter:blur(40px);
+
+    z-index:1;
+
+}
+
+/*====================================================
+                CARD CONTENT
+====================================================*/
+
 .outcome-card-light .info{
-    padding:16px;
+
+    position:absolute;
+
+    left:30px;
+    right:30px;
+    bottom:30px;
+
+    z-index:3;
+
+    color:#fff;
+
 }
 
 .outcome-card-light h3{
-    font-size:18px;
-    margin-bottom:5px;
+
+    font-size:32px;
+
+    margin-bottom:12px;
+
+    font-weight:900;
+
 }
 
 .outcome-card-light p{
-    color:#475569;
-    font-weight:600;
+
+    font-size:20px;
+
+    margin-bottom:18px;
+
+    opacity:.95;
+
 }
 
-/* TAG */
 .outcome-card-light span{
+
     display:inline-block;
-    margin-top:8px;
-    font-size:12px;
-    padding:4px 10px;
-    background:#eef2ff;
-    color:#4f46e5;
+
+    padding:10px 18px;
+
     border-radius:50px;
+
+    background:rgba(255,255,255,.16);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    font-weight:700;
+
 }
 
-/* HIDE */
-.hide{
-    display:none;
+/*====================================================
+                HOVER
+====================================================*/
+
+.outcome-card-light:hover{
+
+    transform:
+        translateY(-12px)
+        rotate(-1deg);
+
+    box-shadow:
+        0 40px 90px rgba(0,0,0,.18);
+
+}
+
+.outcome-card-light:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/*====================================================
+            INDIVIDUAL COLORS
+====================================================*/
+
+/* Software */
+
+.outcome-card-light:nth-child(1)::before{
+
+    background:#3b82f6;
+
+}
+
+/* Data */
+
+.outcome-card-light:nth-child(2)::before{
+
+    background:#8b5cf6;
+
+}
+
+/* UI */
+
+.outcome-card-light:nth-child(3)::before{
+
+    background:#ec4899;
+
+}
+
+/* AI */
+
+.outcome-card-light:nth-child(4)::before{
+
+    background:#22c55e;
+
+}
+
+/*====================================================
+            ANIMATION
+====================================================*/
+
+.outcome-card-light{
+
+    opacity:0;
+    transform:translateY(40px);
+
+    animation:careerFade .8s forwards;
+
+}
+
+.outcome-card-light:nth-child(2){
+
+    animation-delay:.15s;
+
+}
+
+.outcome-card-light:nth-child(3){
+
+    animation-delay:.3s;
+
+}
+
+.outcome-card-light:nth-child(4){
+
+    animation-delay:.45s;
+
+}
+
+@keyframes careerFade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/*====================================================
+            RESPONSIVE
+====================================================*/
+
+@media(max-width:992px){
+
+.outcome-grid-light{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.career-outcomes-light{
+
+padding:90px 20px;
+
+}
+
+.outcome-card-light{
+
+min-height:320px;
+
+}
+
+.outcome-card-light h3{
+
+font-size:26px;
+
+}
+
+.outcome-card-light p{
+
+font-size:17px;
+
+}
+
+.outcome-filters-light{
+
+gap:10px;
+
+}
+
+.outcome-filters-light button{
+
+padding:12px 18px;
+
+font-size:14px;
+
+}
+
 }
 
 /* =========================
@@ -615,7 +1169,7 @@ font-size:24px;
 
 .projects-showcase{
     padding:100px 0;
-    background:#ffffff;
+    /* background:#ffffff; */
 }
 
 /* GRID */
@@ -691,104 +1245,373 @@ font-size:24px;
 /* =========================
    COURSE COMPARE STRIP
 ========================= */
+/*==========================================
+            COURSE COMPARE
+==========================================*/
 
 .course-compare{
-    padding:100px 0;
-    background: radial-gradient(circle at top left,#5b8cff 0,#4f46e5 35%,#2d1b69 100%);
-    color:white;
+
+    padding:120px 80px;
+
+    background:
+    linear-gradient(180deg,#f8fbff,#ffffff);
+
 }
 
-/* SCROLL WRAPPER */
+/*----------------------------------*/
+
 .compare-wrapper{
-    margin-top:60px;
-    overflow:hidden;
-}
 
-/* TRACK (SWIPE AREA) */
-.compare-track{
-    display:flex;
-    gap:25px;
     overflow-x:auto;
-    padding:20px;
-    scroll-snap-type:x mandatory;
+
+    padding-bottom:20px;
+
 }
 
-/* hide scrollbar */
-.compare-track::-webkit-scrollbar{
-    display:none;
+.compare-wrapper::-webkit-scrollbar{
+
+    height:8px;
+
 }
 
-/* CARD */
+.compare-wrapper::-webkit-scrollbar-thumb{
+
+    background:#6366f1;
+    border-radius:20px;
+
+}
+
+/*----------------------------------*/
+
+.compare-track{
+
+    display:flex;
+
+    gap:35px;
+
+    width:max-content;
+
+}
+
+/*==========================================
+            CARD
+==========================================*/
+
 .compare-card{
-    min-width:300px;
-    background:rgba(255,255,255,.1);
-    backdrop-filter:blur(15px);
-    border:1px solid rgba(255,255,255,.2);
-    border-radius:24px;
+
+    width:340px;
+
+    background:white;
+
+    border-radius:32px;
+
     overflow:hidden;
-    scroll-snap-align:center;
-    transition:.4s;
-    box-shadow:0 20px 60px rgba(0,0,0,.25);
+
+    position:relative;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+    transition:.45s;
+
 }
 
-/* IMAGE */
-.compare-card img{
+.compare-card:hover{
+
+    transform:translateY(-14px);
+
+}
+
+/*==========================================
+        TOP BANNER
+==========================================*/
+
+.top-banner{
+
+    height:90px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+}
+
+/*==========================================
+            IMAGE
+==========================================*/
+
+.course-image{
+
+    width:130px;
+    height:130px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    margin:-55px auto 20px;
+
+    border:8px solid white;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+.course-image img{
+
     width:100%;
-    height:180px;
+    height:100%;
     object-fit:cover;
+
 }
 
-/* INFO */
-.compare-card .info{
-    padding:16px;
-}
+/*==========================================
+            TEXT
+==========================================*/
 
 .compare-card h3{
-    margin-bottom:5px;
+
+    text-align:center;
+
+    font-size:30px;
+
+    margin-top:10px;
+
 }
 
-.compare-card p{
-    color:#e5e7eb;
-    font-weight:600;
+.salary{
+
+    width:max-content;
+
+    margin:auto;
+
+    padding:10px 22px;
+
+    border-radius:40px;
+
+    color:white;
+
+    font-weight:800;
+
+    margin-bottom:18px;
+
 }
 
-/* TAGS */
-.meta{
-    display:flex;
-    flex-wrap:wrap;
-    gap:6px;
+/*==========================================
+        PROGRESS
+==========================================*/
+
+.skill-level{
+
+    padding:0 30px;
+
+    margin:25px 0;
+
+}
+
+.progress{
+
+    height:10px;
+
+    background:#e5e7eb;
+
+    border-radius:30px;
+
     margin:10px 0;
+
+    overflow:hidden;
+
 }
 
-.meta span{
-    font-size:12px;
-    padding:4px 10px;
-    border-radius:50px;
-    background:rgba(255,255,255,.15);
+.fill{
+
+    height:100%;
+
+    border-radius:30px;
+
 }
 
-/* BUTTON */
-.compare-card button{
-    width:100%;
-    padding:10px;
-    border:none;
-    border-radius:12px;
-    background:white;
-    color:#4f46e5;
+/*==========================================
+        TAGS
+==========================================*/
+
+.course-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:0 25px;
+
+}
+
+.course-tags span{
+
+    padding:8px 16px;
+
+    border-radius:40px;
+
+    font-size:14px;
+
     font-weight:700;
+
+}
+
+/*==========================================
+        FEATURES
+==========================================*/
+
+.compare-card ul{
+
+    margin:30px;
+
+    padding:0;
+
+    list-style:none;
+
+}
+
+.compare-card li{
+
+    margin-bottom:16px;
+
+    color:#475569;
+
+}
+
+/*==========================================
+        BUTTON
+==========================================*/
+
+.compare-card button{
+
+    width:calc(100% - 60px);
+
+    margin:0 30px 30px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:16px;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:700;
+
     cursor:pointer;
-    transition:.3s;
+
+    transition:.35s;
+
 }
 
 .compare-card button:hover{
+
     transform:translateY(-3px);
-    box-shadow:0 10px 25px rgba(0,0,0,.3);
+
 }
 
-/* HOVER LIFT */
-.compare-card:hover{
-    transform:translateY(-8px);
+/*==========================================
+        COLOR THEMES
+==========================================*/
+
+/* AI */
+
+.compare-card.ai .top-banner,
+.compare-card.ai .salary,
+.compare-card.ai button,
+.compare-card.ai .fill{
+
+    background:linear-gradient(135deg,#8b5cf6,#6366f1);
+
 }
+
+.compare-card.ai .course-tags span{
+
+    background:#ede9fe;
+    color:#6d28d9;
+
+}
+
+/* DATA */
+
+.compare-card.data .top-banner,
+.compare-card.data .salary,
+.compare-card.data button,
+.compare-card.data .fill{
+
+    background:linear-gradient(135deg,#06b6d4,#3b82f6);
+
+}
+
+.compare-card.data .course-tags span{
+
+    background:#dbeafe;
+    color:#2563eb;
+
+}
+
+/* WEB */
+
+.compare-card.web .top-banner,
+.compare-card.web .salary,
+.compare-card.web button,
+.compare-card.web .fill{
+
+    background:linear-gradient(135deg,#10b981,#22c55e);
+
+}
+
+.compare-card.web .course-tags span{
+
+    background:#dcfce7;
+    color:#15803d;
+
+}
+
+/* UI */
+
+.compare-card.ui .top-banner,
+.compare-card.ui .salary,
+.compare-card.ui button,
+.compare-card.ui .fill{
+
+    background:linear-gradient(135deg,#ec4899,#f43f5e);
+
+}
+
+.compare-card.ui .course-tags span{
+
+    background:#fce7f3;
+    color:#be185d;
+
+}
+
+/*==========================================*/
+
+@media(max-width:768px){
+
+.compare-card{
+
+width:290px;
+
+}
+
+}
+
 
 /* =========================
    INSTRUCTOR ALT WALL
@@ -796,7 +1619,7 @@ font-size:24px;
 
 .instructor-wall-alt{
     padding:100px 0;
-    background:#f8fafc;
+    /* background:#f8fafc; */
 }
 
 /* LAYOUT */
@@ -919,7 +1742,7 @@ font-size:24px;
 
 .course-lab{
     padding:100px 0;
-    background:#f8fafc;
+    /* background:#f8fafc; */
 }
 
 /* WRAPPER */
@@ -1025,4 +1848,534 @@ font-size:24px;
     .lab-wrapper{
         grid-template-columns:1fr;
     }
+}
+
+
+/* =============== */
+.hidden {
+  display: none !important;
+}
+
+/* smoother project reveal */
+.project-card.preload {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s ease;
+}
+
+.project-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+/* ============================================== colors =================================================== */
+/*======================================
+    COLORFUL COURSE CARDS
+======================================*/
+
+/* Card 1 - Blue */
+.course:nth-child(1){
+    background:linear-gradient(135deg,#eff6ff,#ffffff);
+    border-top:6px solid #3b82f6;
+}
+.course:nth-child(1) .thumb{
+    background:linear-gradient(135deg,#2563eb,#60a5fa);
+}
+.course:nth-child(1) .tag{
+    background:#dbeafe;
+    color:#1d4ed8;
+}
+
+/* Card 2 - Cyan */
+.course:nth-child(2){
+    background:linear-gradient(135deg,#ecfeff,#ffffff);
+    border-top:6px solid #06b6d4;
+}
+.course:nth-child(2) .thumb{
+    background:linear-gradient(135deg,#0891b2,#22d3ee);
+}
+.course:nth-child(2) .tag{
+    background:#cffafe;
+    color:#0e7490;
+}
+
+/* Card 3 - Purple */
+.course:nth-child(3){
+    background:linear-gradient(135deg,#f5f3ff,#ffffff);
+    border-top:6px solid #8b5cf6;
+}
+.course:nth-child(3) .thumb{
+    background:linear-gradient(135deg,#7c3aed,#a78bfa);
+}
+.course:nth-child(3) .tag{
+    background:#ede9fe;
+    color:#6d28d9;
+}
+
+/* Card 4 - Pink */
+.course:nth-child(4){
+    background:linear-gradient(135deg,#fdf2f8,#ffffff);
+    border-top:6px solid #ec4899;
+}
+.course:nth-child(4) .thumb{
+    background:linear-gradient(135deg,#db2777,#f472b6);
+}
+.course:nth-child(4) .tag{
+    background:#fce7f3;
+    color:#be185d;
+}
+
+/* Card 5 - Orange */
+.course:nth-child(5){
+    background:linear-gradient(135deg,#fff7ed,#ffffff);
+    border-top:6px solid #f97316;
+}
+.course:nth-child(5) .thumb{
+    background:linear-gradient(135deg,#ea580c,#fb923c);
+}
+.course:nth-child(5) .tag{
+    background:#ffedd5;
+    color:#c2410c;
+}
+
+/* Card 6 - Yellow */
+.course:nth-child(6){
+    background:linear-gradient(135deg,#fefce8,#ffffff);
+    border-top:6px solid #eab308;
+}
+.course:nth-child(6) .thumb{
+    background:linear-gradient(135deg,#ca8a04,#fde047);
+}
+.course:nth-child(6) .tag{
+    background:#fef9c3;
+    color:#a16207;
+}
+
+/* Card 7 - Green */
+.course:nth-child(7){
+    background:linear-gradient(135deg,#ecfdf5,#ffffff);
+    border-top:6px solid #22c55e;
+}
+.course:nth-child(7) .thumb{
+    background:linear-gradient(135deg,#16a34a,#4ade80);
+}
+.course:nth-child(7) .tag{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+/* Card 8 - Emerald */
+.course:nth-child(8){
+    background:linear-gradient(135deg,#f0fdfa,#ffffff);
+    border-top:6px solid #10b981;
+}
+.course:nth-child(8) .thumb{
+    background:linear-gradient(135deg,#059669,#34d399);
+}
+.course:nth-child(8) .tag{
+    background:#d1fae5;
+    color:#047857;
+}
+
+/* Card 9 - Red */
+.course:nth-child(9){
+    background:linear-gradient(135deg,#fef2f2,#ffffff);
+    border-top:6px solid #ef4444;
+}
+.course:nth-child(9) .thumb{
+    background:linear-gradient(135deg,#dc2626,#f87171);
+}
+.course:nth-child(9) .tag{
+    background:#fee2e2;
+    color:#b91c1c;
+}
+
+/*======================================
+    PREMIUM HOVER EFFECT
+======================================*/
+
+.course{
+    position:relative;
+}
+
+.course::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:24px;
+    background:linear-gradient(
+        135deg,
+        rgba(255,255,255,.35),
+        transparent 45%
+    );
+    opacity:0;
+    transition:.4s;
+    pointer-events:none;
+}
+
+.course:hover::before{
+    opacity:1;
+}
+
+.course:hover{
+    transform:translateY(-12px) scale(1.02);
+}
+
+.thumb{
+    color:#fff;
+    text-shadow:0 4px 15px rgba(0,0,0,.25);
+}
+
+.tag{
+    font-weight:700;
+}
+
+/*======================================
+        PREMIUM ENROLL BUTTON
+======================================*/
+
+.course-footer .btn-secondary{
+    position: relative;
+    overflow: hidden;
+
+    padding: 12px 26px;
+    border: none;
+    border-radius: 50px;
+
+    background: linear-gradient(135deg,#6366f1,#8b5cf6);
+    color: #fff;
+
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .3px;
+
+    cursor: pointer;
+    transition: .35s ease;
+
+    box-shadow:
+        0 10px 25px rgba(99,102,241,.35);
+}
+
+/* Shine Effect */
+
+.course-footer .btn-secondary::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:60%;
+    height:100%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.6),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+    transition:.7s;
+}
+
+.course-footer .btn-secondary:hover::before{
+    left:160%;
+}
+
+/* Hover */
+
+.course-footer .btn-secondary:hover{
+    transform:translateY(-3px);
+    box-shadow:
+        0 18px 35px rgba(99,102,241,.45);
+}
+
+/* Click */
+
+.course-footer .btn-secondary:active{
+    transform:scale(.96);
+}
+
+/* Blue */
+.course:nth-child(1) .btn-secondary{
+    background:linear-gradient(135deg,#2563eb,#60a5fa);
+}
+
+/* Cyan */
+.course:nth-child(2) .btn-secondary{
+    background:linear-gradient(135deg,#0891b2,#22d3ee);
+}
+
+/* Purple */
+.course:nth-child(3) .btn-secondary{
+    background:linear-gradient(135deg,#7c3aed,#a78bfa);
+}
+
+/* Pink */
+.course:nth-child(4) .btn-secondary{
+    background:linear-gradient(135deg,#db2777,#f472b6);
+}
+
+/* Orange */
+.course:nth-child(5) .btn-secondary{
+    background:linear-gradient(135deg,#ea580c,#fb923c);
+}
+
+/* Yellow */
+.course:nth-child(6) .btn-secondary{
+    background:linear-gradient(135deg,#ca8a04,#facc15);
+    color:#111827;
+}
+
+/* Green */
+.course:nth-child(7) .btn-secondary{
+    background:linear-gradient(135deg,#16a34a,#4ade80);
+}
+
+/* Emerald */
+.course:nth-child(8) .btn-secondary{
+    background:linear-gradient(135deg,#059669,#34d399);
+}
+
+/* Red */
+.course:nth-child(9) .btn-secondary{
+    background:linear-gradient(135deg,#dc2626,#f87171);
+}
+
+
+/* ================================= MEDIA QUERRY ================================= */
+/* ===================================================
+   MOBILE RESPONSIVE (0px - 768px)
+=================================================== */
+
+@media (max-width:768px){
+
+    html,
+    body{
+        width:100%;
+        overflow-x:hidden;
+    }
+
+    *{
+        box-sizing:border-box;
+    }
+
+    img{
+        max-width:100%;
+        display:block;
+    }
+
+    .container{
+        width:100%;
+        padding:0 18px;
+        margin:0 auto;
+    }
+
+    section{
+        padding:70px 0;
+    }
+
+    /* ---------- SECTION HEAD ---------- */
+
+    .section-head{
+        margin-bottom:35px;
+    }
+
+    .section-head h2{
+        font-size:32px;
+        line-height:1.2;
+    }
+
+    .section-head p{
+        font-size:16px;
+    }
+
+    .chip{
+        font-size:13px;
+        padding:8px 16px;
+    }
+
+    /* ---------- HERO ---------- */
+
+    .course-hero{
+        min-height:90vh;
+        height:auto;
+        padding:120px 0 70px;
+    }
+
+    .hero-content{
+        width:100%;
+        padding:0 18px;
+    }
+
+    .hero-content h1{
+        font-size:36px;
+        line-height:1.2;
+    }
+
+    .hero-content p{
+        font-size:16px;
+    }
+
+    .search-box{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .search-box input,
+    .search-box button{
+        width:100%;
+    }
+
+    .categories{
+        gap:8px;
+    }
+
+    .categories span{
+        font-size:12px;
+        padding:8px 14px;
+    }
+
+    /* ---------- FILTER ---------- */
+
+    .filter-bar{
+        justify-content:flex-start;
+        overflow-x:auto;
+        flex-wrap:nowrap;
+        gap:10px;
+        padding-bottom:10px;
+        scrollbar-width:none;
+    }
+
+    .filter-bar::-webkit-scrollbar{
+        display:none;
+    }
+
+    .filter{
+        white-space:nowrap;
+        flex-shrink:0;
+        font-size:14px;
+        padding:10px 18px;
+    }
+
+    /* ---------- ALL GRIDS ---------- */
+
+    .courses-grid,
+    .path-scroll,
+    .outcome-grid-light,
+    .project-grid,
+    .wall-alt,
+    .lab-wrapper{
+        grid-template-columns:1fr;
+    }
+
+    /* ---------- COURSE ---------- */
+
+    .course-body{
+        padding:22px;
+    }
+
+    .course h3{
+        font-size:22px;
+    }
+
+    .course-footer{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:16px;
+    }
+
+    .course-footer .btn-secondary{
+        width:100%;
+    }
+
+    .price{
+        font-size:24px;
+    }
+
+    /* ---------- LEARNING PATH ---------- */
+
+    .learning-paths{
+        padding:70px 0;
+    }
+
+    .path-line{
+        display:none;
+    }
+
+    .path-node{
+        padding:22px;
+    }
+
+    .node-img{
+        width:85px;
+        height:85px;
+    }
+
+    .node-content h3{
+        font-size:22px;
+    }
+
+    /* ---------- CAREER OUTCOME ---------- */
+
+    .career-outcomes-light{
+        padding:70px 0;
+    }
+
+    .outcome-card-light{
+        min-height:300px;
+    }
+
+    .outcome-card-light .info{
+        left:20px;
+        right:20px;
+        bottom:20px;
+    }
+
+    .outcome-card-light h3{
+        font-size:24px;
+    }
+
+    .outcome-card-light p{
+        font-size:15px;
+    }
+
+    /* ---------- COMPARE ---------- */
+
+    .course-compare{
+        padding:70px 0;
+    }
+
+    .compare-card{
+        width:280px;
+    }
+
+    /* ---------- INSTRUCTORS ---------- */
+
+    .spotlight{
+        height:320px;
+    }
+
+    .small,
+    .tall{
+        height:220px;
+    }
+
+    /* ---------- LAB ---------- */
+
+    .editor textarea{
+        height:220px;
+    }
+
+    #outputBox{
+        height:180px;
+    }
+
+    .ai-box input,
+    .ai-box button{
+        width:100%;
+    }
+
 }

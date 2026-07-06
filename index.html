@@ -3,22 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CertifyPro — Certifications that get you hired</title>
+  <title>Stackly — Certifications that get you hired</title>
   <meta name="description" content="Online certification platform with expert-led courses across tech, design, business & more." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   <link rel="stylesheet" href="css/home.css" />
   <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="auth/auth.css">
 </head>
 <body data-page="home">
+
+    <div id="auth-container"></div>
+
+<div class="bg-gradient"></div>
+<div class="bg-blobs"></div>
+<canvas id="particles"></canvas>
+<div class="cursor-glow"></div>
+
   <!-- NAV -->
 <header class="nav-wrap">
     <div class="navbar">
 
         <a href="home.html" class="brand">
-            <span class="brand-mark">C</span>
-            <span>CertifyPro</span>
+            <img src="images/stackly-logo.webp" alt="Stackly" class="brand-img">
         </a>
 
         <nav class="nav-links" id="navMenu">
@@ -27,14 +39,31 @@
             <a href="certifications.html">Certifications</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
+
+            <div class="nav-contact-box">
+                <h3 class="contact-heading">Get in Touch</h3>
+                <div class="contact-item">
+                    <span class="item-label">Phone</span>
+                    <span class="item-value">📞 +1 (555) 019-2834</span>
+                </div>
+                <div class="contact-item">
+                    <span class="item-label">Email</span>
+                    <span class="item-value">✉️ support@Stackly.com</span>
+                </div>
+                <div class="contact-item">
+                    <span class="item-label">Location</span>
+                    <span class="item-value">📍 New York, NY, USA</span>
+                </div>
+            </div>
+
         </nav>
 
         <div class="nav-cta">
-            <button class="btn btn-ghost" data-open-modal="login-modal">
+            <button class="btn btn-ghost"  onclick="openAuth()">
                 Log in
             </button>
 
-            <button class="btn btn-primary" data-open-modal="signup-modal">
+            <button class="btn btn-primary"  onclick="openAuth()">
                 Get Started
             </button>
 
@@ -57,14 +86,14 @@
     <div class="dot-grid"></div>
     <div class="container hero-grid">
       <div>
-        <span class="chip">🎓 Trusted by 200k+ learners</span>
-        <h1>Certifications <span class="swipe">that actually</span> <span class="underline">land jobs.</span></h1>
-        <p class="lead">Master in-demand skills with hands-on projects, expert mentors, and industry-recognized credentials — all in one bright, joyful place.</p>
-        <div class="hero-actions">
+        <span class="chip reveal-left">🎓 Trusted by 200k+ learners</span>
+        <h1 reveal-pop>Certifications <span class="swipe">that actually</span> <span class="underline">land jobs.</span></h1>
+        <p class="lead reveal-right">Master in-demand skills with hands-on projects, expert mentors, and industry-recognized credentials — all in one bright, joyful place.</p>
+        <div class="hero-actions reveal-up">
           <button class="btn btn-primary" data-open-modal="signup-modal">Start free trial →</button>
-          <a class="btn btn-yellow" href="/site/courses.html">Browse courses</a>
+          <a class="btn btn-yellow" href="error.html">Browse courses</a>
         </div>
-        <div class="hero-stats">
+        <div class="hero-stats reveal-pop">
           <div><strong>200k+</strong><span>Active learners</span></div>
           <div><strong>450+</strong><span>Certifications</span></div>
           <div><strong>96%</strong><span>Completion rate</span></div>
@@ -96,13 +125,13 @@
   </section>
 
 <!-- COMPANY SLIDER -->
-<section class="trusted">
+<section class="trusted ">
     <div class="container">
 
         <div class="section-head">
-            <span class="chip">Trusted Worldwide</span>
-            <h2>Trusted by Leading Companies</h2>
-            <p>Our certifications help professionals get hired by top organizations around the world.</p>
+            <span class="chip reveal-left">Trusted Worldwide</span>
+            <h2 class="reveal-right">Trusted by Leading Companies</h2>
+            <p class="reveal-up" >Our certifications help professionals get hired by top organizations around the world.</p>
         </div>
 
         <div class="company-slider">
@@ -165,21 +194,21 @@
 </section>
 
 <!-- LEARNING JOURNEY -->
- <section class="journey">
+ <section class="journey ">
   <div class="container">
 
     <div class="section-head">
-      <span class="chip">🚀 Learning Journey</span>
-      <h2>Your path to a better career</h2>
-      <p>Follow a structured roadmap designed by industry experts.</p>
+      <span class="chip reveal-left">🚀 Learning Journey</span>
+      <h2 class="reveal-right">Your path to a better career</h2>
+      <p class="reveal-up">Follow a structured roadmap designed by industry experts.</p>
     </div>
 
     <div class="journey-grid">
 
       <!-- Step 1 -->
-      <div class="journey-card">
+      <div class="journey-card reveal-pop">
         <div class="img-box">
-          <img src="images/choose-course.jpg" alt="Choose Course">
+          <img src="images/choose-your-course1.webp" alt="Choose Course">
         </div>
         <div class="step">Step 1</div>
         <h3>Choose Your Course</h3>
@@ -187,9 +216,9 @@
       </div>
 
       <!-- Step 2 -->
-      <div class="journey-card">
+      <div class="journey-card reveal-pop">
         <div class="img-box">
-          <img src="images/learn-online.jpg" alt="Learn Online">
+          <img src="images/choose-your-course2.webp" alt="Learn Online">
         </div>
         <div class="step">Step 2</div>
         <h3>Learn from Experts</h3>
@@ -197,9 +226,9 @@
       </div>
 
       <!-- Step 3 -->
-      <div class="journey-card">
+      <div class="journey-card reveal-pop">
         <div class="img-box">
-          <img src="images/build-project.jpg" alt="Build Projects">
+          <img src="images/choose-your-course3.webp" alt="Build Projects">
         </div>
         <div class="step">Step 3</div>
         <h3>Build Real Projects</h3>
@@ -207,9 +236,9 @@
       </div>
 
       <!-- Step 4 -->
-      <div class="journey-card">
+      <div class="journey-card reveal-pop">
         <div class="img-box">
-          <img src="images/certificate.jpg" alt="Get Certified">
+          <img src="images/choose-your-course4.webp" alt="Get Certified">
         </div>
         <div class="step">Step 4</div>
         <h3>Get Certified & Hired</h3>
@@ -222,13 +251,13 @@
 </section>
 
 <!-- TRANSFORMATION STORY -->
-<section class="transformation">
+<section class="transformation ">
   <div class="container">
 
     <div class="section-head">
-      <span class="chip">🔥 Career Transformation</span>
-      <h2>From learning → to landing jobs</h2>
-      <p>Real students. Real transformations. Real careers built with CertifyPro.</p>
+      <span class="chip reveal-left">🔥 Career Transformation</span>
+      <h2 class="reveal-right">From learning → to landing jobs</h2>
+      <p class="reveal-up">Real students. Real transformations. Real careers built with Stackly.</p>
     </div>
 
     <div class="story">
@@ -236,8 +265,8 @@
       <!-- STORY 1 -->
       <div class="story-block">
 
-        <div class="story-side before">
-          <img src="images/before-student.jpg" alt="Before learning">
+        <div class="story-side before reveal-pop">
+          <img src="images/Course Planning.webp" alt="Before learning">
           <div class="label">Before</div>
           <h3>Confused & stuck</h3>
           <p>No clear direction. Watching random tutorials. No projects.</p>
@@ -245,8 +274,8 @@
 
         <div class="arrow">→</div>
 
-        <div class="story-side after">
-          <img src="images/after-student.jpg" alt="After learning">
+        <div class="story-side after reveal-pop">
+          <img src="images/AI Model Training.webp" alt="After learning">
           <div class="label">After</div>
           <h3>Cloud Engineer at AWS</h3>
           <p>Built 5 projects, got certified, and landed a high-paying job.</p>
@@ -258,8 +287,8 @@
       <!-- STORY 2 -->
       <div class="story-block">
 
-        <div class="story-side before">
-          <img src="images/before-ai.jpg" alt="Before AI learning">
+        <div class="story-side before reveal-pop">
+          <img src="images/Software Engineer.webp" alt="Before AI learning">
           <div class="label">Before</div>
           <h3>Fresher with no skills</h3>
           <p>Struggling to find direction in tech.</p>
@@ -267,8 +296,8 @@
 
         <div class="arrow">→</div>
 
-        <div class="story-side after">
-          <img src="images/after-ai.jpg" alt="After AI learning">
+        <div class="story-side after reveal-pop">
+          <img src="images/Fresher with no skills.webp" alt="After AI learning">
           <div class="label">After</div>
           <h3>AI Engineer at Startup</h3>
           <p>Built ML models, learned deep learning, got hired fast.</p>
@@ -284,21 +313,21 @@
 
 
 <!-- CAREER PATH -->
-<section class="career">
+<section class="career ">
   <div class="container">
 
     <div class="section-head">
-      <span class="chip">⭐ Career Paths</span>
-      <h2>Choose your future role</h2>
-      <p>Industry-aligned career tracks with salary insights and skills roadmap.</p>
+      <span class="chip reveal-left">⭐ Career Paths</span>
+      <h2 class="reveal-right">Choose your future role</h2>
+      <p class="reveal-up">Industry-aligned career tracks with salary insights and skills roadmap.</p>
     </div>
 
     <div class="career-grid">
 
       <!-- Card 1 -->
-      <div class="career-card">
+      <div class="career-card reveal-pop">
         <div class="career-img">
-          <img src="images/cloud-engineer.jpg" alt="Cloud Engineer">
+          <img src="images/Cloud Engineer.webp" alt="Cloud Engineer">
         </div>
 
         <div class="career-body">
@@ -312,14 +341,14 @@
 
           <div class="salary">₹14 LPA Avg</div>
 
-          <button class="btn btn-primary">Explore Path</button>
+          <button class="btn btn-primary" onclick="window.location.href='error.html'">Explore Path</button>
         </div>
       </div>
 
       <!-- Card 2 -->
-      <div class="career-card">
+      <div class="career-card reveal-pop">
         <div class="career-img">
-          <img src="images/ai-engineer.jpg" alt="AI Engineer">
+          <img src="images/AI Engineer.webp" alt="AI Engineer">
         </div>
 
         <div class="career-body">
@@ -333,14 +362,14 @@
 
           <div class="salary">₹18 LPA Avg</div>
 
-          <button class="btn btn-primary">Explore Path</button>
+          <button class="btn btn-primary" onclick="window.location.href='error.html'">Explore Path</button>
         </div>
       </div>
 
       <!-- Card 3 -->
-      <div class="career-card">
+      <div class="career-card reveal-pop">
         <div class="career-img">
-          <img src="images/cyber-security.jpg" alt="Cyber Security">
+          <img src="images/Cyber Security.webp" alt="Cyber Security">
         </div>
 
         <div class="career-body">
@@ -354,7 +383,7 @@
 
           <div class="salary">₹12 LPA Avg</div>
 
-          <button class="btn btn-primary">Explore Path</button>
+          <button class="btn btn-primary" onclick="window.location.href='error.html'">Explore Path</button>
         </div>
       </div>
 
@@ -364,16 +393,16 @@
 </section>
 
 <!-- MOCK DASHBOARD -->
-<section class="dashboard-preview">
+<section class="dashboard-preview ">
   <div class="container">
 
     <div class="section-head">
-      <span class="chip">📊 Dashboard Preview</span>
-      <h2>Your learning workspace</h2>
-      <p>Everything you need — progress, courses, goals, and achievements in one place.</p>
+      <span class="chip reveal-left">📊 Dashboard Preview</span>
+      <h2 class="reveal-right">Your learning workspace</h2>
+      <p class="reveal-up">Everything you need — progress, courses, goals, and achievements in one place.</p>
     </div>
 
-    <div class="dashboard">
+    <div class="dashboard reveal-pop">
 
       <!-- LEFT SIDEBAR -->
       <div class="dash-sidebar">
@@ -435,7 +464,7 @@
 
         <!-- ACTIVITY -->
         <div class="activity">
-          <h4>Recent Activity</h4>
+          <!-- <h4>Recent Activity</h4> -->
 
           <div class="bar">
             <span>Mon</span>
@@ -472,21 +501,21 @@
 </section>
 
 <!-- REAL WORK -->
-<section class="simulation">
+<section class="simulation ">
   <div class="container">
 
     <div class="section-head">
-      <span class="chip">🧪 Real Work Simulation</span>
-      <h2>Practice like you're already on the job</h2>
-      <p>Work on real-world tools used by professionals — not just theory.</p>
+      <span class="chip reveal-left">🧪 Real Work Simulation</span>
+      <h2 class="reveal-right">Practice like you're already on the job</h2>
+      <p class="reveal-up">Work on real-world tools used by professionals — not just theory.</p>
     </div>
 
     <div class="sim-grid">
 
       <!-- MAIN BIG SIMULATION -->
-      <div class="sim-main">
+      <div class="sim-main reveal-pop">
 
-        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" alt="Coding workspace">
+        <img src="images/200,000+ Learners.webp" alt="Coding workspace">
 
         <div class="overlay">
 
@@ -505,9 +534,9 @@
       </div>
 
       <!-- SIDE SIM 1 -->
-      <div class="sim-side">
+      <div class="sim-side reveal-pop">
 
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Data dashboard">
+        <img src="images/Analytics Dashboard.webp" alt="Data dashboard">
 
         <div class="sim-label">
           <h4>Analytics Dashboard</h4>
@@ -517,9 +546,9 @@
       </div>
 
       <!-- SIDE SIM 2 -->
-      <div class="sim-side">
+      <div class="sim-side reveal-pop">
 
-        <img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72" alt="AI model screen">
+        <img src="images/AI Model Training.webp" alt="AI model screen">
 
         <div class="sim-label">
           <h4>AI Model Training</h4>
@@ -535,12 +564,12 @@
 
 <!-- WHY CHOOSE US -->
 
-  <section>
+  <section >
     <div class="container">
       <div class="section-head">
-        <span class="chip">✨ Why CertifyPro</span>
-        <h2>Everything you need to level up.</h2>
-        <p>We built the platform we always wished existed — colorful, human, and ruthlessly effective.</p>
+        <span class="chip reveal-left">✨ Why Stackly</span>
+        <h2 class="reveal-right">Everything you need to level up.</h2>
+        <p class="reveal-up">We built the platform we always wished existed — colorful, human, and ruthlessly effective.</p>
       </div>
       <div class="features-grid">
         <div class="feature"><div class="icon">🚀</div><h3>Project-based learning</h3><p>Build real portfolio projects while you learn. No fluff, no filler lectures.</p></div>
@@ -556,54 +585,152 @@
   <section>
     <div class="container">
       <div class="section-head">
-        <span class="chip">📚 Popular right now</span>
-        <h2>Hot certifications this month.</h2>
+        <span class="chip reveal-left">📚 Popular right now</span>
+        <h2 class="reveal-right">Hot certifications this month.</h2>
       </div>
       <div class="courses-grid">
-        <div class="course">
+        <div class="course reveal-pop">
           <div class="thumb">☁️</div>
           <div class="course-body">
             <div class="meta"><span class="tag">Cloud</span><span class="tag">12 weeks</span></div>
             <h3>AWS Solutions Architect</h3>
             <p>Design scalable, resilient cloud systems the industry-standard way.</p>
-            <div class="course-footer"><span class="price">$249</span><a class="btn btn-secondary" href="/site/courses.html">Enroll</a></div>
+            <div class="course-footer"><span class="price">$249</span><a class="btn btn-secondary" href="error.html">Enroll</a></div>
           </div>
         </div>
-        <div class="course">
+        <div class="course reveal-pop">
           <div class="thumb">🧠</div>
           <div class="course-body">
             <div class="meta"><span class="tag">AI/ML</span><span class="tag">16 weeks</span></div>
             <h3>Machine Learning Pro</h3>
             <p>From regressions to transformers. Ship 5 production ML projects.</p>
-            <div class="course-footer"><span class="price">$349</span><a class="btn btn-secondary" href="/site/courses.html">Enroll</a></div>
+            <div class="course-footer"><span class="price">$349</span><a class="btn btn-secondary" href="error.html">Enroll</a></div>
           </div>
         </div>
-        <div class="course">
+        <div class="course reveal-pop">
           <div class="thumb">🎨</div>
           <div class="course-body">
             <div class="meta"><span class="tag">Design</span><span class="tag">10 weeks</span></div>
             <h3>Product Design Master</h3>
             <p>Research, prototype, and ship real digital products end-to-end.</p>
-            <div class="course-footer"><span class="price">$219</span><a class="btn btn-secondary" href="/site/courses.html">Enroll</a></div>
+            <div class="course-footer"><span class="price">$219</span><a class="btn btn-secondary" href="error.html">Enroll</a></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section>
+  <section class="reveal-pop">
     <div class="container">
       <div class="cta-banner">
         <h2>Your future self will thank you.</h2>
         <p>Join thousands earning credentials that open real doors.</p>
-        <button class="btn btn-yellow" data-open-modal="signup-modal">Start learning free →</button>
+        <button class="btn btn-yellow" onclick="window.location.href='error.html'">Start learning free →</button>
       </div>
     </div>
   </section>
+
+<!-- FOOTER -->
+<footer class="site-footer ">
+
+  <div class="container footer-grid">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">
+         <img src="images/stackly-logo.webp" alt="Stackly Logo">
+      </a>
+      <p>
+        Build real skills, earn industry certifications, and launch your career
+        with confidence. Learn by doing, not just watching.
+      </p>
+
+      <div class="socials">
+            <a onclick="window.location.href = 'error.html'">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a onclick="window.location.href = 'error.html'">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a onclick="window.location.href = 'error.html'">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a onclick="window.location.href = 'error.html'">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+    </div>
+
+    <!-- LINKS -->
+    <div class="footer-col">
+      <h3>Explore</h3>
+      <a href="error.html">Courses</a>
+      <a href="error.html">Certifications</a>
+      <a href="error.html">Learning Paths</a>
+      <a href="error.html">Projects</a>
+      <a href="error.html">Pricing</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Company</h3>
+      <a href="error.html">About Us</a>
+      <a href="error.html">Careers</a>
+      <a href="error.html">Blog</a>
+      <a href="error.html">Partners</a>
+      <a href="error.html">Contact</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Support</h3>
+      <a href="error.html">Help Center</a>
+      <a href="error.html">FAQs</a>
+      <a href="error.html">Terms</a>
+      <a href="error.html">Privacy Policy</a>
+      <a href="error.html">Refund Policy</a>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="footer-newsletter">
+      <h3>Stay Updated</h3>
+      <p>Get new courses, career tips, and updates weekly.</p>
+
+      <div class="newsletter-box">
+        <input type="email" placeholder="Enter your email">
+        <button  onclick="window.location.href = 'error.html'">Subscribe</button>
+      </div>
+
+      <small>No spam. Unsubscribe anytime.</small>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom">
+    <p>© 2026 Stackly. All rights reserved.</p>
+
+    <div class="footer-links">
+      <a href="error.html">Terms</a>
+      <a href="error.html">Privacy</a>
+      <a href="error.html">Cookies</a>
+    </div>
+  </div>
+
+</footer>
+
+    <!-- Scripts -->
+
+    <script>
+        fetch("auth/auth.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("auth-container").innerHTML = html;
+  });
+    </script>
 
   
   <div id="modal-slot"></div>
   <script src="js/common.js"></script>
   <script src="js/home.js"></script>
+  <script  src="auth/auth.js" defer></script>
 </body>
 </html>

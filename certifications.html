@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/certifications.css">
+    <link rel="stylesheet" href="auth/auth.css" />
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="auth-container"></div>
+
+<div class="bg-gradient"></div>
+<div class="bg-blobs"></div>
+<canvas id="particles"></canvas>
+<div class="cursor-glow"></div>
+
+    
+      <!-- NAV -->
+<header class="nav-wrap">
+    <div class="navbar">
+
+        <a href="home.html" class="brand">
+            <img src="images/stackly-logo.webp" alt="Stackly" class="brand-img">
+        </a>
+
+        <nav class="nav-links" id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="certifications.html">Certifications</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-cta">
+            <button class="btn btn-ghost" onclick="openAuth()">
+                Log in
+            </button>
+
+            <button class="btn btn-primary" onclick="openAuth()">
+                Get Started
+            </button>
+
+            <button
+                class="nav-toggle"
+                id="navToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+                aria-controls="navMenu">
+                ☰
+            </button>
+        </div>
+
+    </div>
+</header>
+
+    <!-- HERO -->
+<section class="cert-hero">
+
+    <div class="cert-bg"></div>
+
+    <div class="container">
+
+        <!-- TOP TEXT -->
+
+        <div class="cert-hero-content">
+
+            <span class="chip reveal-left">🏆 Industry-Recognized Certifications</span>
+
+            <h1 class="reveal-right">
+                Get certified.<br>
+                Get hired.<br>
+                <span>Build your future.</span>
+            </h1>
+
+            <p class="reveal-up">
+                Learn job-ready skills, complete real-world projects,
+                and earn certifications trusted by top companies worldwide.
+            </p>
+
+            <!-- SEARCH BAR -->
+
+            <div class="cert-search reveal-pop">
+
+                <input type="text" placeholder="Search certifications (AWS, AI, Design...)">
+
+                <button onclick="window.location.href='error.html'">Search</button>
+
+            </div>
+
+            <!-- QUICK STATS -->
+
+            <div class="cert-stats reveal-pop">
+
+                <div class="stat-box">
+                    <h3 data-target="450">0</h3>
+                    <span>Certifications</span>
+                </div>
+
+                <div class="stat-box">
+                    <h3 data-target="300">0</h3>
+                    <span>Hiring Partners</span>
+                </div>
+
+                <div class="stat-box">
+                    <h3 data-target="96">0</h3>
+                    <span>Success Rate</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- VISUAL SIDE -->
+
+        <div class="cert-visual">
+
+            <img src="images/Live Code Editor.webp" alt="certification learning">
+
+            <!-- floating badges -->
+
+            <div class="badge b1">☁️ AWS Certified</div>
+
+            <div class="badge b2">🧠 AI Engineer Track</div>
+
+            <div class="badge b3">🎨 UX Design Pro</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- section-2 -->
+<section class="cert-path">
+
+    <div class="container">
+
+        <div class="section-head">
+            <span class="chip reveal-left">🧭 Certification Path Explorer</span>
+            <h2 class="reveal-right">Your career journey, step by step.</h2>
+            <p class="reveal-up">
+                Follow structured learning paths designed to take you from beginner
+                to job-ready professional.
+            </p>
+        </div>
+
+        <!-- HORIZONTAL SCROLL MAP -->
+
+        <div class="path-scroll">
+
+            <div class="path-line"></div>
+
+            <!-- Step 1 -->
+            <div class="path-node reveal-pop">
+                <div class="node-icon">🟢</div>
+                <h3>Beginner</h3>
+                <p>Start with fundamentals and core concepts.</p>
+                <span>Cloud • Design • Dev Basics</span>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="path-node reveal-pop">
+                <div class="node-icon">🔵</div>
+                <h3>Intermediate</h3>
+                <p>Work on real-world guided projects.</p>
+                <span>APIs • UI Systems • Data Handling</span>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="path-node reveal-pop">
+                <div class="node-icon">🟣</div>
+                <h3>Advanced</h3>
+                <p>Build industry-level production projects.</p>
+                <span>Scalability • AI • Cloud Architecture</span>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="path-node reveal-pop">
+                <div class="node-icon">🟡</div>
+                <h3>Job Ready</h3>
+                <p>Mock interviews, portfolio & certification exam.</p>
+                <span>Resume • Interview • Certification</span>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="path-node reveal-pop">
+                <div class="node-icon">🟣</div>
+                <h3>Advanced</h3>
+                <p>Build industry-level production projects.</p>
+                <span>Scalability • AI • Cloud Architecture</span>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="path-node reveal-pop">
+                <div class="node-icon">🟣</div>
+                <h3>Advanced</h3>
+                <p>Build industry-level production projects.</p>
+                <span>Scalability • AI • Cloud Architecture</span>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="path-node reveal-pop">
+                <div class="node-icon">🟣</div>
+                <h3>Advanced</h3>
+                <p>Build industry-level production projects.</p>
+                <span>Scalability • AI • Cloud Architecture</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CERTIFICATIONS TYPES -->
+<section class="cert-types">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <span class="chip reveal-left">🏆 Certification Categories</span>
+
+            <h2 class="reveal-right">Choose the path that matches your ambitions.</h2>
+
+            <p class="reveal-up">
+                Explore certifications designed by industry professionals
+                across today's fastest-growing career domains.
+            </p>
+
+        </div>
+
+        <!-- CLOUD -->
+
+        <div class="type-row reveal-pop">
+
+            <img src="images/Cloud Computing.webp">
+
+            <div class="overlay">
+
+                <h3>☁ Cloud Computing</h3>
+
+                <div class="pills">
+
+                    <span>AWS</span>
+                    <span>Azure</span>
+                    <span>Google Cloud</span>
+                    <span>Kubernetes</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- AI -->
+
+        <div class="type-row reveal-pop">
+
+            <img src="images/Artificial Intelligence.webp">
+
+            <div class="overlay">
+
+                <h3>🧠 Artificial Intelligence</h3>
+
+                <div class="pills">
+
+                    <span>Python</span>
+                    <span>LLMs</span>
+                    <span>TensorFlow</span>
+                    <span>Computer Vision</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- DEVELOPMENT -->
+
+        <div class="type-row reveal-pop">
+
+            <img src="images/Software Development.webp">
+
+            <div class="overlay">
+
+                <h3>💻 Software Development</h3>
+
+                <div class="pills">
+
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>Java</span>
+                    <span>Python</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- DESIGN -->
+
+        <div class="type-row reveal-pop">
+
+            <img src="images/UIUX Designer.webp">
+
+            <div class="overlay">
+
+                <h3>🎨 UI / UX Design</h3>
+
+                <div class="pills">
+
+                    <span>Figma</span>
+                    <span>UX Research</span>
+                    <span>Wireframing</span>
+                    <span>Design Systems</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- EMPLOYER RECOGNITION -->
+<section class="employers">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <span class="chip reveal-left">🏢 Employer Recognition</span>
+
+            <h2 class="reveal-right">Trusted by hiring teams worldwide.</h2>
+
+            <p class="reveal-up">
+                Our learners work at startups, unicorns and Fortune 500
+                companies across the globe.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- Row 1 -->
+
+    <div class="logo-slider reveal-pop">
+
+        <div class="logo-track">
+
+            <span>Google</span>
+            <span>Microsoft</span>
+            <span>Amazon</span>
+            <span>Meta</span>
+            <span>Apple</span>
+            <span>Netflix</span>
+            <span>Adobe</span>
+            <span>IBM</span>
+            <span>Oracle</span>
+            <span>Intel</span>
+
+            <!-- Duplicate -->
+
+            <span>Google</span>
+            <span>Microsoft</span>
+            <span>Amazon</span>
+            <span>Meta</span>
+            <span>Apple</span>
+            <span>Netflix</span>
+            <span>Adobe</span>
+            <span>IBM</span>
+            <span>Oracle</span>
+            <span>Intel</span>
+
+        </div>
+
+    </div>
+
+    <!-- Row 2 -->
+
+    <div class="logo-slider reverse">
+
+        <div class="logo-track">
+
+            <span>Spotify</span>
+            <span>Uber</span>
+            <span>Airbnb</span>
+            <span>NVIDIA</span>
+            <span>Samsung</span>
+            <span>Cisco</span>
+            <span>Salesforce</span>
+            <span>Dell</span>
+            <span>PayPal</span>
+            <span>Intel</span>
+
+            <span>Spotify</span>
+            <span>Uber</span>
+            <span>Airbnb</span>
+            <span>NVIDIA</span>
+            <span>Samsung</span>
+            <span>Cisco</span>
+            <span>Salesforce</span>
+            <span>Dell</span>
+            <span>PayPal</span>
+            <span>Intel</span>
+
+        </div>
+
+    </div>
+
+    <div class="partner-count stat-box">
+       <h3 data-target="300">0</h3>
+       <span>Hiring Partners Worldwide</span>
+    </div>
+
+</section>
+
+<!--  Certification Preview Wall (Interactive) -->
+<section class="certificate-wall">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <span class="chip reveal-left">🎓 Certification Gallery</span>
+
+            <h2 class="reveal-right">Certificates you'll be proud to share.</h2>
+
+            <p class="reveal-up">
+                Every completed learning path rewards you with a beautifully
+                designed certificate that showcases your verified skills.
+            </p>
+
+        </div>
+
+        <div class="wall-grid">
+
+            <div class="certificate large reveal-pop">
+
+                <img src="images/AWS Solutions Architect.webp">
+
+                <div class="overlay">
+
+                    <h3>AWS Solutions Architect</h3>
+
+                    <button onclick="window.location.href='error.html'">View Preview →</button>
+
+                </div>
+
+            </div>
+
+            <div class="certificate reveal-pop">
+
+                <img src="images/Machine Learning.webp">
+
+                <div class="overlay">
+
+                    <h3>Machine Learning</h3>
+
+                    <button onclick="window.location.href='error.html'">View Preview →</button>
+
+                </div>
+
+            </div>
+
+            <div class="certificate reveal-pop">
+
+                <img src="images/Artificial Intelligence.webp">
+
+                <div class="overlay">
+
+                    <h3>Product Design</h3>
+
+                    <button onclick="window.location.href='error.html'">View Preview →</button>
+
+                </div>
+
+            </div>
+
+            <div class="certificate reveal-pop">
+
+                <img src="images/Cyber Security.webp">
+
+                <div class="overlay">
+
+                    <h3>Cyber Security</h3>
+
+                    <button onclick="window.location.href='error.html'">View Preview →</button>
+
+                </div>
+
+            </div>
+
+            <div class="certificate large reveal-pop">
+
+                <img src="images/Machine Learning.webp">
+
+                <div class="overlay">
+
+                    <h3>Full Stack Developer</h3>
+
+                    <button onclick="window.location.href='error.html'">View Preview →</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- WHAT YOU LEARN -->
+<section class="learn-get">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <span class="chip reveal-left">🧠 Learning Outcomes</span>
+
+            <h2 class="reveal-right">What You Learn <span>vs</span> What You Get</h2>
+
+            <p class="reveal-up">
+                Every certification is designed to teach practical skills and
+                deliver real career value beyond the classroom.
+            </p>
+
+        </div>
+
+        <div class="comparison">
+
+            <!-- LEFT -->
+
+            <div class="comparison-side reveal-pop">
+
+                <div class="side-title">
+                    📚 What You Learn
+                </div>
+
+                <div class="item">
+                    <div class="icon">💻</div>
+                    <div>
+                        <h3>Hands-on Technical Skills</h3>
+                        <p>Master industry-standard tools, frameworks and technologies.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="icon">🛠</div>
+                    <div>
+                        <h3>Real Projects</h3>
+                        <p>Create portfolio-worthy applications and case studies.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="icon">🧩</div>
+                    <div>
+                        <h3>Problem Solving</h3>
+                        <p>Learn through practical challenges and assessments.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="icon">🤝</div>
+                    <div>
+                        <h3>Mentor Guidance</h3>
+                        <p>Receive feedback from experienced industry professionals.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CENTER -->
+
+            <div class="comparison-arrow">
+
+                <div class="circle">
+
+                    →
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="comparison-side right reveal-pop">
+
+                <div class="side-title">
+                    🎓 What You Get
+                </div>
+
+                <div class="item">
+                    <div class="icon">🏆</div>
+                    <div>
+                        <h3>Verified Certificate</h3>
+                        <p>Earn a professional credential recognized by employers.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="icon">📂</div>
+                    <div>
+                        <h3>Professional Portfolio</h3>
+                        <p>Showcase completed projects during interviews.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="icon">💼</div>
+                    <div>
+                        <h3>Career Support</h3>
+                        <p>Resume reviews, interview preparation and job guidance.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="icon">🚀</div>
+                    <div>
+                        <h3>Job Readiness</h3>
+                        <p>Graduate with confidence and industry-ready skills.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CERTIFICATION INCLUDES -->
+<section class="intent-section">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <span class="chip reveal-left">💬 Help Center</span>
+
+            <h2 class="reveal-right">How can we help you today?</h2>
+
+            <p class="reveal-up">
+                Select the area you need support with — we’ll guide you instantly
+                to the right solution.
+            </p>
+
+        </div>
+
+        <div class="intent-grid">
+
+            <div class="intent-card reveal-pop" data-type="course">
+
+                <div class="icon">🎓</div>
+
+                <h3>Course Guidance</h3>
+
+                <p>Not sure which certification to choose? We’ll help you decide based on your goals.</p>
+
+                <span class="tag">Best for beginners</span>
+
+            </div>
+
+            <div class="intent-card reveal-pop" data-type="career">
+
+                <div class="icon">💼</div>
+
+                <h3>Career Advice</h3>
+
+                <p>Get clarity on which skills and certifications match your career path.</p>
+
+                <span class="tag">Career planning</span>
+
+            </div>
+
+            <div class="intent-card reveal-pop" data-type="cert">
+
+                <div class="icon">🧾</div>
+
+                <h3>Certification Help</h3>
+
+                <p>Issues with certificates, downloads, or verification? We’ve got you covered.</p>
+
+                <span class="tag">Support</span>
+
+            </div>
+
+            <div class="intent-card reveal-pop" data-type="tech">
+
+                <div class="icon">🛠</div>
+
+                <h3>Technical Issue</h3>
+
+                <p>Login issues, bugs, or platform errors — we’ll fix it quickly.</p>
+
+                <span class="tag">Fast support</span>
+
+            </div>
+
+            <div class="intent-card reveal-pop" data-type="partner">
+
+                <div class="icon">🤝</div>
+
+                <h3>Partnership</h3>
+
+                <p>Hire learners, collaborate, or build training programs with us.</p>
+
+                <span class="tag">Business</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="site-footer ">
+
+  <div class="container footer-grid">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">
+         <img src="images/stackly-logo.webp" alt="Stackly Logo">
+      </a>
+      <p>
+        Build real skills, earn industry certifications, and launch your career
+        with confidence. Learn by doing, not just watching.
+      </p>
+
+      <div class="socials">
+            <a onclick="window.location.href = 'error.html'">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a onclick="window.location.href = 'error.html'">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a onclick="window.location.href = 'error.html'">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a onclick="window.location.href = 'error.html'">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+    </div>
+
+    <!-- LINKS -->
+    <div class="footer-col">
+      <h3>Explore</h3>
+      <a href="error.html">Courses</a>
+      <a href="error.html">Certifications</a>
+      <a href="error.html">Learning Paths</a>
+      <a href="error.html">Projects</a>
+      <a href="error.html">Pricing</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Company</h3>
+      <a href="error.html">About Us</a>
+      <a href="error.html">Careers</a>
+      <a href="error.html">Blog</a>
+      <a href="error.html">Partners</a>
+      <a href="error.html">Contact</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Support</h3>
+      <a href="error.html">Help Center</a>
+      <a href="error.html">FAQs</a>
+      <a href="error.html">Terms</a>
+      <a href="error.html">Privacy Policy</a>
+      <a href="error.html">Refund Policy</a>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="footer-newsletter">
+      <h3>Stay Updated</h3>
+      <p>Get new courses, career tips, and updates weekly.</p>
+
+      <div class="newsletter-box">
+        <input type="email" placeholder="Enter your email">
+        <button  onclick="window.location.href = 'error.html'">Subscribe</button>
+      </div>
+
+      <small>No spam. Unsubscribe anytime.</small>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom">
+    <p>© 2026 Stackly. All rights reserved.</p>
+
+    <div class="footer-links">
+      <a href="error.html">Terms</a>
+      <a href="error.html">Privacy</a>
+      <a href="error.html">Cookies</a>
+    </div>
+  </div>
+
+</footer>
+
+    <!-- Scripts -->
+
+    <script>
+        fetch("auth/auth.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("auth-container").innerHTML = html;
+  });
+    </script>
+
+
+<script src="js/certifications.js"></script>
+<script src="js/common.js"></script>
+<script src="auth/auth.js" defer></script>
+
+</body>
+</html>

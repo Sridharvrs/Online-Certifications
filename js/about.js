@@ -1,58 +1,65 @@
-const timelineItems = document.querySelectorAll(".timeline-item");
+const items = document.querySelectorAll(".timeline-item");
 
-const observer = new IntersectionObserver(entries => {
+const observer = new IntersectionObserver((entries, obs) => {
 
     entries.forEach(entry => {
 
-        if(entry.isIntersecting){
+        if (!entry.isIntersecting) return;
 
-            entry.target.style.opacity="1";
-            entry.target.style.transform="translateY(0)";
+        const el = entry.target;
 
-        }
+        el.classList.add("show");
+
+        // stop observing after animation (important for performance)
+        obs.unobserve(el);
 
     });
 
-},{
-    threshold:.25
+}, {
+    threshold: 0.2,
+    rootMargin: "0px 0px -80px 0px"
 });
 
-timelineItems.forEach(item=>{
-
-    item.style.opacity="0";
-    item.style.transform="translateY(80px)";
-    item.style.transition=".8s ease";
-
+items.forEach(item => {
     observer.observe(item);
-
 });
 
 // ====================================
-const floats = document.querySelectorAll(".floating");
-
-window.addEventListener("mousemove",(e)=>{
-
-    const x = (e.clientX/window.innerWidth - 0.5)*15;
-    const y = (e.clientY/window.innerHeight - 0.5)*15;
-
-    floats.forEach((box,index)=>{
-
-        const speed=(index+1)*0.2;
-
-        box.style.transform=
-        `translate(${x*speed}px,${y*speed}px)`;
-
-    });
-
-});
 
 // ======================================
-const heroImage = document.querySelector(".hero-image img");
 
-window.addEventListener("scroll", () => {
+// =================================================
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".stat-card h2");
 
-    const scroll = window.pageYOffset;
+    const countobserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animate(entry.target);
+                countobserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.6 });
 
-    heroImage.style.transform = `scale(${1 + scroll * 0.00012})`;
+    counters.forEach(c => countobserver.observe(c));
 
+    function animate(el) {
+        const target = +el.dataset.target;
+        let current = 0;
+        const speed = 40;
+
+        function update() {
+            const increment = target / speed;
+
+            if (current < target) {
+                current += increment;
+                el.innerText = Math.ceil(current).toLocaleString() + "+";
+                requestAnimationFrame(update);
+            } else {
+                el.innerText = target.toLocaleString() + "+";
+            }
+        }
+
+        update();
+    }
 });

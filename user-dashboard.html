@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>User Dashboard · Stackly</title>
+<link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+
+<!-- ================== SIDEBAR ================== -->
+<aside class="sidebar">
+  <div class="brand">
+    <div class="logo">C</div>
+    <div>
+      <h2>Stackly</h2>
+      <small>Learner Portal</small>
+    </div>
+  </div>
+
+  <!-- Module 1 -->
+  <div class="module">
+    <div class="module-title"><span><span class="ico">🏠</span> Dashboard</span><span class="chev">›</span></div>
+    <ul class="sections">
+      <li><a href="dashboarderror.html" data-target="v-overview" data-sub="A snapshot of your learning journey">Overview</a></li>
+      <li><a href="dashboarderror.html" data-target="v-progress" data-sub="Track weekly and monthly progress">Progress Report</a></li>
+      <li><a href="dashboarderror.html" data-target="v-activity" data-sub="Your recent learning activity">Recent Activity</a></li>
+    </ul>
+  </div>
+
+  <!-- Module 2 -->
+  <div class="module">
+    <div class="module-title"><span><span class="ico">📚</span> My Courses</span><span class="chev">›</span></div>
+    <ul class="sections">
+      <li><a href="dashboarderror.html" data-target="v-enrolled" data-sub="Courses you are currently taking">Enrolled Courses</a></li>
+      <li><a href="dashboarderror.html" data-target="v-completed" data-sub="Courses you have finished">Completed Courses</a></li>
+      <li><a href="dashboarderror.html" data-target="v-catalog" data-sub="Browse and enroll in new courses">Browse Catalog</a></li>
+    </ul>
+  </div>
+
+  <!-- Module 3 -->
+  <div class="module">
+    <div class="module-title"><span><span class="ico">🏆</span> Certifications</span><span class="chev">›</span></div>
+    <ul class="sections">
+      <li><a href="dashboarderror.html" data-target="v-mycerts" data-sub="Certificates you have earned">My Certificates</a></li>
+      <li><a href="dashboarderror.html" data-target="v-upcoming" data-sub="Certifications in progress">Upcoming Certifications</a></li>
+      <li><a href="dashboarderror.html" data-target="v-verify" data-sub="Verify authenticity of a certificate">Verify Certificate</a></li>
+    </ul>
+  </div>
+
+  <!-- Module 4 -->
+  <div class="module">
+    <div class="module-title"><span><span class="ico">📝</span> Assessments</span><span class="chev">›</span></div>
+    <ul class="sections">
+      <li><a href="dashboarderror.html" data-target="v-upcexams" data-sub="Scheduled tests and quizzes">Upcoming Exams</a></li>
+      <li><a href="dashboarderror.html" data-target="v-results" data-sub="Detailed exam results">Exam Results</a></li>
+      <li><a href="dashboarderror.html" data-target="v-practice" data-sub="Sharpen skills before the real exam">Practice Tests</a></li>
+    </ul>
+  </div>
+
+  <!-- Module 5 -->
+  <div class="module">
+    <div class="module-title"><span><span class="ico">🛤️</span> Learning Paths</span><span class="chev">›</span></div>
+    <ul class="sections">
+      <li><a href="dashboarderror.html" data-target="v-mypath" data-sub="Your active learning journey">My Path</a></li>
+      <li><a href="dashboarderror.html" data-target="v-recommend" data-sub="Suggested for you">Recommended</a></li>
+      <li><a href="dashboarderror.html" data-target="v-goals" data-sub="Learning goals and milestones">Skill Goals</a></li>
+    </ul>
+  </div>
+
+  <!-- Module 6 -->
+  <div class="module">
+    <div class="module-title"><span><span class="ico">👤</span> Profile</span><span class="chev">›</span></div>
+    <ul class="sections">
+      <li><a href="dashboarderror.html" data-target="v-personal" data-sub="Edit your personal details">Personal Info</a></li>
+      <li><a href="dashboarderror.html" data-target="v-security" data-sub="Password and account security">Security</a></li>
+      <li><a href="dashboarderror.html" data-target="v-billing" data-sub="Manage payment and subscriptions">Billing</a></li>
+    </ul>
+  </div>
+</aside>
+
+<!-- ================== MAIN ================== -->
+<main class="main">
+  <header class="topbar">
+    <div class="left">
+      <button class="toggle-btn" id="toggle-btn">☰</button>
+      <div class="search">🔍<input placeholder="Search courses, certificates..." /></div>
+    </div>
+    <div class="right">
+      <button class="icon-btn">🔔<span class="badge">4</span></button>
+      <button class="icon-btn">✉️<span class="badge">2</span></button>
+      <div class="avatar">JS</div>
+    </div>
+  </header>
+
+  <section class="content">
+    <div class="page-head">
+      <h1 id="page-title">Overview</h1>
+      <p id="page-sub">A snapshot of your learning journey</p>
+    </div>
+
+    <!-- OVERVIEW -->
+    <div id="v-overview" class="view">
+      <div class="stats-grid">
+        <div class="stat-card"><div><div class="label">Enrolled Courses</div><div class="value">12</div><div class="delta">▲ 2 this month</div></div><div class="stat-icon">📚</div></div>
+        <div class="stat-card"><div><div class="label">Certificates</div><div class="value">7</div><div class="delta">▲ 1 new</div></div><div class="stat-icon">🏆</div></div>
+        <div class="stat-card"><div><div class="label">Hours Learned</div><div class="value">148h</div><div class="delta">▲ 12h this week</div></div><div class="stat-icon">⏱️</div></div>
+        <div class="stat-card"><div><div class="label">Avg. Score</div><div class="value">87%</div><div class="delta down">▼ 2%</div></div><div class="stat-icon">📊</div></div>
+      </div>
+
+      <div class="grid-2">
+        <div class="panel">
+          <div class="panel-head"><h3>Weekly Learning Hours</h3><a href="dashboarderror.html">Details</a></div>
+          <div class="chart">
+            <div class="bar-col" style="height:40%"><span>Mon</span></div>
+            <div class="bar-col" style="height:65%"><span>Tue</span></div>
+            <div class="bar-col" style="height:80%"><span>Wed</span></div>
+            <div class="bar-col" style="height:50%"><span>Thu</span></div>
+            <div class="bar-col" style="height:90%"><span>Fri</span></div>
+            <div class="bar-col" style="height:35%"><span>Sat</span></div>
+            <div class="bar-col" style="height:70%"><span>Sun</span></div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-head"><h3>Course Progress</h3></div>
+          <div class="progress-item"><div class="row"><span>AWS Solutions Architect</span><span>72%</span></div><div class="bar"><span style="width:72%"></span></div></div>
+          <div class="progress-item"><div class="row"><span>Data Science Fundamentals</span><span>45%</span></div><div class="bar"><span style="width:45%"></span></div></div>
+          <div class="progress-item"><div class="row"><span>React Advanced Patterns</span><span>90%</span></div><div class="bar"><span style="width:90%"></span></div></div>
+          <div class="progress-item"><div class="row"><span>Cybersecurity Essentials</span><span>30%</span></div><div class="bar"><span style="width:30%"></span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROGRESS -->
+    <div id="v-progress" class="view" style="display:none">
+      <div class="panel">
+        <div class="panel-head"><h3>Monthly Progress</h3></div>
+        <div class="chart">
+          <div class="bar-col" style="height:55%"><span>Jan</span></div>
+          <div class="bar-col" style="height:70%"><span>Feb</span></div>
+          <div class="bar-col" style="height:60%"><span>Mar</span></div>
+          <div class="bar-col" style="height:85%"><span>Apr</span></div>
+          <div class="bar-col" style="height:95%"><span>May</span></div>
+          <div class="bar-col" style="height:78%"><span>Jun</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACTIVITY -->
+    <div id="v-activity" class="view" style="display:none">
+      <div class="panel">
+        <div class="panel-head"><h3>Recent Activity</h3></div>
+        <table class="table">
+          <thead><tr><th>Activity</th><th>Course</th><th>Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>Completed Quiz 5</td><td>AWS Architect</td><td>Jul 1, 2026</td><td><span class="pill ok">Passed</span></td></tr>
+            <tr><td>Watched Module 3</td><td>React Advanced</td><td>Jun 30, 2026</td><td><span class="pill new">Done</span></td></tr>
+            <tr><td>Submitted Assignment</td><td>Data Science</td><td>Jun 29, 2026</td><td><span class="pill pend">Grading</span></td></tr>
+            <tr><td>Enrolled Course</td><td>Cybersecurity</td><td>Jun 28, 2026</td><td><span class="pill new">Started</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ENROLLED -->
+    <div id="v-enrolled" class="view" style="display:none">
+      <div class="grid-3">
+        <div class="course-card"><div class="course-cover">☁️</div><div class="course-body"><h4>AWS Solutions Architect</h4><p>Cloud · 72% complete</p><div class="bar"><span style="width:72%"></span></div><br><button class="btn sm">Continue</button></div></div>
+        <div class="course-card"><div class="course-cover">📊</div><div class="course-body"><h4>Data Science Fundamentals</h4><p>Analytics · 45% complete</p><div class="bar"><span style="width:45%"></span></div><br><button class="btn sm">Continue</button></div></div>
+        <div class="course-card"><div class="course-cover">⚛️</div><div class="course-body"><h4>React Advanced Patterns</h4><p>Frontend · 90% complete</p><div class="bar"><span style="width:90%"></span></div><br><button class="btn sm">Continue</button></div></div>
+        <div class="course-card"><div class="course-cover">🔐</div><div class="course-body"><h4>Cybersecurity Essentials</h4><p>Security · 30% complete</p><div class="bar"><span style="width:30%"></span></div><br><button class="btn sm">Continue</button></div></div>
+      </div>
+    </div>
+
+    <!-- COMPLETED -->
+    <div id="v-completed" class="view" style="display:none">
+      <div class="panel">
+        <table class="table">
+          <thead><tr><th>Course</th><th>Completed On</th><th>Score</th><th>Certificate</th></tr></thead>
+          <tbody>
+            <tr><td>Python for Beginners</td><td>May 12, 2026</td><td>92%</td><td><button class="btn sm">Download</button></td></tr>
+            <tr><td>SQL Mastery</td><td>Apr 18, 2026</td><td>88%</td><td><button class="btn sm">Download</button></td></tr>
+            <tr><td>HTML & CSS Pro</td><td>Feb 05, 2026</td><td>95%</td><td><button class="btn sm">Download</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- CATALOG -->
+    <div id="v-catalog" class="view" style="display:none">
+      <div class="grid-3">
+        <div class="course-card"><div class="course-cover">🤖</div><div class="course-body"><h4>Machine Learning A-Z</h4><p>Intermediate · 40h</p><button class="btn sm">Enroll</button></div></div>
+        <div class="course-card"><div class="course-cover">📱</div><div class="course-body"><h4>Flutter Development</h4><p>Beginner · 25h</p><button class="btn sm">Enroll</button></div></div>
+        <div class="course-card"><div class="course-cover">🎨</div><div class="course-body"><h4>UI/UX Design</h4><p>All levels · 30h</p><button class="btn sm">Enroll</button></div></div>
+      </div>
+    </div>
+
+    <!-- MY CERTS -->
+    <div id="v-mycerts" class="view" style="display:none">
+      <div class="grid-3">
+        <div class="cert"><div class="seal">🏆</div><h4>Python for Beginners</h4><p>Issued: May 12, 2026</p><br><button class="btn sm">View</button> <button class="btn sm outline">Share</button></div>
+        <div class="cert"><div class="seal">🏆</div><h4>SQL Mastery</h4><p>Issued: Apr 18, 2026</p><br><button class="btn sm">View</button> <button class="btn sm outline">Share</button></div>
+        <div class="cert"><div class="seal">🏆</div><h4>HTML & CSS Pro</h4><p>Issued: Feb 05, 2026</p><br><button class="btn sm">View</button> <button class="btn sm outline">Share</button></div>
+      </div>
+    </div>
+
+    <!-- UPCOMING CERTS -->
+    <div id="v-upcoming" class="view" style="display:none">
+      <div class="panel">
+        <div class="progress-item"><div class="row"><span>AWS Solutions Architect Associate</span><span>72%</span></div><div class="bar"><span style="width:72%"></span></div></div>
+        <div class="progress-item"><div class="row"><span>Certified Data Scientist</span><span>45%</span></div><div class="bar"><span style="width:45%"></span></div></div>
+        <div class="progress-item"><div class="row"><span>React Professional</span><span>90%</span></div><div class="bar"><span style="width:90%"></span></div></div>
+      </div>
+    </div>
+
+    <!-- VERIFY -->
+    <div id="v-verify" class="view" style="display:none">
+      <div class="panel">
+        <h3 style="margin-bottom:12px;color:var(--sky-700)">Verify a Certificate</h3>
+        <div class="form-grid">
+          <div class="field"><label>Certificate ID</label><input placeholder="e.g. CP-2026-00123" /></div>
+          <div class="field"><label>Holder Name</label><input placeholder="Full name" /></div>
+          <div class="full"><button class="btn">Verify Now</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- UPCOMING EXAMS -->
+    <div id="v-upcexams" class="view" style="display:none">
+      <div class="panel">
+        <table class="table">
+          <thead><tr><th>Exam</th><th>Date</th><th>Duration</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td>AWS Practice Test 3</td><td>Jul 10, 2026</td><td>90 min</td><td><button class="btn sm">Start</button></td></tr>
+            <tr><td>Data Science Midterm</td><td>Jul 15, 2026</td><td>120 min</td><td><button class="btn sm outline">Schedule</button></td></tr>
+            <tr><td>React Final Assessment</td><td>Jul 22, 2026</td><td>60 min</td><td><button class="btn sm outline">Schedule</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div id="v-results" class="view" style="display:none">
+      <div class="panel">
+        <table class="table">
+          <thead><tr><th>Exam</th><th>Date</th><th>Score</th><th>Result</th></tr></thead>
+          <tbody>
+            <tr><td>Python Final</td><td>May 10, 2026</td><td>92/100</td><td><span class="pill ok">Passed</span></td></tr>
+            <tr><td>SQL Midterm</td><td>Apr 05, 2026</td><td>88/100</td><td><span class="pill ok">Passed</span></td></tr>
+            <tr><td>JS Basics</td><td>Mar 22, 2026</td><td>58/100</td><td><span class="pill err">Failed</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- PRACTICE -->
+    <div id="v-practice" class="view" style="display:none">
+      <div class="grid-3">
+        <div class="panel"><h4 style="color:var(--sky-700)">AWS Practice Set</h4><p style="color:var(--muted);font-size:13px;margin:8px 0">50 questions · 60 min</p><button class="btn sm">Start</button></div>
+        <div class="panel"><h4 style="color:var(--sky-700)">React Quiz</h4><p style="color:var(--muted);font-size:13px;margin:8px 0">30 questions · 40 min</p><button class="btn sm">Start</button></div>
+        <div class="panel"><h4 style="color:var(--sky-700)">Data Science MCQ</h4><p style="color:var(--muted);font-size:13px;margin:8px 0">40 questions · 45 min</p><button class="btn sm">Start</button></div>
+      </div>
+    </div>
+
+    <!-- LEARNING PATH -->
+    <div id="v-mypath" class="view" style="display:none">
+      <div class="panel">
+        <div class="panel-head"><h3>Full-Stack Developer Path</h3></div>
+        <div class="progress-item"><div class="row"><span>1. HTML & CSS</span><span>✔ Completed</span></div><div class="bar"><span style="width:100%"></span></div></div>
+        <div class="progress-item"><div class="row"><span>2. JavaScript</span><span>✔ Completed</span></div><div class="bar"><span style="width:100%"></span></div></div>
+        <div class="progress-item"><div class="row"><span>3. React</span><span>90%</span></div><div class="bar"><span style="width:90%"></span></div></div>
+        <div class="progress-item"><div class="row"><span>4. Node.js</span><span>Not started</span></div><div class="bar"><span style="width:0%"></span></div></div>
+        <div class="progress-item"><div class="row"><span>5. Databases</span><span>Not started</span></div><div class="bar"><span style="width:0%"></span></div></div>
+      </div>
+    </div>
+
+    <!-- RECOMMEND -->
+    <div id="v-recommend" class="view" style="display:none">
+      <div class="grid-3">
+        <div class="course-card"><div class="course-cover">🧠</div><div class="course-body"><h4>Deep Learning</h4><p>Because you learned Data Science</p><button class="btn sm">Enroll</button></div></div>
+        <div class="course-card"><div class="course-cover">🐳</div><div class="course-body"><h4>Docker & Kubernetes</h4><p>Pairs with AWS Architect</p><button class="btn sm">Enroll</button></div></div>
+        <div class="course-card"><div class="course-cover">🔗</div><div class="course-body"><h4>GraphQL Complete</h4><p>Trending among React devs</p><button class="btn sm">Enroll</button></div></div>
+      </div>
+    </div>
+
+    <!-- GOALS -->
+    <div id="v-goals" class="view" style="display:none">
+      <div class="panel">
+        <div class="progress-item"><div class="row"><span>Earn 3 certifications by Dec 2026</span><span>2 of 3</span></div><div class="bar"><span style="width:66%"></span></div></div>
+        <div class="progress-item"><div class="row"><span>Complete Full-Stack Path</span><span>60%</span></div><div class="bar"><span style="width:60%"></span></div></div>
+        <div class="progress-item"><div class="row"><span>Study 200 hrs this year</span><span>148 / 200</span></div><div class="bar"><span style="width:74%"></span></div></div>
+      </div>
+    </div>
+
+    <!-- PERSONAL -->
+    <div id="v-personal" class="view" style="display:none">
+      <div class="panel">
+        <div class="form-grid">
+          <div class="field"><label>First Name</label><input value="John" /></div>
+          <div class="field"><label>Last Name</label><input value="Smith" /></div>
+          <div class="field"><label>Email</label><input value="john@Stackly.com" /></div>
+          <div class="field"><label>Phone</label><input value="+1 555 123 4567" /></div>
+          <div class="field full"><label>Bio</label><textarea rows="3">Aspiring cloud architect and lifelong learner.</textarea></div>
+          <div class="full"><button class="btn">Save Changes</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECURITY -->
+    <div id="v-security" class="view" style="display:none">
+      <div class="panel">
+        <div class="form-grid">
+          <div class="field"><label>Current Password</label><input type="password" /></div>
+          <div class="field"><label>New Password</label><input type="password" /></div>
+          <div class="field full"><label>Two-Factor Authentication</label>
+            <select><option>Enabled (Authenticator App)</option><option>Disabled</option></select>
+          </div>
+          <div class="full"><button class="btn">Update Security</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BILLING -->
+    <div id="v-billing" class="view" style="display:none">
+      <div class="panel">
+        <div class="panel-head"><h3>Current Plan: Pro · $19/mo</h3><button class="btn sm outline">Upgrade</button></div>
+        <table class="table">
+          <thead><tr><th>Invoice</th><th>Date</th><th>Amount</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>#INV-2026-006</td><td>Jun 01, 2026</td><td>$19.00</td><td><span class="pill ok">Paid</span></td></tr>
+            <tr><td>#INV-2026-005</td><td>May 01, 2026</td><td>$19.00</td><td><span class="pill ok">Paid</span></td></tr>
+            <tr><td>#INV-2026-004</td><td>Apr 01, 2026</td><td>$19.00</td><td><span class="pill ok">Paid</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>
