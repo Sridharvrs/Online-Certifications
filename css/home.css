@@ -1134,8 +1134,8 @@ TRUSTED COMPANIES
 /* GRID */
 .sim-grid{
     display:grid;
-    grid-template-columns:2fr 1fr 1fr;
-    gap:25px;
+    grid-template-columns:1.5fr 1.5fr 1.5fr;
+    gap:35px;
     margin-top:60px;
 }
 
