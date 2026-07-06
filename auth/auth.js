@@ -12,11 +12,13 @@ function initAuth() {
 
   const modal = document.getElementById("authModal");
 
+ 
+
   // ================= OPEN MODAL =================
   window.openAuth = () => {
-    modal.classList.remove("hidden");
-  };
-
+  console.log("clicked");
+  document.getElementById("authModal").classList.remove("hidden");
+};
   // ================= CLOSE MODAL =================
   document.getElementById("authClose").onclick = () => {
     modal.classList.add("hidden");
@@ -138,3 +140,4 @@ document.getElementById("loginBtn").addEventListener("click", () => {
     }, 500);
 });
 }
+

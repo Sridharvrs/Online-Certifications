@@ -125,6 +125,11 @@ body {
 .btn-ghost {
     background: none;
     color: #e2e8f0;
+    
+}
+
+button {
+  cursor: pointer;
 }
 
 .btn-ghost:hover {
@@ -161,6 +166,10 @@ body {
     font-size: 24px;
     cursor: pointer;
     transition: background 0.2s;
+}
+
+.mobile-auth{
+    display: none;
 }
 
 /* ===================================================
@@ -260,7 +269,7 @@ body {
     /* ===================================================
        8. AUTH INJECTED BUTTONS (STACKED VIA ORDER IN MENU)
        =================================================== */
-    .nav-links::before {
+    /* .nav-links::before {
         content: 'Get Started';
         display: flex;
         align-items: center;
@@ -295,7 +304,35 @@ body {
         cursor: pointer;
         box-sizing: border-box;
         order: 7;
-    }
+    } */
+
+    .mobile-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.mobile-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.mobile-btn.primary {
+    background: #fff;
+    color: #0052cc;
+    border: none;
+}
+
+.mobile-btn.ghost {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
 
     /* ===================================================
        9. RESPONSIVE CONTACT PANEL & HEADING LAYOUT

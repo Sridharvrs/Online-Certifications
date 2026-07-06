@@ -40,7 +40,17 @@
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
 
-            <div class="nav-contact-box">
+            <div class="mobile-auth">
+               <button class="mobile-btn primary" onclick="openAuth()">
+                   Get Started
+               </button>
+
+               <button class="mobile-btn ghost" onclick="openAuth()">
+                    Log In
+               </button>
+           </div>
+
+            <!-- <div class="nav-contact-box">
                 <h3 class="contact-heading">Get in Touch</h3>
                 <div class="contact-item">
                     <span class="item-label">Phone</span>
@@ -54,18 +64,22 @@
                     <span class="item-label">Location</span>
                     <span class="item-value">📍 New York, NY, USA</span>
                 </div>
-            </div>
+            </div> -->
 
         </nav>
 
         <div class="nav-cta">
-            <button class="btn btn-ghost"  onclick="openAuth()">
+
+          
+
+            <button type="button" class="btn btn-ghost"  onclick="openAuth()">
                 Log in
             </button>
 
             <button class="btn btn-primary"  onclick="openAuth()">
                 Get Started
             </button>
+
 
             <button
                 class="nav-toggle"

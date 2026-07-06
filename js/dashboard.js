@@ -47,3 +47,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const firstLink = document.querySelector('.sections a');
   if (firstLink) firstLink.click();
 });
+
+
+// ===============================
+document.getElementById("logoutBtn").addEventListener("click", () => {
+
+    if(confirm("Are you sure you want to logout?")){
+
+        currentUser = null;
+
+        // If you store login in localStorage
+        localStorage.removeItem("currentUser");
+
+        // Redirect to Home page
+        window.location.href = "index.html";
+
+    }
+
+});
