@@ -7,9 +7,12 @@ toggle.addEventListener("click", () => {
 
     menu.classList.toggle("show");
 
-    toggle.innerHTML = menu.classList.contains("show")
-        ? "✕"
-        : "☰";
+    const isOpen = menu.classList.contains("show");
+
+    toggle.innerHTML = isOpen ? "✕" : "☰";
+
+    // Prevent page scrolling
+    document.body.classList.toggle("no-scroll", isOpen);
 
 });
 

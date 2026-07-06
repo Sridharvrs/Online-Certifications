@@ -96,8 +96,8 @@
       <div class="search">🔍<input placeholder="Search users, courses, orders..." /></div>
     </div>
     <div class="right">
-      <button class="icon-btn">🔔<span class="badge">9</span></button>
-      <button class="icon-btn">⚙️</button>
+      <button class="icon-btn" onclick="window.location.href = 'dashboarderror.html'">🔔<span class="badge">9</span></button>
+      <button class="icon-btn" onclick="window.location.href = 'dashboarderror.html'">⚙️</button>
       <div class="avatar">AD</div>
       <button class="logout-btn" id="logoutBtn">
         🚪 Logout
@@ -158,35 +158,131 @@
     </div>
 
     <!-- REVENUE -->
-    <div id="v-revenue" class="view" style="display:none">
-      <div class="stats-grid">
-        <div class="stat-card"><div><div class="label">Today</div><div class="value">$3,140</div></div><div class="stat-icon">💵</div></div>
-        <div class="stat-card"><div><div class="label">This Week</div><div class="value">$18,420</div></div><div class="stat-icon">📅</div></div>
-        <div class="stat-card"><div><div class="label">This Month</div><div class="value">$96,420</div></div><div class="stat-icon">📆</div></div>
-        <div class="stat-card"><div><div class="label">This Year</div><div class="value">$847,320</div></div><div class="stat-icon">🏦</div></div>
-      </div>
-      <div class="panel">
-        <div class="panel-head"><h3>Monthly Revenue</h3></div>
-        <div class="chart">
-          <div class="bar-col" style="height:45%"><span>Jan</span></div>
-          <div class="bar-col" style="height:60%"><span>Feb</span></div>
-          <div class="bar-col" style="height:55%"><span>Mar</span></div>
-          <div class="bar-col" style="height:75%"><span>Apr</span></div>
-          <div class="bar-col" style="height:90%"><span>May</span></div>
-          <div class="bar-col" style="height:96%"><span>Jun</span></div>
-        </div>
-      </div>
+    <!-- REVENUE INSIGHTS -->
+<div id="v-revenue" class="view" style="display:none">
+
+  <div class="panel">
+    <div class="panel-head">
+      <h3>Revenue Insights</h3>
+      <a href="dashboarderror.html">View Full Report</a>
     </div>
+
+    <!-- Top Stats -->
+    <div class="revenue-stats">
+
+      <div class="rev-card">
+        <h4>Total Revenue</h4>
+        <div class="rev-value">$48,250</div>
+        <div class="rev-meta">▲ 12% this month</div>
+      </div>
+
+      <div class="rev-card">
+        <h4>Monthly Revenue</h4>
+        <div class="rev-value">$6,420</div>
+        <div class="rev-meta">▲ 8% growth</div>
+      </div>
+
+      <div class="rev-card">
+        <h4>Active Subscribers</h4>
+        <div class="rev-value">1,284</div>
+        <div class="rev-meta">▲ 64 new users</div>
+      </div>
+
+      <div class="rev-card">
+        <h4>Refunds</h4>
+        <div class="rev-value">$320</div>
+        <div class="rev-meta down">▼ 2% decrease</div>
+      </div>
+
+    </div>
+
+    <!-- Chart Section -->
+    <div class="panel" style="margin-top:20px">
+
+      <div class="panel-head">
+        <h3>Monthly Revenue Trend</h3>
+      </div>
+
+      <div class="chart">
+        <div class="bar-col" style="height:40%"><span>Jan</span></div>
+        <div class="bar-col" style="height:55%"><span>Feb</span></div>
+        <div class="bar-col" style="height:70%"><span>Mar</span></div>
+        <div class="bar-col" style="height:60%"><span>Apr</span></div>
+        <div class="bar-col" style="height:85%"><span>May</span></div>
+        <div class="bar-col" style="height:95%"><span>Jun</span></div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
     <!-- LIVE -->
-    <div id="v-live" class="view" style="display:none">
-      <div class="stats-grid">
-        <div class="stat-card"><div><div class="label">Online Now</div><div class="value">1,284</div><div class="delta">▲ realtime</div></div><div class="stat-icon">🟢</div></div>
-        <div class="stat-card"><div><div class="label">Live Exams</div><div class="value">37</div></div><div class="stat-icon">📝</div></div>
-        <div class="stat-card"><div><div class="label">Support Tickets</div><div class="value">14</div></div><div class="stat-icon">🎫</div></div>
-      </div>
+<!-- LIVE ACTIVITY -->
+<div id="v-live" class="view" style="display:none">
+
+  <div class="panel">
+
+    <div class="panel-head">
+      <h3>Live Activity Feed</h3>
+      <span style="font-size:12px;color:var(--success);font-weight:600;">
+        ● Live Updates
+      </span>
     </div>
 
+    <div class="live-feed">
+
+      <div class="live-item">
+        <div class="live-dot"></div>
+        <div class="live-content">
+          <h4>New User Registered</h4>
+          <p>John Doe just signed up for Stackly</p>
+          <span>Just now</span>
+        </div>
+      </div>
+
+      <div class="live-item">
+        <div class="live-dot"></div>
+        <div class="live-content">
+          <h4>Course Enrolled</h4>
+          <p>React Advanced Patterns enrolled by Sarah</p>
+          <span>2 mins ago</span>
+        </div>
+      </div>
+
+      <div class="live-item">
+        <div class="live-dot warn"></div>
+        <div class="live-content">
+          <h4>Payment Received</h4>
+          <p>$19 subscription purchased (Pro Plan)</p>
+          <span>5 mins ago</span>
+        </div>
+      </div>
+
+      <div class="live-item">
+        <div class="live-dot"></div>
+        <div class="live-content">
+          <h4>Certificate Issued</h4>
+          <p>Python certificate issued to Alex</p>
+          <span>10 mins ago</span>
+        </div>
+      </div>
+
+      <div class="live-item">
+        <div class="live-dot danger"></div>
+        <div class="live-content">
+          <h4>Login Alert</h4>
+          <p>New login from unknown device detected</p>
+          <span>15 mins ago</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
     <!-- USERS -->
     <div id="v-users" class="view" style="display:none">
       <div class="panel">
@@ -205,13 +301,95 @@
     </div>
 
     <!-- INSTRUCTORS -->
-    <div id="v-instructors" class="view" style="display:none">
-      <div class="grid-3">
-        <div class="panel"><h4 style="color:var(--sky-700)">Dr. Ana Ruiz</h4><p style="color:var(--muted);font-size:13px;margin:6px 0">Cloud Computing · 12 courses</p><button class="btn sm">View Profile</button></div>
-        <div class="panel"><h4 style="color:var(--sky-700)">Prof. Ravi Kumar</h4><p style="color:var(--muted);font-size:13px;margin:6px 0">Data Science · 8 courses</p><button class="btn sm">View Profile</button></div>
-        <div class="panel"><h4 style="color:var(--sky-700)">Emma Chen</h4><p style="color:var(--muted);font-size:13px;margin:6px 0">Web Dev · 15 courses</p><button class="btn sm">View Profile</button></div>
-      </div>
+<!-- INSTRUCTORS -->
+<div id="v-instructors" class="view" style="display:none">
+
+  <div class="panel">
+
+    <div class="panel-head">
+      <h3>Instructors Management</h3>
+      <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">+ Add Instructor</button>
     </div>
+
+    <div class="instructor-grid">
+
+      <!-- Instructor Card -->
+      <div class="instructor-card">
+
+        <div class="instructor-top">
+          <div class="avatar">RK</div>
+          <div>
+            <h4>Rahul Kumar</h4>
+            <p>Full Stack Developer</p>
+          </div>
+        </div>
+
+        <div class="instructor-meta">
+          <div><strong>12</strong><span>Courses</span></div>
+          <div><strong>4.8</strong><span>Rating</span></div>
+          <div><strong>2.1k</strong><span>Students</span></div>
+        </div>
+
+        <div class="instructor-actions">
+          <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">View Profile</button>
+          <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Edit</button>
+        </div>
+
+      </div>
+
+      <!-- Instructor Card -->
+      <div class="instructor-card">
+
+        <div class="instructor-top">
+          <div class="avatar">SP</div>
+          <div>
+            <h4>Sarah Paul</h4>
+            <p>Data Science Expert</p>
+          </div>
+        </div>
+
+        <div class="instructor-meta">
+          <div><strong>8</strong><span>Courses</span></div>
+          <div><strong>4.7</strong><span>Rating</span></div>
+          <div><strong>1.5k</strong><span>Students</span></div>
+        </div>
+
+        <div class="instructor-actions">
+          <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">View Profile</button>
+          <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Edit</button>
+        </div>
+
+      </div>
+
+      <!-- Instructor Card -->
+      <div class="instructor-card">
+
+        <div class="instructor-top">
+          <div class="avatar">AK</div>
+          <div>
+            <h4>Amit Kumar</h4>
+            <p>Cloud & DevOps</p>
+          </div>
+        </div>
+
+        <div class="instructor-meta">
+          <div><strong>10</strong><span>Courses</span></div>
+          <div><strong>4.9</strong><span>Rating</span></div>
+          <div><strong>3.2k</strong><span>Students</span></div>
+        </div>
+
+        <div class="instructor-actions">
+          <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">View Profile</button>
+          <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Edit</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
     <!-- ROLES -->
     <div id="v-roles" class="view" style="display:none">
@@ -229,20 +407,166 @@
     </div>
 
     <!-- ALL COURSES -->
-    <div id="v-allcourses" class="view" style="display:none">
-      <div class="panel">
-        <div class="panel-head"><h3>All Courses</h3><button class="btn sm">+ Add Course</button></div>
-        <table class="table">
-          <thead><tr><th>Course</th><th>Instructor</th><th>Enrolled</th><th>Price</th><th>Status</th></tr></thead>
-          <tbody>
-            <tr><td>AWS Solutions Architect</td><td>Dr. Ana Ruiz</td><td>1,240</td><td>$149</td><td><span class="pill ok">Published</span></td></tr>
-            <tr><td>Data Science Fundamentals</td><td>Prof. Ravi Kumar</td><td>980</td><td>$99</td><td><span class="pill ok">Published</span></td></tr>
-            <tr><td>React Advanced Patterns</td><td>Emma Chen</td><td>612</td><td>$89</td><td><span class="pill ok">Published</span></td></tr>
-            <tr><td>Machine Learning A-Z</td><td>Prof. Ravi Kumar</td><td>0</td><td>$179</td><td><span class="pill pend">Draft</span></td></tr>
-          </tbody>
-        </table>
+<!-- ALL COURSES -->
+<div id="v-allcourses" class="view" style="display:none">
+
+  <div class="panel">
+
+    <div class="panel-head">
+      <h3>All Courses</h3>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <input class="course-search" placeholder="Search courses..." />
+        <button class="btn sm">+ Add Course</button>
       </div>
     </div>
+
+    <!-- FILTER BAR -->
+    <div class="course-filters">
+
+      <button class="filter active">All</button>
+      <button class="filter">Development</button>
+      <button class="filter">Data Science</button>
+      <button class="filter">Cloud</button>
+      <button class="filter">Design</button>
+      <button class="filter">Security</button>
+
+    </div>
+
+    <!-- COURSE STATS -->
+    <div class="course-stats">
+
+      <div class="course-stat-card">
+        <h4>Total Courses</h4>
+        <div class="value">42</div>
+      </div>
+
+      <div class="course-stat-card">
+        <h4>Active Courses</h4>
+        <div class="value">38</div>
+      </div>
+
+      <div class="course-stat-card">
+        <h4>Drafts</h4>
+        <div class="value">4</div>
+      </div>
+
+      <div class="course-stat-card">
+        <h4>Total Enrollments</h4>
+        <div class="value">12,540</div>
+      </div>
+
+    </div>
+
+    <!-- COURSE GRID -->
+    <div class="course-admin-grid">
+
+      <!-- Course Card -->
+      <div class="admin-course-card">
+
+        <div class="course-header">
+          <div class="course-icon">☁️</div>
+          <div>
+            <h4>AWS Solutions Architect</h4>
+            <p>Cloud · Intermediate</p>
+          </div>
+        </div>
+
+        <div class="course-info">
+          <div><span>Students</span><strong>2,450</strong></div>
+          <div><span>Rating</span><strong>4.8</strong></div>
+          <div><span>Duration</span><strong>40h</strong></div>
+        </div>
+
+        <div class="progress-item">
+          <div class="row">
+            <span>Completion Rate</span>
+            <span>72%</span>
+          </div>
+          <div class="bar">
+            <span style="width:72%"></span>
+          </div>
+        </div>
+
+        <div class="course-actions">
+          <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">View</button>
+          <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Edit</button>
+        </div>
+
+      </div>
+
+      <!-- Course Card -->
+      <div class="admin-course-card">
+
+        <div class="course-header">
+          <div class="course-icon">📊</div>
+          <div>
+            <h4>Data Science Mastery</h4>
+            <p>Data Science · Advanced</p>
+          </div>
+        </div>
+
+        <div class="course-info">
+          <div><span>Students</span><strong>1,820</strong></div>
+          <div><span>Rating</span><strong>4.7</strong></div>
+          <div><span>Duration</span><strong>55h</strong></div>
+        </div>
+
+        <div class="progress-item">
+          <div class="row">
+            <span>Completion Rate</span>
+            <span>65%</span>
+          </div>
+          <div class="bar">
+            <span style="width:65%"></span>
+          </div>
+        </div>
+
+        <div class="course-actions">
+          <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">View</button>
+          <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Edit</button>
+        </div>
+
+      </div>
+
+      <!-- Course Card -->
+      <div class="admin-course-card">
+
+        <div class="course-header">
+          <div class="course-icon">⚛️</div>
+          <div>
+            <h4>React Advanced Patterns</h4>
+            <p>Frontend · Advanced</p>
+          </div>
+        </div>
+
+        <div class="course-info">
+          <div><span>Students</span><strong>3,100</strong></div>
+          <div><span>Rating</span><strong>4.9</strong></div>
+          <div><span>Duration</span><strong>35h</strong></div>
+        </div>
+
+        <div class="progress-item">
+          <div class="row">
+            <span>Completion Rate</span>
+            <span>88%</span>
+          </div>
+          <div class="bar">
+            <span style="width:88%"></span>
+          </div>
+        </div>
+
+        <div class="course-actions">
+          <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">View</button>
+          <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Edit</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
     <!-- ADD COURSE -->
     <div id="v-addcourse" class="view" style="display:none">
@@ -261,28 +585,233 @@
     </div>
 
     <!-- CATEGORIES -->
-    <div id="v-categories" class="view" style="display:none">
-      <div class="grid-3">
-        <div class="panel"><h4 style="color:var(--sky-700)">☁️ Cloud Computing</h4><p style="color:var(--muted);font-size:13px;margin:6px 0">54 courses</p><button class="btn sm outline">Manage</button></div>
-        <div class="panel"><h4 style="color:var(--sky-700)">📊 Data Science</h4><p style="color:var(--muted);font-size:13px;margin:6px 0">42 courses</p><button class="btn sm outline">Manage</button></div>
-        <div class="panel"><h4 style="color:var(--sky-700)">⚛️ Web Development</h4><p style="color:var(--muted);font-size:13px;margin:6px 0">68 courses</p><button class="btn sm outline">Manage</button></div>
-        <div class="panel"><h4 style="color:var(--sky-700)">🔐 Cybersecurity</h4><p style="color:var(--muted);font-size:13px;margin:6px 0">31 courses</p><button class="btn sm outline">Manage</button></div>
+<!-- CATEGORIES -->
+<div id="v-categories" class="view" style="display:none">
+
+  <div class="panel">
+
+    <div class="panel-head">
+      <h3>Course Categories</h3>
+      <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">+ Add Category</button>
+    </div>
+
+    <!-- CATEGORY STATS -->
+    <div class="category-stats">
+
+      <div class="cat-stat-card">
+        <h4>Total Categories</h4>
+        <div class="value">8</div>
+      </div>
+
+      <div class="cat-stat-card">
+        <h4>Active Courses</h4>
+        <div class="value">42</div>
+      </div>
+
+      <div class="cat-stat-card">
+        <h4>Top Category</h4>
+        <div class="value">Development</div>
+      </div>
+
+      <div class="cat-stat-card">
+        <h4>Growth</h4>
+        <div class="value">+18%</div>
+      </div>
+
+    </div>
+
+    <!-- CATEGORY GRID -->
+    <div class="category-grid">
+
+      <!-- Card -->
+      <div class="category-card">
+        <div class="cat-icon">💻</div>
+        <h4>Development</h4>
+        <p>Frontend, Backend, Full Stack courses</p>
+
+        <div class="cat-info">
+          <div><strong>18</strong><span>Courses</span></div>
+          <div><strong>6.2k</strong><span>Students</span></div>
+        </div>
+
+        <div class="cat-progress">
+          <div class="row">
+            <span>Popularity</span>
+            <span>85%</span>
+          </div>
+          <div class="bar">
+            <span style="width:85%"></span>
+          </div>
+        </div>
+
+        <div class="cat-actions">
+          <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">View</button>
+          <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Edit</button>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="category-card">
+        <div class="cat-icon">☁️</div>
+        <h4>Cloud Computing</h4>
+        <p>AWS, Azure, DevOps training</p>
+
+        <div class="cat-info">
+          <div><strong>10</strong><span>Courses</span></div>
+          <div><strong>3.1k</strong><span>Students</span></div>
+        </div>
+
+        <div class="cat-progress">
+          <div class="row">
+            <span>Popularity</span>
+            <span>72%</span>
+          </div>
+          <div class="bar">
+            <span style="width:72%"></span>
+          </div>
+        </div>
+
+        <div class="cat-actions">
+          <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">View</button>
+          <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Edit</button>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="category-card">
+        <div class="cat-icon">📊</div>
+        <h4>Data Science</h4>
+        <p>AI, ML, Data Analytics</p>
+
+        <div class="cat-info">
+          <div><strong>12</strong><span>Courses</span></div>
+          <div><strong>4.5k</strong><span>Students</span></div>
+        </div>
+
+        <div class="cat-progress">
+          <div class="row">
+            <span>Popularity</span>
+            <span>78%</span>
+          </div>
+          <div class="bar">
+            <span style="width:78%"></span>
+          </div>
+        </div>
+
+        <div class="cat-actions">
+          <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">View</button>
+          <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Edit</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+    <!-- ISSUED CERTS -->
+<!-- ISSUED CERTIFICATES MODULE -->
+<div id="v-issued" class="view" style="display:none">
+
+  <div class="panel">
+    
+    <div class="panel-head">
+      <h3>Issued Certificates</h3>
+      <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Export CSV</button>
+    </div>
+
+    <!-- Summary cards -->
+    <div class="stats-grid" style="margin-bottom:16px;">
+      <div class="stat-card">
+        <div>
+          <div class="label">Total Issued</div>
+          <div class="value">1,245</div>
+        </div>
+        <div class="stat-icon">🏆</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="label">This Month</div>
+          <div class="value">86</div>
+        </div>
+        <div class="stat-icon">📅</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Verified</div>
+          <div class="value">1,102</div>
+        </div>
+        <div class="stat-icon">✔️</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Pending Review</div>
+          <div class="value">12</div>
+        </div>
+        <div class="stat-icon">⏳</div>
       </div>
     </div>
 
-    <!-- ISSUED CERTS -->
-    <div id="v-issued" class="view" style="display:none">
-      <div class="panel">
-        <table class="table">
-          <thead><tr><th>Cert ID</th><th>Holder</th><th>Course</th><th>Issued</th><th>Status</th></tr></thead>
-          <tbody>
-            <tr><td>CP-2026-00123</td><td>John Smith</td><td>Python for Beginners</td><td>May 12, 2026</td><td><span class="pill ok">Valid</span></td></tr>
-            <tr><td>CP-2026-00122</td><td>Alice Wong</td><td>SQL Mastery</td><td>May 10, 2026</td><td><span class="pill ok">Valid</span></td></tr>
-            <tr><td>CP-2026-00121</td><td>Rohit Sen</td><td>HTML & CSS Pro</td><td>May 08, 2026</td><td><span class="pill err">Revoked</span></td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+    <!-- Table -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Certificate ID</th>
+          <th>User Name</th>
+          <th>Course</th>
+          <th>Issued Date</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>CP-2026-00123</td>
+          <td>John Smith</td>
+          <td>AWS Solutions Architect</td>
+          <td>Jul 01, 2026</td>
+          <td><span class="pill ok">Verified</span></td>
+          <td>
+            <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">View</button>
+            <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Revoke</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>CP-2026-00124</td>
+          <td>Sarah Lee</td>
+          <td>React Advanced</td>
+          <td>Jul 02, 2026</td>
+          <td><span class="pill new">Issued</span></td>
+          <td>
+            <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">View</button>
+            <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Revoke</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>CP-2026-00125</td>
+          <td>Arjun Kumar</td>
+          <td>Data Science</td>
+          <td>Jul 03, 2026</td>
+          <td><span class="pill pend">Pending</span></td>
+          <td>
+            <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">View</button>
+            <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Approve</button>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
 
     <!-- TEMPLATES -->
     <div id="v-templates" class="view" style="display:none">
@@ -294,122 +823,1440 @@
     </div>
 
     <!-- REVOKE -->
-    <div id="v-revoke" class="view" style="display:none">
-      <div class="panel">
-        <div class="form-grid">
-          <div class="field"><label>Certificate ID</label><input placeholder="CP-2026-00123" /></div>
-          <div class="field"><label>Action</label><select><option>Revoke</option><option>Reissue</option></select></div>
-          <div class="field full"><label>Reason</label><textarea rows="3" placeholder="Provide a reason..."></textarea></div>
-          <div class="full"><button class="btn">Submit</button></div>
-        </div>
-      </div>
+<!-- REISSUE CERTIFICATES MODULE -->
+<div id="v-revoke" class="view" style="display:none">
+
+  <div class="panel">
+
+    <div class="panel-head">
+      <h3>Reissue Certificates</h3>
+      <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Bulk Reissue</button>
     </div>
+
+    <!-- Search + Filters -->
+    <div class="form-grid" style="margin-bottom:18px;">
+      
+      <div class="field">
+        <label>Search Certificate ID / User</label>
+        <input placeholder="e.g. CP-2026-00123 or John Smith">
+      </div>
+
+      <div class="field">
+        <label>Filter Status</label>
+        <select>
+          <option>All</option>
+          <option>Verified</option>
+          <option>Issued</option>
+          <option>Expired</option>
+          <option>Revoked</option>
+        </select>
+      </div>
+
+    </div>
+
+    <!-- Table -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Certificate ID</th>
+          <th>User</th>
+          <th>Course</th>
+          <th>Last Issued</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td>CP-2026-00110</td>
+          <td>John Smith</td>
+          <td>AWS Architect</td>
+          <td>Jun 15, 2026</td>
+          <td><span class="pill ok">Verified</span></td>
+          <td>
+            <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Reissue</button>
+            <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Preview</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>CP-2026-00111</td>
+          <td>Sarah Lee</td>
+          <td>React Advanced</td>
+          <td>Jun 20, 2026</td>
+          <td><span class="pill pend">Expired</span></td>
+          <td>
+            <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Reissue</button>
+            <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Preview</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>CP-2026-00112</td>
+          <td>Arjun Kumar</td>
+          <td>Data Science</td>
+          <td>Jun 25, 2026</td>
+          <td><span class="pill err">Revoked</span></td>
+          <td>
+            <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Reissue</button>
+            <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">View Reason</button>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+
+  <!-- Reissue Panel -->
+  <div class="panel" style="margin-top:20px;">
+
+    <div class="panel-head">
+      <h3>Reissue Certificate Form</h3>
+    </div>
+
+    <div class="form-grid">
+
+      <div class="field">
+        <label>Certificate ID</label>
+        <input placeholder="CP-2026-XXXXX">
+      </div>
+
+      <div class="field">
+        <label>Reason for Reissue</label>
+        <select>
+          <option>Correction in Name</option>
+          <option>Lost Certificate</option>
+          <option>Data Update</option>
+          <option>System Error</option>
+        </select>
+      </div>
+
+      <div class="field full">
+        <label>Additional Notes</label>
+        <textarea rows="3" placeholder="Explain why this certificate is being reissued..."></textarea>
+      </div>
+
+      <div class="full">
+        <button class="btn" onclick="window.location.href = 'dashboarderror.html'">Generate New Certificate</button>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
     <!-- EXAMS -->
-    <div id="v-exams" class="view" style="display:none">
-      <div class="panel">
-        <table class="table">
-          <thead><tr><th>Exam</th><th>Course</th><th>Attempts</th><th>Pass Rate</th><th>Status</th></tr></thead>
-          <tbody>
-            <tr><td>AWS Final</td><td>AWS Architect</td><td>2,140</td><td>78%</td><td><span class="pill ok">Live</span></td></tr>
-            <tr><td>DS Midterm</td><td>Data Science</td><td>1,680</td><td>65%</td><td><span class="pill ok">Live</span></td></tr>
-            <tr><td>React Quiz</td><td>React Advanced</td><td>940</td><td>82%</td><td><span class="pill pend">Review</span></td></tr>
-          </tbody>
-        </table>
-      </div>
+<!-- ALL EXAMS MODULE -->
+<div id="v-exams" class="view" style="display:none">
+
+  <div class="panel">
+
+    <div class="panel-head">
+      <h3>All Exams</h3>
+      <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Create Exam</button>
     </div>
+
+    <!-- Filters -->
+    <div class="form-grid" style="margin-bottom:18px;">
+
+      <div class="field">
+        <label>Search Exam</label>
+        <input placeholder="e.g. AWS Practice Test">
+      </div>
+
+      <div class="field">
+        <label>Status</label>
+        <select>
+          <option>All</option>
+          <option>Upcoming</option>
+          <option>Ongoing</option>
+          <option>Completed</option>
+          <option>Draft</option>
+        </select>
+      </div>
+
+    </div>
+
+    <!-- Exams Table -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Exam Name</th>
+          <th>Course</th>
+          <th>Date</th>
+          <th>Duration</th>
+          <th>Participants</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td>AWS Practice Test 1</td>
+          <td>AWS Architect</td>
+          <td>Jul 10, 2026</td>
+          <td>90 min</td>
+          <td>120</td>
+          <td><span class="pill new">Upcoming</span></td>
+          <td>
+            <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">View</button>
+            <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Edit</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>React Final Assessment</td>
+          <td>React Advanced</td>
+          <td>Jul 12, 2026</td>
+          <td>60 min</td>
+          <td>98</td>
+          <td><span class="pill pend">Ongoing</span></td>
+          <td>
+            <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Monitor</button>
+            <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Pause</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Data Science Midterm</td>
+          <td>Data Science</td>
+          <td>Jun 28, 2026</td>
+          <td>120 min</td>
+          <td>150</td>
+          <td><span class="pill ok">Completed</span></td>
+          <td>
+            <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Results</button>
+            <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Report</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Cybersecurity Quiz 1</td>
+          <td>Cybersecurity</td>
+          <td>Draft</td>
+          <td>45 min</td>
+          <td>—</td>
+          <td><span class="pill err">Draft</span></td>
+          <td>
+            <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Publish</button>
+            <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Delete</button>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+
+  <!-- Exam Analytics -->
+  <div class="panel" style="margin-top:20px;">
+
+    <div class="panel-head">
+      <h3>Exam Performance Overview</h3>
+    </div>
+
+    <div class="stats-grid">
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Total Exams</div>
+          <div class="value">42</div>
+        </div>
+        <div class="stat-icon">📝</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Completion Rate</div>
+          <div class="value">87%</div>
+        </div>
+        <div class="stat-icon">📊</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Avg Score</div>
+          <div class="value">78%</div>
+        </div>
+        <div class="stat-icon">🎯</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Active Exams</div>
+          <div class="value">6</div>
+        </div>
+        <div class="stat-icon">⏱️</div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
     <!-- QUESTION BANK -->
-    <div id="v-qbank" class="view" style="display:none">
-      <div class="panel">
-        <div class="panel-head"><h3>Question Bank</h3><button class="btn sm">+ New Question</button></div>
-        <table class="table">
-          <thead><tr><th>ID</th><th>Question</th><th>Type</th><th>Difficulty</th></tr></thead>
-          <tbody>
-            <tr><td>Q-1023</td><td>What does EC2 stand for?</td><td>MCQ</td><td><span class="pill new">Easy</span></td></tr>
-            <tr><td>Q-1024</td><td>Explain the CAP theorem.</td><td>Essay</td><td><span class="pill pend">Hard</span></td></tr>
-            <tr><td>Q-1025</td><td>Write a SQL join query.</td><td>Code</td><td><span class="pill pend">Medium</span></td></tr>
-          </tbody>
-        </table>
-      </div>
+<!-- QUESTION BANK MODULE -->
+<div id="v-qbank" class="view" style="display:none">
+
+  <div class="panel">
+
+    <div class="panel-head">
+      <h3>Question Bank</h3>
+      <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">+ Add Question</button>
     </div>
+
+    <!-- Filters -->
+    <div class="form-grid" style="margin-bottom:18px;">
+
+      <div class="field">
+        <label>Search Question</label>
+        <input placeholder="Search by keyword...">
+      </div>
+
+      <div class="field">
+        <label>Category</label>
+        <select>
+          <option>All</option>
+          <option>AWS</option>
+          <option>React</option>
+          <option>Data Science</option>
+          <option>Cybersecurity</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Difficulty</label>
+        <select>
+          <option>All</option>
+          <option>Easy</option>
+          <option>Medium</option>
+          <option>Hard</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Type</label>
+        <select>
+          <option>All</option>
+          <option>MCQ</option>
+          <option>True/False</option>
+          <option>Descriptive</option>
+        </select>
+      </div>
+
+    </div>
+
+    <!-- Table -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Category</th>
+          <th>Type</th>
+          <th>Difficulty</th>
+          <th>Marks</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td>What is AWS EC2 used for?</td>
+          <td>AWS</td>
+          <td>MCQ</td>
+          <td><span class="pill new">Easy</span></td>
+          <td>2</td>
+          <td><span class="pill ok">Active</span></td>
+          <td>
+            <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Edit</button>
+            <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Delete</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Explain React Virtual DOM</td>
+          <td>React</td>
+          <td>Descriptive</td>
+          <td><span class="pill pend">Medium</span></td>
+          <td>5</td>
+          <td><span class="pill ok">Active</span></td>
+          <td>
+            <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Edit</button>
+            <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Preview</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Which algorithm is used in classification?</td>
+          <td>Data Science</td>
+          <td>MCQ</td>
+          <td><span class="pill pend">Medium</span></td>
+          <td>3</td>
+          <td><span class="pill ok">Active</span></td>
+          <td>
+            <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Edit</button>
+            <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Delete</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>SQL Injection is a type of?</td>
+          <td>Cybersecurity</td>
+          <td>MCQ</td>
+          <td><span class="pill err">Hard</span></td>
+          <td>4</td>
+          <td><span class="pill ok">Active</span></td>
+          <td>
+            <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Edit</button>
+            <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Review</button>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+
+  <!-- Question Analytics -->
+  <div class="panel" style="margin-top:20px;">
+
+    <div class="panel-head">
+      <h3>Question Bank Insights</h3>
+    </div>
+
+    <div class="stats-grid">
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Total Questions</div>
+          <div class="value">1,240</div>
+        </div>
+        <div class="stat-icon">❓</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="label">MCQs</div>
+          <div class="value">780</div>
+        </div>
+        <div class="stat-icon">🧾</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Active</div>
+          <div class="value">1,100</div>
+        </div>
+        <div class="stat-icon">✅</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Draft</div>
+          <div class="value">140</div>
+        </div>
+        <div class="stat-icon">📝</div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
     <!-- EXAM REPORTS -->
-    <div id="v-reports" class="view" style="display:none">
-      <div class="panel">
-        <div class="panel-head"><h3>Pass Rates by Course</h3></div>
-        <div class="progress-item"><div class="row"><span>AWS Architect</span><span>78%</span></div><div class="bar"><span style="width:78%"></span></div></div>
-        <div class="progress-item"><div class="row"><span>Data Science</span><span>65%</span></div><div class="bar"><span style="width:65%"></span></div></div>
-        <div class="progress-item"><div class="row"><span>React Advanced</span><span>82%</span></div><div class="bar"><span style="width:82%"></span></div></div>
-        <div class="progress-item"><div class="row"><span>Cybersecurity</span><span>58%</span></div><div class="bar"><span style="width:58%"></span></div></div>
-      </div>
+<!-- EXAM REPORTS MODULE -->
+<div id="v-reports" class="view" style="display:none">
+
+  <div class="panel">
+
+    <div class="panel-head">
+      <h3>Exam Reports</h3>
+      <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Export Report</button>
     </div>
+
+    <!-- Filters -->
+    <div class="form-grid" style="margin-bottom:18px;">
+
+      <div class="field">
+        <label>Search Exam / User</label>
+        <input placeholder="e.g. AWS Final or John Smith">
+      </div>
+
+      <div class="field">
+        <label>Course</label>
+        <select>
+          <option>All</option>
+          <option>AWS</option>
+          <option>React</option>
+          <option>Data Science</option>
+          <option>Cybersecurity</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Result Status</label>
+        <select>
+          <option>All</option>
+          <option>Passed</option>
+          <option>Failed</option>
+          <option>Pending</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Date Range</label>
+        <select>
+          <option>Last 7 Days</option>
+          <option>Last 30 Days</option>
+          <option>Last 3 Months</option>
+          <option>This Year</option>
+        </select>
+      </div>
+
+    </div>
+
+    <!-- Table -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Student</th>
+          <th>Exam</th>
+          <th>Course</th>
+          <th>Score</th>
+          <th>Max Marks</th>
+          <th>Percentage</th>
+          <th>Status</th>
+          <th>Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td>John Smith</td>
+          <td>AWS Final Test</td>
+          <td>AWS Architect</td>
+          <td>92</td>
+          <td>100</td>
+          <td>92%</td>
+          <td><span class="pill ok">Passed</span></td>
+          <td>Jul 01, 2026</td>
+          <td>
+            <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">View</button>
+            <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Details</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Sarah Lee</td>
+          <td>React Assessment</td>
+          <td>React Advanced</td>
+          <td>68</td>
+          <td>100</td>
+          <td>68%</td>
+          <td><span class="pill pend">Pending</span></td>
+          <td>Jul 02, 2026</td>
+          <td>
+            <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Review</button>
+            <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Recheck</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Arjun Kumar</td>
+          <td>Data Science Midterm</td>
+          <td>Data Science</td>
+          <td>45</td>
+          <td>100</td>
+          <td>45%</td>
+          <td><span class="pill err">Failed</span></td>
+          <td>Jun 28, 2026</td>
+          <td>
+            <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Analyze</button>
+            <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Retake</button>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+
+  <!-- REPORT INSIGHTS -->
+  <div class="panel" style="margin-top:20px;">
+
+    <div class="panel-head">
+      <h3>Exam Performance Insights</h3>
+    </div>
+
+    <div class="stats-grid">
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Total Exams Conducted</div>
+          <div class="value">64</div>
+        </div>
+        <div class="stat-icon">📝</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Pass Rate</div>
+          <div class="value">78%</div>
+        </div>
+        <div class="stat-icon">📊</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Avg Score</div>
+          <div class="value">71%</div>
+        </div>
+        <div class="stat-icon">🎯</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Top Performing Course</div>
+          <div class="value">AWS</div>
+        </div>
+        <div class="stat-icon">🏆</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Simple Performance Bar Section -->
+  <div class="panel" style="margin-top:20px;">
+
+    <div class="panel-head">
+      <h3>Course-wise Performance</h3>
+    </div>
+
+    <div class="progress-item">
+      <div class="row"><span>AWS Architect</span><span>82%</span></div>
+      <div class="bar"><span style="width:82%"></span></div>
+    </div>
+
+    <div class="progress-item">
+      <div class="row"><span>React Advanced</span><span>74%</span></div>
+      <div class="bar"><span style="width:74%"></span></div>
+    </div>
+
+    <div class="progress-item">
+      <div class="row"><span>Data Science</span><span>66%</span></div>
+      <div class="bar"><span style="width:66%"></span></div>
+    </div>
+
+    <div class="progress-item">
+      <div class="row"><span>Cybersecurity</span><span>58%</span></div>
+      <div class="bar"><span style="width:58%"></span></div>
+    </div>
+
+  </div>
+
+</div>
 
     <!-- TRAFFIC -->
-    <div id="v-traffic" class="view" style="display:none">
-      <div class="stats-grid">
-        <div class="stat-card"><div><div class="label">Visitors Today</div><div class="value">12,480</div></div><div class="stat-icon">🌍</div></div>
-        <div class="stat-card"><div><div class="label">Page Views</div><div class="value">54,120</div></div><div class="stat-icon">👀</div></div>
-        <div class="stat-card"><div><div class="label">Avg. Session</div><div class="value">4m 32s</div></div><div class="stat-icon">⏱️</div></div>
-      </div>
-      <div class="panel">
-        <div class="panel-head"><h3>Traffic Sources</h3></div>
-        <div class="progress-item"><div class="row"><span>Organic Search</span><span>48%</span></div><div class="bar"><span style="width:48%"></span></div></div>
-        <div class="progress-item"><div class="row"><span>Direct</span><span>22%</span></div><div class="bar"><span style="width:22%"></span></div></div>
-        <div class="progress-item"><div class="row"><span>Social Media</span><span>18%</span></div><div class="bar"><span style="width:18%"></span></div></div>
-        <div class="progress-item"><div class="row"><span>Referral</span><span>12%</span></div><div class="bar"><span style="width:12%"></span></div></div>
-      </div>
+<!-- TRAFFIC MODULE -->
+<div id="v-traffic" class="view" style="display:none">
+
+  <!-- Header -->
+  <div class="panel">
+
+    <div class="panel-head">
+      <h3>Traffic Overview</h3>
+      <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Export Data</button>
     </div>
+
+    <!-- Stats -->
+    <div class="stats-grid">
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Total Visitors</div>
+          <div class="value">48,920</div>
+          <div class="delta">▲ 12% this week</div>
+        </div>
+        <div class="stat-icon">👥</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Page Views</div>
+          <div class="value">1,24,560</div>
+          <div class="delta">▲ 18% growth</div>
+        </div>
+        <div class="stat-icon">📊</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Bounce Rate</div>
+          <div class="value">32%</div>
+          <div class="delta down">▼ 4% improved</div>
+        </div>
+        <div class="stat-icon">📉</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Avg Session</div>
+          <div class="value">4m 32s</div>
+          <div class="delta">▲ 9% increase</div>
+        </div>
+        <div class="stat-icon">⏱️</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Traffic Chart -->
+  <div class="panel" style="margin-top:20px;">
+
+    <div class="panel-head">
+      <h3>Weekly Traffic Trend</h3>
+    </div>
+
+    <div class="chart">
+      <div class="bar-col" style="height:55%"><span>Mon</span></div>
+      <div class="bar-col" style="height:70%"><span>Tue</span></div>
+      <div class="bar-col" style="height:65%"><span>Wed</span></div>
+      <div class="bar-col" style="height:85%"><span>Thu</span></div>
+      <div class="bar-col" style="height:95%"><span>Fri</span></div>
+      <div class="bar-col" style="height:60%"><span>Sat</span></div>
+      <div class="bar-col" style="height:80%"><span>Sun</span></div>
+    </div>
+
+  </div>
+
+  <!-- Source Breakdown -->
+  <div class="grid-2">
+
+    <div class="panel">
+
+      <div class="panel-head">
+        <h3>Traffic Sources</h3>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>Organic Search</span><span>45%</span></div>
+        <div class="bar"><span style="width:45%"></span></div>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>Direct</span><span>25%</span></div>
+        <div class="bar"><span style="width:25%"></span></div>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>Social Media</span><span>20%</span></div>
+        <div class="bar"><span style="width:20%"></span></div>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>Referral</span><span>10%</span></div>
+        <div class="bar"><span style="width:10%"></span></div>
+      </div>
+
+    </div>
+
+    <div class="panel">
+
+      <div class="panel-head">
+        <h3>Top Pages</h3>
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Page</th>
+            <th>Views</th>
+            <th>Growth</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>/home</td>
+            <td>18,420</td>
+            <td><span class="pill ok">+12%</span></td>
+          </tr>
+
+          <tr>
+            <td>/courses</td>
+            <td>14,210</td>
+            <td><span class="pill ok">+8%</span></td>
+          </tr>
+
+          <tr>
+            <td>/dashboard</td>
+            <td>9,560</td>
+            <td><span class="pill new">+5%</span></td>
+          </tr>
+
+          <tr>
+            <td>/certifications</td>
+            <td>7,880</td>
+            <td><span class="pill pend">+2%</span></td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+
+  </div>
+
+</div>
 
     <!-- ENGAGE -->
-    <div id="v-engage" class="view" style="display:none">
-      <div class="panel">
-        <div class="panel-head"><h3>Content Engagement</h3></div>
-        <div class="chart">
-          <div class="bar-col" style="height:60%"><span>Videos</span></div>
-          <div class="bar-col" style="height:85%"><span>Quizzes</span></div>
-          <div class="bar-col" style="height:50%"><span>Reads</span></div>
-          <div class="bar-col" style="height:72%"><span>Labs</span></div>
-          <div class="bar-col" style="height:40%"><span>Forum</span></div>
+<!-- ENGAGEMENT MODULE -->
+<div id="v-engage" class="view" style="display:none">
+
+  <div class="panel">
+    <div class="panel-head">
+      <h3>User Engagement Overview</h3>
+      <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Export Report</button>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div>
+          <div class="label">Daily Active Users</div>
+          <div class="value">8,420</div>
+          <div class="delta">▲ 12% this week</div>
         </div>
+        <div class="stat-icon">👥</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Avg. Session Time</div>
+          <div class="value">24m</div>
+          <div class="delta">▲ 5% increase</div>
+        </div>
+        <div class="stat-icon">⏱️</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Course Completion Rate</div>
+          <div class="value">67%</div>
+          <div class="delta down">▼ 2%</div>
+        </div>
+        <div class="stat-icon">🎯</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Return Users</div>
+          <div class="value">5,130</div>
+          <div class="delta">▲ 9% growth</div>
+        </div>
+        <div class="stat-icon">🔁</div>
       </div>
     </div>
+  </div>
+
+  <!-- Engagement Chart -->
+  <div class="grid-2">
+
+    <div class="panel">
+      <div class="panel-head">
+        <h3>Engagement Trend (Weekly)</h3>
+      </div>
+
+      <div class="chart">
+        <div class="bar-col" style="height:40%"><span>Mon</span></div>
+        <div class="bar-col" style="height:55%"><span>Tue</span></div>
+        <div class="bar-col" style="height:70%"><span>Wed</span></div>
+        <div class="bar-col" style="height:60%"><span>Thu</span></div>
+        <div class="bar-col" style="height:85%"><span>Fri</span></div>
+        <div class="bar-col" style="height:50%"><span>Sat</span></div>
+        <div class="bar-col" style="height:65%"><span>Sun</span></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h3>Engagement Breakdown</h3>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>Video Watching</span><span>78%</span></div>
+        <div class="bar"><span style="width:78%"></span></div>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>Quizzes Attempted</span><span>62%</span></div>
+        <div class="bar"><span style="width:62%"></span></div>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>Assignments Submitted</span><span>54%</span></div>
+        <div class="bar"><span style="width:54%"></span></div>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>Forum Participation</span><span>39%</span></div>
+        <div class="bar"><span style="width:39%"></span></div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Recent Engagement Logs -->
+  <div class="panel">
+    <div class="panel-head">
+      <h3>Recent Engagement Activity</h3>
+    </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Action</th>
+          <th>Course</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John S</td>
+          <td>Watched Video</td>
+          <td>AWS Basics</td>
+          <td>2 min ago</td>
+        </tr>
+        <tr>
+          <td>Priya K</td>
+          <td>Completed Quiz</td>
+          <td>React Advanced</td>
+          <td>10 min ago</td>
+        </tr>
+        <tr>
+          <td>Arun M</td>
+          <td>Submitted Assignment</td>
+          <td>Data Science</td>
+          <td>1 hr ago</td>
+        </tr>
+        <tr>
+          <td>Neha R</td>
+          <td>Joined Discussion</td>
+          <td>Cybersecurity</td>
+          <td>2 hr ago</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+
 
     <!-- CONVERSION -->
-    <div id="v-conversion" class="view" style="display:none">
-      <div class="stats-grid">
-        <div class="stat-card"><div><div class="label">Visitor → Signup</div><div class="value">8.4%</div></div><div class="stat-icon">📝</div></div>
-        <div class="stat-card"><div><div class="label">Signup → Enrolled</div><div class="value">36.2%</div></div><div class="stat-icon">🎯</div></div>
-        <div class="stat-card"><div><div class="label">Enrolled → Certified</div><div class="value">62.8%</div></div><div class="stat-icon">🏆</div></div>
+<!-- CONVERSION MODULE -->
+<div id="v-conversion" class="view" style="display:none">
+
+  <!-- Top Stats -->
+  <div class="panel">
+    <div class="panel-head">
+      <h3>Conversion Overview</h3>
+      <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Export</button>
+    </div>
+
+    <div class="stats-grid">
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Website Visitors</div>
+          <div class="value">120K</div>
+          <div class="delta">▲ 18% growth</div>
+        </div>
+        <div class="stat-icon">🌐</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Signups</div>
+          <div class="value">32,450</div>
+          <div class="delta">▲ 12% increase</div>
+        </div>
+        <div class="stat-icon">📝</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Course Enrollments</div>
+          <div class="value">18,760</div>
+          <div class="delta">▲ 9% increase</div>
+        </div>
+        <div class="stat-icon">📚</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Paid Users</div>
+          <div class="value">6,540</div>
+          <div class="delta down">▼ 2% drop</div>
+        </div>
+        <div class="stat-icon">💳</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Funnel + Chart -->
+  <div class="grid-2">
+
+    <!-- Conversion Funnel -->
+    <div class="panel">
+      <div class="panel-head">
+        <h3>Conversion Funnel</h3>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>Visitors → Signups</span><span>27%</span></div>
+        <div class="bar"><span style="width:27%"></span></div>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>Signups → Enrollments</span><span>58%</span></div>
+        <div class="bar"><span style="width:58%"></span></div>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>Enrollments → Active Learners</span><span>74%</span></div>
+        <div class="bar"><span style="width:74%"></span></div>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>Active → Paid Conversion</span><span>35%</span></div>
+        <div class="bar"><span style="width:35%"></span></div>
+      </div>
+
+    </div>
+
+    <!-- Weekly Conversion Chart -->
+    <div class="panel">
+      <div class="panel-head">
+        <h3>Weekly Conversion Rate</h3>
+      </div>
+
+      <div class="chart">
+        <div class="bar-col" style="height:45%"><span>Mon</span></div>
+        <div class="bar-col" style="height:55%"><span>Tue</span></div>
+        <div class="bar-col" style="height:60%"><span>Wed</span></div>
+        <div class="bar-col" style="height:72%"><span>Thu</span></div>
+        <div class="bar-col" style="height:80%"><span>Fri</span></div>
+        <div class="bar-col" style="height:65%"><span>Sat</span></div>
+        <div class="bar-col" style="height:70%"><span>Sun</span></div>
       </div>
     </div>
+
+  </div>
+
+  <!-- Traffic Source Table -->
+  <div class="panel">
+    <div class="panel-head">
+      <h3>Traffic Sources & Conversion</h3>
+    </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Source</th>
+          <th>Visitors</th>
+          <th>Conversions</th>
+          <th>Rate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Organic Search</td>
+          <td>65,000</td>
+          <td>12,300</td>
+          <td><span class="pill ok">18.9%</span></td>
+        </tr>
+        <tr>
+          <td>Social Media</td>
+          <td>28,000</td>
+          <td>4,900</td>
+          <td><span class="pill new">17.5%</span></td>
+        </tr>
+        <tr>
+          <td>Paid Ads</td>
+          <td>20,000</td>
+          <td>3,800</td>
+          <td><span class="pill pend">15.1%</span></td>
+        </tr>
+        <tr>
+          <td>Email Campaign</td>
+          <td>7,000</td>
+          <td>2,200</td>
+          <td><span class="pill ok">31.4%</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+
 
     <!-- GENERAL SETTINGS -->
-    <div id="v-general" class="view" style="display:none">
-      <div class="panel">
-        <div class="form-grid">
-          <div class="field"><label>Site Name</label><input value="Stackly" /></div>
-          <div class="field"><label>Support Email</label><input value="support@Stackly.com" /></div>
-          <div class="field"><label>Default Language</label><select><option>English</option><option>Spanish</option><option>French</option></select></div>
-          <div class="field"><label>Timezone</label><select><option>UTC</option><option>GMT+5:30 (IST)</option><option>PST</option></select></div>
-          <div class="full"><button class="btn">Save Settings</button></div>
+<!-- GENERAL SETTINGS MODULE -->
+<div id="v-general-settings" class="view" style="display:none">
+
+  <div class="panel">
+    <div class="panel-head">
+      <h3>General Settings</h3>
+      <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Save Changes</button>
+    </div>
+
+    <div class="form-grid">
+
+      <!-- Account Info -->
+      <div class="field">
+        <label>Full Name</label>
+        <input type="text" value="John Smith">
+      </div>
+
+      <div class="field">
+        <label>Email Address</label>
+        <input type="email" value="john@stackly.com">
+      </div>
+
+      <div class="field">
+        <label>Phone Number</label>
+        <input type="tel" value="+91 98765 43210">
+      </div>
+
+      <div class="field">
+        <label>Username</label>
+        <input type="text" value="john_smith">
+      </div>
+
+      <!-- Preferences -->
+      <div class="field">
+        <label>Language</label>
+        <select>
+          <option>English</option>
+          <option>Hindi</option>
+          <option>Tamil</option>
+          <option>Spanish</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Time Zone</label>
+        <select>
+          <option>GMT +5:30 (India)</option>
+          <option>GMT +0:00 (UTC)</option>
+          <option>GMT -5:00 (USA)</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Theme Mode</label>
+        <select>
+          <option>Light Mode</option>
+          <option>Dark Mode</option>
+          <option>System Default</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Notification Preference</label>
+        <select>
+          <option>Email Notifications</option>
+          <option>Push Notifications</option>
+          <option>SMS Notifications</option>
+          <option>Disabled</option>
+        </select>
+      </div>
+
+      <!-- Bio -->
+      <div class="field full">
+        <label>Bio</label>
+        <textarea rows="3">Learning enthusiast focused on cloud and frontend development.</textarea>
+      </div>
+
+      <!-- Buttons -->
+      <div class="full">
+        <button class="btn" onclick="window.location.href = 'dashboarderror.html'">Update Settings</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Security Shortcut Panel -->
+  <div class="grid-2">
+
+    <div class="panel">
+      <div class="panel-head">
+        <h3>Account Status</h3>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>Profile Completion</span><span>85%</span></div>
+        <div class="bar"><span style="width:85%"></span></div>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>Email Verified</span><span>✔ Verified</span></div>
+        <div class="bar"><span style="width:100%"></span></div>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>2FA Security</span><span>Enabled</span></div>
+        <div class="bar"><span style="width:90%"></span></div>
+      </div>
+
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h3>Quick Actions</h3>
+      </div>
+
+      <button class="btn sm" style="width:100%;margin-bottom:10px;" onclick="window.location.href = 'dashboarderror.html'">
+        Change Password
+      </button>
+
+      <button class="btn sm outline" style="width:100%;margin-bottom:10px;" onclick="window.location.href = 'dashboarderror.html'">
+        Download My Data
+      </button>
+
+      <button class="btn sm outline" style="width:100%;margin-bottom:10px;" onclick="window.location.href = 'dashboarderror.html'">
+        Manage Devices
+      </button>
+
+      <button class="btn sm" style="width:100%;background:#ef4444;" onclick="window.location.href = 'dashboarderror.html'">
+        Delete Account
+      </button>
+    </div>
+
+  </div>
+
+</div>
+
+    <!-- PAYMENTS -->
+<!-- PAYMENTS MODULE -->
+<div id="v-payments" class="view" style="display:none">
+
+  <!-- Top Summary -->
+  <div class="panel">
+    <div class="panel-head">
+      <h3>Payment Overview</h3>
+      <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Download Report</button>
+    </div>
+
+    <div class="stats-grid">
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Total Revenue</div>
+          <div class="value">₹4,28,500</div>
+          <div class="delta">▲ 14% this month</div>
         </div>
+        <div class="stat-icon">💰</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Successful Payments</div>
+          <div class="value">2,840</div>
+          <div class="delta">▲ 9% increase</div>
+        </div>
+        <div class="stat-icon">✅</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Pending Payments</div>
+          <div class="value">124</div>
+          <div class="delta">▼ 3% drop</div>
+        </div>
+        <div class="stat-icon">⏳</div>
+      </div>
+
+      <div class="stat-card">
+        <div>
+          <div class="label">Refund Requests</div>
+          <div class="value">18</div>
+          <div class="delta down">▼ 5% decrease</div>
+        </div>
+        <div class="stat-icon">↩️</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Revenue Chart + Subscription -->
+  <div class="grid-2">
+
+    <!-- Revenue Trend -->
+    <div class="panel">
+      <div class="panel-head">
+        <h3>Revenue Trend (Weekly)</h3>
+      </div>
+
+      <div class="chart">
+        <div class="bar-col" style="height:55%"><span>Mon</span></div>
+        <div class="bar-col" style="height:65%"><span>Tue</span></div>
+        <div class="bar-col" style="height:70%"><span>Wed</span></div>
+        <div class="bar-col" style="height:85%"><span>Thu</span></div>
+        <div class="bar-col" style="height:95%"><span>Fri</span></div>
+        <div class="bar-col" style="height:75%"><span>Sat</span></div>
+        <div class="bar-col" style="height:80%"><span>Sun</span></div>
       </div>
     </div>
 
-    <!-- PAYMENTS -->
-    <div id="v-payments" class="view" style="display:none">
-      <div class="panel">
-        <table class="table">
-          <thead><tr><th>Gateway</th><th>Status</th><th>Fee</th><th>Action</th></tr></thead>
-          <tbody>
-            <tr><td>Stripe</td><td><span class="pill ok">Active</span></td><td>2.9% + 30¢</td><td><button class="btn sm outline">Configure</button></td></tr>
-            <tr><td>PayPal</td><td><span class="pill ok">Active</span></td><td>3.5%</td><td><button class="btn sm outline">Configure</button></td></tr>
-            <tr><td>Razorpay</td><td><span class="pill pend">Inactive</span></td><td>2%</td><td><button class="btn sm outline">Configure</button></td></tr>
-          </tbody>
-        </table>
+    <!-- Subscription Breakdown -->
+    <div class="panel">
+      <div class="panel-head">
+        <h3>Subscription Plans</h3>
       </div>
+
+      <div class="progress-item">
+        <div class="row"><span>Free Users</span><span>62%</span></div>
+        <div class="bar"><span style="width:62%"></span></div>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>Pro Plan</span><span>28%</span></div>
+        <div class="bar"><span style="width:28%"></span></div>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>Enterprise</span><span>10%</span></div>
+        <div class="bar"><span style="width:10%"></span></div>
+      </div>
+
     </div>
+
+  </div>
+
+  <!-- Transaction Table -->
+  <div class="panel">
+    <div class="panel-head">
+      <h3>Recent Transactions</h3>
+    </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Transaction ID</th>
+          <th>User</th>
+          <th>Plan</th>
+          <th>Amount</th>
+          <th>Status</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>#TXN1001</td>
+          <td>John Smith</td>
+          <td>Pro Plan</td>
+          <td>₹499</td>
+          <td><span class="pill ok">Success</span></td>
+          <td>Jul 5, 2026</td>
+        </tr>
+
+        <tr>
+          <td>#TXN1002</td>
+          <td>Priya K</td>
+          <td>Free → Pro</td>
+          <td>₹499</td>
+          <td><span class="pill pend">Pending</span></td>
+          <td>Jul 4, 2026</td>
+        </tr>
+
+        <tr>
+          <td>#TXN1003</td>
+          <td>Arun M</td>
+          <td>Enterprise</td>
+          <td>₹2,999</td>
+          <td><span class="pill ok">Success</span></td>
+          <td>Jul 3, 2026</td>
+        </tr>
+
+        <tr>
+          <td>#TXN1004</td>
+          <td>Neha R</td>
+          <td>Pro Plan</td>
+          <td>₹499</td>
+          <td><span class="pill err">Failed</span></td>
+          <td>Jul 2, 2026</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Invoice Section -->
+  <div class="panel">
+    <div class="panel-head">
+      <h3>Invoices</h3>
+      <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Generate Invoice</button>
+    </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Invoice</th>
+          <th>User</th>
+          <th>Amount</th>
+          <th>Status</th>
+          <th>Download</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>#INV-001</td>
+          <td>John Smith</td>
+          <td>₹499</td>
+          <td><span class="pill ok">Paid</span></td>
+          <td><button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Download</button></td>
+        </tr>
+
+        <tr>
+          <td>#INV-002</td>
+          <td>Priya K</td>
+          <td>₹2,999</td>
+          <td><span class="pill pend">Unpaid</span></td>
+          <td><button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Send Reminder</button></td>
+        </tr>
+
+        <tr>
+          <td>#INV-003</td>
+          <td>Arun M</td>
+          <td>₹499</td>
+          <td><span class="pill ok">Paid</span></td>
+          <td><button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Download</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
 
     <!-- NOTIFICATIONS -->
     <div id="v-notif" class="view" style="display:none">
@@ -419,7 +2266,7 @@
           <div class="field full"><label>Certificate Issued Email</label><select><option>Enabled</option><option>Disabled</option></select></div>
           <div class="field full"><label>Exam Reminder SMS</label><select><option>Enabled</option><option>Disabled</option></select></div>
           <div class="field full"><label>Weekly Admin Digest</label><select><option>Enabled</option><option>Disabled</option></select></div>
-          <div class="full"><button class="btn">Save Preferences</button></div>
+          <div class="full"><button class="btn" onclick="window.location.href = 'dashboarderror.html'">Save Preferences</button></div>
         </div>
       </div>
     </div>

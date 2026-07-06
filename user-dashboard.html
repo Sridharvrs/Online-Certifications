@@ -76,6 +76,7 @@
       <li><a href="dashboarderror.html" data-target="v-billing" data-sub="Manage payment and subscriptions">Billing</a></li>
     </ul>
   </div>
+
 </aside>
 
 <!-- ================== MAIN ================== -->
@@ -86,12 +87,13 @@
       <div class="search">🔍<input placeholder="Search courses, certificates..." /></div>
     </div>
     <div class="right">
-      <button class="icon-btn">🔔<span class="badge">4</span></button>
-      <button class="icon-btn">✉️<span class="badge">2</span></button>
+      <button class="icon-btn" onclick="window.location.href = 'dashboarderror.html'">🔔<span class="badge">4</span></button>
+      <button class="icon-btn" onclick="window.location.href = 'dashboarderror.html'">✉️<span class="badge">2</span></button>
       <div class="avatar">JS</div>
       <button class="logout-btn" id="logoutBtn">
         🚪 Logout
     </button>
+      
     </div>
   </header>
 
@@ -134,7 +136,7 @@
     </div>
 
     <!-- PROGRESS -->
-    <div id="v-progress" class="view" style="display:none">
+    <!-- <div id="v-progress" class="view" style="display:none">
       <div class="panel">
         <div class="panel-head"><h3>Monthly Progress</h3></div>
         <div class="chart">
@@ -146,74 +148,789 @@
           <div class="bar-col" style="height:78%"><span>Jun</span></div>
         </div>
       </div>
+    </div> -->
+
+    <!-- PROGRESS REPORT (UPGRADED) -->
+<div id="v-progress" class="view" style="display:none">
+
+  <!-- TOP SUMMARY CARDS -->
+  <div class="stats-grid">
+
+    <div class="stat-card">
+      <div>
+        <div class="label">Total Learning Hours</div>
+        <div class="value">148h</div>
+        <div class="delta">▲ 12h this week</div>
+      </div>
+      <div class="stat-icon">⏱️</div>
     </div>
+
+    <div class="stat-card">
+      <div>
+        <div class="label">Completion Rate</div>
+        <div class="value">41%</div>
+        <div class="delta">▲ 5% improved</div>
+      </div>
+      <div class="stat-icon">📊</div>
+    </div>
+
+    <div class="stat-card">
+      <div>
+        <div class="label">Current Streak</div>
+        <div class="value">6 Days</div>
+        <div class="delta">🔥 Keep going</div>
+      </div>
+      <div class="stat-icon">🔥</div>
+    </div>
+
+  </div>
+
+  <div class="panel">
+        <div class="panel-head"><h3>Monthly Progress</h3></div>
+        <div class="chart">
+          <div class="bar-col" style="height:55%"><span>Jan</span></div>
+          <div class="bar-col" style="height:70%"><span>Feb</span></div>
+          <div class="bar-col" style="height:60%"><span>Mar</span></div>
+          <div class="bar-col" style="height:85%"><span>Apr</span></div>
+          <div class="bar-col" style="height:95%"><span>May</span></div>
+          <div class="bar-col" style="height:78%"><span>Jun</span></div>
+        </div>
+      </div>
+
+  <!-- MAIN GRID -->
+  <div class="grid-2">
+
+    <!-- LEFT: Learning Trend -->
+    <div class="panel">
+      <div class="panel-head">
+        <h3>Learning Trend (Weekly)</h3>
+      </div>
+
+      <div class="chart">
+        <div class="bar-col" style="height:40%"><span>Mon</span></div>
+        <div class="bar-col" style="height:65%"><span>Tue</span></div>
+        <div class="bar-col" style="height:80%"><span>Wed</span></div>
+        <div class="bar-col" style="height:55%"><span>Thu</span></div>
+        <div class="bar-col" style="height:90%"><span>Fri</span></div>
+        <div class="bar-col" style="height:35%"><span>Sat</span></div>
+        <div class="bar-col" style="height:70%"><span>Sun</span></div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Skill Breakdown -->
+    <div class="panel">
+      <div class="panel-head">
+        <h3>Skill Progress</h3>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>Frontend Development</span><span>78%</span></div>
+        <div class="bar"><span style="width:78%"></span></div>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>Backend Development</span><span>45%</span></div>
+        <div class="bar"><span style="width:45%"></span></div>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>Database</span><span>60%</span></div>
+        <div class="bar"><span style="width:60%"></span></div>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>Cloud & DevOps</span><span>35%</span></div>
+        <div class="bar"><span style="width:35%"></span></div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- BOTTOM GRID -->
+  <div class="grid-2">
+
+    <!-- Course Completion -->
+    <div class="panel">
+      <div class="panel-head">
+        <h3>Course Completion</h3>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>Enrolled Courses</span><span>12</span></div>
+        <div class="bar"><span style="width:100%"></span></div>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>Completed Courses</span><span>5</span></div>
+        <div class="bar"><span style="width:41%"></span></div>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>In Progress</span><span>7</span></div>
+        <div class="bar"><span style="width:58%"></span></div>
+      </div>
+
+    </div>
+
+    <!-- Performance Insight -->
+    <div class="panel">
+      <div class="panel-head">
+        <h3>Performance Insight</h3>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>Quiz Accuracy</span><span>87%</span></div>
+        <div class="bar"><span style="width:87%"></span></div>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>Assignment Score</span><span>82%</span></div>
+        <div class="bar"><span style="width:82%"></span></div>
+      </div>
+
+      <div class="progress-item">
+        <div class="row"><span>Consistency</span><span>76%</span></div>
+        <div class="bar"><span style="width:76%"></span></div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
     <!-- ACTIVITY -->
-    <div id="v-activity" class="view" style="display:none">
-      <div class="panel">
-        <div class="panel-head"><h3>Recent Activity</h3></div>
-        <table class="table">
-          <thead><tr><th>Activity</th><th>Course</th><th>Date</th><th>Status</th></tr></thead>
-          <tbody>
-            <tr><td>Completed Quiz 5</td><td>AWS Architect</td><td>Jul 1, 2026</td><td><span class="pill ok">Passed</span></td></tr>
-            <tr><td>Watched Module 3</td><td>React Advanced</td><td>Jun 30, 2026</td><td><span class="pill new">Done</span></td></tr>
-            <tr><td>Submitted Assignment</td><td>Data Science</td><td>Jun 29, 2026</td><td><span class="pill pend">Grading</span></td></tr>
-            <tr><td>Enrolled Course</td><td>Cybersecurity</td><td>Jun 28, 2026</td><td><span class="pill new">Started</span></td></tr>
-          </tbody>
-        </table>
+<!-- ACTIVITY (UPGRADED) -->
+<div id="v-activity" class="view" style="display:none">
+
+  <!-- SUMMARY CARDS -->
+  <div class="stats-grid">
+
+    <div class="stat-card">
+      <div>
+        <div class="label">Total Activities</div>
+        <div class="value">128</div>
+        <div class="delta">▲ 8 this week</div>
       </div>
+      <div class="stat-icon">🧾</div>
     </div>
+
+    <div class="stat-card">
+      <div>
+        <div class="label">Completed Tasks</div>
+        <div class="value">96</div>
+        <div class="delta">▲ 12 new</div>
+      </div>
+      <div class="stat-icon">✅</div>
+    </div>
+
+    <div class="stat-card">
+      <div>
+        <div class="label">Pending Reviews</div>
+        <div class="value">14</div>
+        <div class="delta down">▼ 3 resolved</div>
+      </div>
+      <div class="stat-icon">⏳</div>
+    </div>
+
+  </div>
+
+  <!-- MAIN ACTIVITY TABLE -->
+  <div class="panel">
+
+    <div class="panel-head">
+      <h3>Recent Learning Activity</h3>
+      <a href="dashboarderror.html">View All</a>
+    </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Activity</th>
+          <th>Course</th>
+          <th>Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td>Completed Quiz 5</td>
+          <td>AWS Architect</td>
+          <td>Jul 1, 2026</td>
+          <td><span class="pill ok">Passed</span></td>
+        </tr>
+
+        <tr>
+          <td>Watched Module 3</td>
+          <td>React Advanced</td>
+          <td>Jun 30, 2026</td>
+          <td><span class="pill new">Completed</span></td>
+        </tr>
+
+        <tr>
+          <td>Submitted Assignment</td>
+          <td>Data Science</td>
+          <td>Jun 29, 2026</td>
+          <td><span class="pill pend">Under Review</span></td>
+        </tr>
+
+        <tr>
+          <td>Started New Course</td>
+          <td>Cybersecurity</td>
+          <td>Jun 28, 2026</td>
+          <td><span class="pill new">Started</span></td>
+        </tr>
+
+        <tr>
+          <td>Earned Badge</td>
+          <td>Consistency Milestone</td>
+          <td>Jun 27, 2026</td>
+          <td><span class="pill ok">Unlocked</span></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
 
     <!-- ENROLLED -->
-    <div id="v-enrolled" class="view" style="display:none">
-      <div class="grid-3">
-        <div class="course-card"><div class="course-cover">☁️</div><div class="course-body"><h4>AWS Solutions Architect</h4><p>Cloud · 72% complete</p><div class="bar"><span style="width:72%"></span></div><br><button class="btn sm">Continue</button></div></div>
-        <div class="course-card"><div class="course-cover">📊</div><div class="course-body"><h4>Data Science Fundamentals</h4><p>Analytics · 45% complete</p><div class="bar"><span style="width:45%"></span></div><br><button class="btn sm">Continue</button></div></div>
-        <div class="course-card"><div class="course-cover">⚛️</div><div class="course-body"><h4>React Advanced Patterns</h4><p>Frontend · 90% complete</p><div class="bar"><span style="width:90%"></span></div><br><button class="btn sm">Continue</button></div></div>
-        <div class="course-card"><div class="course-cover">🔐</div><div class="course-body"><h4>Cybersecurity Essentials</h4><p>Security · 30% complete</p><div class="bar"><span style="width:30%"></span></div><br><button class="btn sm">Continue</button></div></div>
+    <!-- ENROLLED COURSES (UPGRADED) -->
+<div id="v-enrolled" class="view" style="display:none">
+
+  <!-- SUMMARY CARDS -->
+  <div class="stats-grid">
+
+    <div class="stat-card">
+      <div>
+        <div class="label">Total Enrolled</div>
+        <div class="value">12</div>
+        <div class="delta">▲ 2 new this month</div>
+      </div>
+      <div class="stat-icon">📚</div>
+    </div>
+
+    <div class="stat-card">
+      <div>
+        <div class="label">In Progress</div>
+        <div class="value">7</div>
+        <div class="delta">Keep going 🚀</div>
+      </div>
+      <div class="stat-icon">⏳</div>
+    </div>
+
+    <div class="stat-card">
+      <div>
+        <div class="label">Completed</div>
+        <div class="value">5</div>
+        <div class="delta">✔ Finished strong</div>
+      </div>
+      <div class="stat-icon">🏆</div>
+    </div>
+
+  </div>
+
+  <!-- COURSES GRID -->
+  <div class="grid-3">
+
+    <!-- COURSE CARD -->
+    <div class="course-card">
+      <div class="course-cover">☁️</div>
+
+      <div class="course-body">
+        <h4>AWS Solutions Architect</h4>
+        <p>Cloud Computing · 72% complete</p>
+
+        <div class="progress-item">
+          <div class="row">
+            <span>Progress</span>
+            <span>72%</span>
+          </div>
+          <div class="bar">
+            <span style="width:72%"></span>
+          </div>
+        </div>
+
+        <div class="course-actions">
+          <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Continue</button>
+          <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Details</button>
+        </div>
       </div>
     </div>
+
+    <div class="course-card">
+      <div class="course-cover">📊</div>
+
+      <div class="course-body">
+        <h4>Data Science Fundamentals</h4>
+        <p>Analytics · 45% complete</p>
+
+        <div class="progress-item">
+          <div class="row">
+            <span>Progress</span>
+            <span>45%</span>
+          </div>
+          <div class="bar">
+            <span style="width:45%"></span>
+          </div>
+        </div>
+
+        <div class="course-actions">
+          <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Continue</button>
+          <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Details</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <div class="course-cover">⚛️</div>
+
+      <div class="course-body">
+        <h4>React Advanced Patterns</h4>
+        <p>Frontend · 90% complete</p>
+
+        <div class="progress-item">
+          <div class="row">
+            <span>Progress</span>
+            <span>90%</span>
+          </div>
+          <div class="bar">
+            <span style="width:90%"></span>
+          </div>
+        </div>
+
+        <div class="course-actions">
+          <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Continue</button>
+          <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Details</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <div class="course-cover">🔐</div>
+
+      <div class="course-body">
+        <h4>Cybersecurity Essentials</h4>
+        <p>Security · 30% complete</p>
+
+        <div class="progress-item">
+          <div class="row">
+            <span>Progress</span>
+            <span>30%</span>
+          </div>
+          <div class="bar">
+            <span style="width:30%"></span>
+          </div>
+        </div>
+
+        <div class="course-actions">
+          <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Continue</button>
+          <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Details</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
 
     <!-- COMPLETED -->
-    <div id="v-completed" class="view" style="display:none">
-      <div class="panel">
-        <table class="table">
-          <thead><tr><th>Course</th><th>Completed On</th><th>Score</th><th>Certificate</th></tr></thead>
-          <tbody>
-            <tr><td>Python for Beginners</td><td>May 12, 2026</td><td>92%</td><td><button class="btn sm">Download</button></td></tr>
-            <tr><td>SQL Mastery</td><td>Apr 18, 2026</td><td>88%</td><td><button class="btn sm">Download</button></td></tr>
-            <tr><td>HTML & CSS Pro</td><td>Feb 05, 2026</td><td>95%</td><td><button class="btn sm">Download</button></td></tr>
-          </tbody>
-        </table>
+<!-- COMPLETED COURSES (UPGRADED) -->
+<div id="v-completed" class="view" style="display:none">
+
+  <!-- SUMMARY CARDS -->
+  <div class="stats-grid">
+
+    <div class="stat-card">
+      <div>
+        <div class="label">Completed Courses</div>
+        <div class="value">5</div>
+        <div class="delta">✔ Great progress</div>
+      </div>
+      <div class="stat-icon">🏆</div>
+    </div>
+
+    <div class="stat-card">
+      <div>
+        <div class="label">Certificates Earned</div>
+        <div class="value">3</div>
+        <div class="delta">🎓 Download available</div>
+      </div>
+      <div class="stat-icon">🎓</div>
+    </div>
+
+    <div class="stat-card">
+      <div>
+        <div class="label">Success Rate</div>
+        <div class="value">92%</div>
+        <div class="delta">📈 Excellent</div>
+      </div>
+      <div class="stat-icon">📊</div>
+    </div>
+
+  </div>
+
+  <!-- COMPLETED COURSES GRID -->
+  <div class="grid-3">
+
+    <!-- COURSE CARD -->
+    <div class="course-card">
+      <div class="course-cover">🐍</div>
+
+      <div class="course-body">
+        <h4>Python for Beginners</h4>
+        <p>Completed on May 12, 2026</p>
+
+        <div class="progress-item">
+          <div class="row">
+            <span>Final Score</span>
+            <span>92%</span>
+          </div>
+          <div class="bar">
+            <span style="width:92%"></span>
+          </div>
+        </div>
+
+        <div class="course-actions">
+          <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">View Certificate</button>
+          <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Share</button>
+        </div>
       </div>
     </div>
+
+    <div class="course-card">
+      <div class="course-cover">🗄️</div>
+
+      <div class="course-body">
+        <h4>SQL Mastery</h4>
+        <p>Completed on Apr 18, 2026</p>
+
+        <div class="progress-item">
+          <div class="row">
+            <span>Final Score</span>
+            <span>88%</span>
+          </div>
+          <div class="bar">
+            <span style="width:88%"></span>
+          </div>
+        </div>
+
+        <div class="course-actions">
+          <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">View Certificate</button>
+          <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Share</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <div class="course-cover">🎨</div>
+
+      <div class="course-body">
+        <h4>HTML & CSS Pro</h4>
+        <p>Completed on Feb 05, 2026</p>
+
+        <div class="progress-item">
+          <div class="row">
+            <span>Final Score</span>
+            <span>95%</span>
+          </div>
+          <div class="bar">
+            <span style="width:95%"></span>
+          </div>
+        </div>
+
+        <div class="course-actions">
+          <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">View Certificate</button>
+          <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Share</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
 
     <!-- CATALOG -->
-    <div id="v-catalog" class="view" style="display:none">
-      <div class="grid-3">
-        <div class="course-card"><div class="course-cover">🤖</div><div class="course-body"><h4>Machine Learning A-Z</h4><p>Intermediate · 40h</p><button class="btn sm">Enroll</button></div></div>
-        <div class="course-card"><div class="course-cover">📱</div><div class="course-body"><h4>Flutter Development</h4><p>Beginner · 25h</p><button class="btn sm">Enroll</button></div></div>
-        <div class="course-card"><div class="course-cover">🎨</div><div class="course-body"><h4>UI/UX Design</h4><p>All levels · 30h</p><button class="btn sm">Enroll</button></div></div>
+<!-- BROWSE CATALOG (UPGRADED) -->
+<div id="v-catalog" class="view" style="display:none">
+
+  <!-- HEADER SUMMARY -->
+  <div class="stats-grid">
+
+    <div class="stat-card">
+      <div>
+        <div class="label">Available Courses</div>
+        <div class="value">48</div>
+        <div class="delta">📚 Updated weekly</div>
+      </div>
+      <div class="stat-icon">🧭</div>
+    </div>
+
+    <div class="stat-card">
+      <div>
+        <div class="label">Popular This Week</div>
+        <div class="value">12</div>
+        <div class="delta">🔥 Trending now</div>
+      </div>
+      <div class="stat-icon">📈</div>
+    </div>
+
+    <div class="stat-card">
+      <div>
+        <div class="label">New Courses</div>
+        <div class="value">6</div>
+        <div class="delta">✨ Fresh content</div>
+      </div>
+      <div class="stat-icon">✨</div>
+    </div>
+
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="panel" style="margin-bottom:20px;">
+
+    <div class="panel-head">
+      <h3>Explore Courses</h3>
+    </div>
+
+    <div class="catalog-filters">
+
+      <select class="filter">
+        <option>All Categories</option>
+        <option>Cloud</option>
+        <option>Frontend</option>
+        <option>Backend</option>
+        <option>Data Science</option>
+      </select>
+
+      <select class="filter">
+        <option>All Levels</option>
+        <option>Beginner</option>
+        <option>Intermediate</option>
+        <option>Advanced</option>
+      </select>
+
+      <input class="filter-input" placeholder="Search courses..." />
+
+    </div>
+
+  </div>
+
+  <!-- COURSE GRID -->
+  <div class="grid-3">
+
+    <div class="course-card">
+      <div class="course-cover">🤖</div>
+
+      <div class="course-body">
+        <h4>Machine Learning A-Z</h4>
+        <p>Intermediate · 40 Hours</p>
+
+        <div class="course-meta">
+          <span>⭐ 4.7</span>
+          <span>👨‍🎓 12k learners</span>
+        </div>
+
+        <div class="course-actions">
+          <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Enroll Now</button>
+          <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Preview</button>
+        </div>
       </div>
     </div>
+
+    <div class="course-card">
+      <div class="course-cover">📱</div>
+
+      <div class="course-body">
+        <h4>Flutter Development</h4>
+        <p>Beginner · 25 Hours</p>
+
+        <div class="course-meta">
+          <span>⭐ 4.5</span>
+          <span>👨‍🎓 8k learners</span>
+        </div>
+
+        <div class="course-actions">
+          <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Enroll Now</button>
+          <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Preview</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <div class="course-cover">🎨</div>
+
+      <div class="course-body">
+        <h4>UI/UX Design Masterclass</h4>
+        <p>All Levels · 30 Hours</p>
+
+        <div class="course-meta">
+          <span>⭐ 4.8</span>
+          <span>👨‍🎓 15k learners</span>
+        </div>
+
+        <div class="course-actions">
+          <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Enroll Now</button>
+          <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Preview</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
 
     <!-- MY CERTS -->
-    <div id="v-mycerts" class="view" style="display:none">
-      <div class="grid-3">
-        <div class="cert"><div class="seal">🏆</div><h4>Python for Beginners</h4><p>Issued: May 12, 2026</p><br><button class="btn sm">View</button> <button class="btn sm outline">Share</button></div>
-        <div class="cert"><div class="seal">🏆</div><h4>SQL Mastery</h4><p>Issued: Apr 18, 2026</p><br><button class="btn sm">View</button> <button class="btn sm outline">Share</button></div>
-        <div class="cert"><div class="seal">🏆</div><h4>HTML & CSS Pro</h4><p>Issued: Feb 05, 2026</p><br><button class="btn sm">View</button> <button class="btn sm outline">Share</button></div>
-      </div>
+<!-- MY CERTIFICATES -->
+<div id="v-mycerts" class="view" style="display:none">
+
+  <div class="panel">
+    <div class="panel-head">
+      <h3>My Certificates</h3>
+      <a href="dashboarderror.html">Verify All</a>
     </div>
 
-    <!-- UPCOMING CERTS -->
-    <div id="v-upcoming" class="view" style="display:none">
-      <div class="panel">
-        <div class="progress-item"><div class="row"><span>AWS Solutions Architect Associate</span><span>72%</span></div><div class="bar"><span style="width:72%"></span></div></div>
-        <div class="progress-item"><div class="row"><span>Certified Data Scientist</span><span>45%</span></div><div class="bar"><span style="width:45%"></span></div></div>
-        <div class="progress-item"><div class="row"><span>React Professional</span><span>90%</span></div><div class="bar"><span style="width:90%"></span></div></div>
+    <div class="cert-grid">
+
+      <div class="cert-card">
+        <div class="cert-icon">🏆</div>
+        <h4>Python for Beginners</h4>
+        <p>Issued: May 12, 2026</p>
+        <div class="cert-actions">
+          <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">View</button>
+          <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Download</button>
+        </div>
       </div>
+
+      <div class="cert-card">
+        <div class="cert-icon">🏆</div>
+        <h4>SQL Mastery</h4>
+        <p>Issued: Apr 18, 2026</p>
+        <div class="cert-actions">
+          <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">View</button>
+          <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Download</button>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon">🏆</div>
+        <h4>HTML & CSS Pro</h4>
+        <p>Issued: Feb 05, 2026</p>
+        <div class="cert-actions">
+          <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">View</button>
+          <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Download</button>
+        </div>
+      </div>
+
     </div>
+  </div>
+
+</div>
+
+    <!-- UPCOMING CERTS -->
+<!-- UPCOMING CERTIFICATES -->
+<div id="v-upcoming" class="view" style="display:none">
+
+  <div class="panel">
+    <div class="panel-head">
+      <h3>Upcoming Certifications</h3>
+      <a href="dashboarderror.html">View Roadmap</a>
+    </div>
+
+    <div class="cert-progress-grid">
+
+      <!-- Card 1 -->
+      <div class="cert-progress-card">
+        <div class="cert-top">
+          <span class="cert-tag">In Progress</span>
+          <span class="cert-date">ETA: 10 Days</span>
+        </div>
+
+        <h4>AWS Solutions Architect Associate</h4>
+        <p>Cloud Computing · Intermediate Level</p>
+
+        <div class="progress-item">
+          <div class="row">
+            <span>Preparation Progress</span>
+            <span>72%</span>
+          </div>
+          <div class="bar">
+            <span style="width:72%"></span>
+          </div>
+        </div>
+
+        <div class="cert-meta">
+          <span>📘 12 Modules Left</span>
+          <span>⏱️ 18 Hours Needed</span>
+        </div>
+
+        <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Continue Prep</button>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="cert-progress-card">
+        <div class="cert-top">
+          <span class="cert-tag warn">Pending</span>
+          <span class="cert-date">ETA: 22 Days</span>
+        </div>
+
+        <h4>Certified Data Scientist</h4>
+        <p>Data Science · Advanced Level</p>
+
+        <div class="progress-item">
+          <div class="row">
+            <span>Preparation Progress</span>
+            <span>45%</span>
+          </div>
+          <div class="bar">
+            <span style="width:45%"></span>
+          </div>
+        </div>
+
+        <div class="cert-meta">
+          <span>📘 18 Modules Left</span>
+          <span>⏱️ 32 Hours Needed</span>
+        </div>
+
+        <button class="btn sm outline" onclick="window.location.href = 'dashboarderror.html'">Resume Learning</button>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="cert-progress-card">
+        <div class="cert-top">
+          <span class="cert-tag hot">Priority</span>
+          <span class="cert-date">ETA: 5 Days</span>
+        </div>
+
+        <h4>React Professional Certification</h4>
+        <p>Frontend Development · Advanced Level</p>
+
+        <div class="progress-item">
+          <div class="row">
+            <span>Preparation Progress</span>
+            <span>90%</span>
+          </div>
+          <div class="bar">
+            <span style="width:90%"></span>
+          </div>
+        </div>
+
+        <div class="cert-meta">
+          <span>📘 3 Modules Left</span>
+          <span>⏱️ 6 Hours Needed</span>
+        </div>
+
+        <button class="btn sm" onclick="window.location.href = 'dashboarderror.html'">Final Revision</button>
+      </div>
+
+    </div>
+  </div>
+
+</div>
 
     <!-- VERIFY -->
     <div id="v-verify" class="view" style="display:none">
@@ -222,7 +939,7 @@
         <div class="form-grid">
           <div class="field"><label>Certificate ID</label><input placeholder="e.g. CP-2026-00123" /></div>
           <div class="field"><label>Holder Name</label><input placeholder="Full name" /></div>
-          <div class="full"><button class="btn">Verify Now</button></div>
+          <div class="full"><button class="btn" onclick="window.location.href = 'dashboarderror.html'">Verify Now</button></div>
         </div>
       </div>
     </div>
@@ -303,7 +1020,7 @@
           <div class="field"><label>Email</label><input value="john@Stackly.com" /></div>
           <div class="field"><label>Phone</label><input value="+1 555 123 4567" /></div>
           <div class="field full"><label>Bio</label><textarea rows="3">Aspiring cloud architect and lifelong learner.</textarea></div>
-          <div class="full"><button class="btn">Save Changes</button></div>
+          <div class="full"><button class="btn" onclick="window.location.href = 'dashboarderror.html'">Save Changes</button></div>
         </div>
       </div>
     </div>
@@ -317,7 +1034,7 @@
           <div class="field full"><label>Two-Factor Authentication</label>
             <select><option>Enabled (Authenticator App)</option><option>Disabled</option></select>
           </div>
-          <div class="full"><button class="btn">Update Security</button></div>
+          <div class="full"><button class="btn" onclick="window.location.href = 'dashboarderror.html'">Update Security</button></div>
         </div>
       </div>
     </div>

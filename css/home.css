@@ -276,7 +276,7 @@ section{
 }
 
 .section-head p{
-    color:#667085;
+    color:black;
     font-size:18px;
 }
 
@@ -561,7 +561,7 @@ TRUSTED COMPANIES
 }
 
 .transformation .section-head p{
-    color:#9ca3af;
+    color:white;
 }
 
 /* STORY WRAPPER */
@@ -1662,7 +1662,7 @@ TRUSTED COMPANIES
 
     line-height:1.7;
 
-    color:#64748b;
+    color:black;
 
     padding:0 18px 25px;
 
@@ -1799,7 +1799,7 @@ TRUSTED COMPANIES
 .journey-card p{
     font-size:15.5px;
     line-height:1.7;
-    color:#64748b;
+    color:black;
     padding:0 18px 25px;
 }
 
@@ -2079,7 +2079,7 @@ TRUSTED COMPANIES
 
 .feature p{
     font-size:15px;
-    color:#64748b;
+    color:black;
     line-height:1.6;
     margin-top:8px;
 }
@@ -2406,6 +2406,7 @@ TRUSTED COMPANIES
         font-size:16px;
         margin:auto;
         margin-bottom:30px;
+
     }
 
     .hero-actions{
@@ -2532,4 +2533,13 @@ TRUSTED COMPANIES
         overflow:hidden;
     }
 
+}
+
+/* ==================== */
+p{
+    color: rgb(11, 11, 11);
+}
+
+.simulation p{
+    color: white;
 }

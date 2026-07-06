@@ -100,6 +100,21 @@ body {
     background: #ffffff;
 }
 
+.nav-links a.active{
+    color:#0052cc;
+    background:#fff;
+    font-weight:700;
+    box-shadow:0 6px 16px rgba(0,0,0,.12);
+}
+
+@media (max-width:900px){
+    .nav-links a.active{
+        background:#fff;
+        color:#0052cc;
+        border-left:4px solid #ffb703;
+    }
+}
+
 /* ===================================================
    5. DESKTOP CALL-TO-ACTION BUTTONS
    =================================================== */
@@ -194,56 +209,67 @@ button {
     }
 
     /* Half-Width Sliding Side Panel Menu Box */
-    .nav-links {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: auto;
-        width: 50vw; /* Perfect half-width coverage */
-        height: 100vh;
-        background: #0052cc; /* Pure solid blue - No opacity blur issues */
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 14px;
-        padding: 95px 24px 40px 24px; 
-        box-sizing: border-box;
-        
-        opacity: 0;
-        visibility: hidden;
-        transform: translateX(100%);
-        transition: transform .35s cubic-bezier(0.16, 1, 0.3, 1), opacity .25s ease;
-        z-index: 1000;
-        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.25);
-    }
+    /* Mobile Sidebar */
+.nav-links{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70vw;
+    max-width: 360px;
+    height: 100vh;
 
-    .nav-links.show {
-        opacity: 1;
-        visibility: visible;
-        transform: translateX(0);
-    }
+    background: #0052cc;
 
-    .nav-links a {
-        font-size: 18px;
-        width: 100%;
-        text-align: left;
-        padding: 12px 16px;
-        color: #ffffff;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 8px;
-        box-sizing: border-box;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 
-    .nav-links a:hover {
-        background: rgba(255, 255, 255, 0.1);
-    }
+    padding: 90px 22px 30px;
 
-    .nav-links a.active {
-        background: #ffffff;
-        color: #0052cc;
-        border-bottom-color: transparent;
-    }
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    gap: 8px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: .35s ease;
+
+    z-index: 1000;
+    box-shadow: -10px 0 35px rgba(0,0,0,.25);
+
+    scrollbar-width: thin;
+}
+
+.nav-links.show{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.nav-links a{
+    width:100%;
+    padding:14px 16px;
+    font-size:17px;
+    font-weight:600;
+
+    color:#fff;
+
+    border-radius:10px;
+    border-bottom:none;
+
+    transition:.25s;
+}
+
+.nav-links a:hover{
+    background:rgba(255,255,255,.12);
+}
+
+.nav-links a.active{
+    background:#fff;
+    color:#0052cc;
+}
 
     .nav-cta .btn-ghost,
     .nav-cta .btn-primary {
@@ -306,87 +332,87 @@ button {
         order: 7;
     } */
 
-    .mobile-auth {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 20px;
-    width: 100%;
+.mobile-auth{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin:25px 0;
+    width:100%;
 }
 
-.mobile-btn {
-    width: 100%;
-    padding: 12px;
-    border-radius: 10px;
-    font-weight: 700;
-    cursor: pointer;
+.mobile-btn{
+    width:100%;
+    padding:14px;
+    border-radius:12px;
+    font-size:15px;
+    font-weight:700;
 }
 
-.mobile-btn.primary {
-    background: #fff;
-    color: #0052cc;
-    border: none;
+.mobile-btn.primary{
+    background:#fff;
+    color:#0052cc;
+    border:none;
 }
 
-.mobile-btn.ghost {
-    background: transparent;
-    border: 2px solid #fff;
-    color: #fff;
+.mobile-btn.ghost{
+    background:transparent;
+    border:2px solid #fff;
+    color:#fff;
 }
 
     /* ===================================================
        9. RESPONSIVE CONTACT PANEL & HEADING LAYOUT
        =================================================== */
-    .nav-contact-box {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        gap: 12px;
-        margin-top: auto; /* Clean layout rule snaps contact information to extreme menu bottom */
-        padding-top: 20px;
-        border-top: 1px solid rgba(255, 255, 255, 0.15);
-        box-sizing: border-box;
-        order: 9; 
-    }
+    .nav-contact-box{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
 
-    .contact-heading {
-        margin: 0 0 4px 0;
-        font-size: 14px;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        color: rgba(255, 255, 255, 0.6);
-        font-weight: 700;
-        padding-left: 8px;
-    }
+    margin-top:25px;
+    padding-top:22px;
 
-    .contact-item {
-        display: flex;
-        flex-direction: column;
-        gap: 2px;
-        padding-left: 8px;
-    }
+    border-top:1px solid rgba(255,255,255,.18);
+}
 
-    .item-label {
-        font-size: 11px;
-        font-weight: 600;
-        color: rgba(255, 255, 255, 0.45);
-        text-transform: uppercase;
-    }
+.contact-heading{
+    font-size:15px;
+    font-weight:700;
+    color:#fff;
+    margin:0 0 8px;
+}
 
-    .item-value {
-        color: #ffffff;
-        font-size: 14px;
-        font-weight: 500;
-    }
+.contact-item{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+}
+
+.item-label{
+    font-size:12px;
+    font-weight:700;
+    color:#bcd6ff;
+    text-transform:uppercase;
+    letter-spacing:.5px;
+}
+
+.item-value{
+    font-size:15px;
+    color:#fff;
+    line-height:1.5;
+    word-break:break-word;
+}
 }
 
 /* ===================================================
    10. MOBILE PHONE SIZING POLISH CHANGES
    =================================================== */
-@media (max-width: 600px) {
-    .nav-links {
-        width: 65vw; /* Width optimized for narrow mobile formats */
+@media (max-width:600px){
+
+    .nav-links{
+        width:85vw;
+        padding:85px 18px 25px;
     }
+
 }
 
 @media (max-width: 500px) {
@@ -403,6 +429,14 @@ button {
     }
 }
 
+
+
+
+body.no-scroll{
+    overflow: hidden;
+    height: 100vh;
+    touch-action: none;
+}
 
 /* =================================== FOOTER =================================*/
 
@@ -773,3 +807,8 @@ body{
 .reveal-pop{
     transition-delay:calc(var(--delay,0) * .12s);
 }
+
+i{
+    margin-right: 10px;
+}
+

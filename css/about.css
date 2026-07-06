@@ -2184,3 +2184,114 @@ gap:30px;
     grid-template-columns:1fr;
   }
 }
+
+/* =============== */
+.hero-description{
+    color:#eef4ff;
+    font-weight:500;
+}
+
+.hero-content p{
+    color:white;
+    font-weight:500;
+}
+
+.section-head h2{
+    color:#0f172a;
+    font-weight:800;
+}
+
+.timeline-content p{
+    color:#1e293b;
+    font-weight:500;
+}
+
+.year{
+    color:#4f46e540;
+}
+
+.difference-text p{
+    color:#1e293b;
+    font-weight:500;
+}
+
+.difference-text span{
+    color:#4f46e540;
+}
+
+.workplace-tags span{
+    color:#0f172a;
+    font-weight:700;
+}
+
+.process-card p{
+    color:#1e293b;
+    font-weight:500;
+}
+
+.process-number{
+    color:#4f46e535;
+}
+
+.team-card p{
+    color:#1f2937;
+    font-weight:500;
+}
+
+.team-card span{
+    color:#1d4ed8;
+    font-weight:700;
+}
+
+.floating-card span{
+    color:#ffffff;
+    opacity:.95;
+}
+
+.hero-stats span{
+    color:#0f172a;
+    font-weight:600;
+}
+
+.hero-heading p{
+    color:#1e293b;
+    font-weight:500;
+}
+
+/* ==========================================
+   HIGH CONTRAST TEXT OVERRIDES
+========================================== */
+
+p{
+    color:#1e293b;
+    font-weight:500;
+}
+
+.section-head p,
+.timeline-content p,
+.difference-text p,
+.process-card p,
+.team-card p
+{
+    color:#1e293b !important;
+}
+
+h1,h2,h3,h4,h5,h6{
+    color:#0f172a;
+}
+
+.about-hero h1,
+.hero-title{
+    color:#ffffff;
+}
+
+.about-hero h1 span,
+.hero-title span{
+    color:inherit;
+}
+
+.year,
+.difference-text span,
+.process-number{
+    opacity:.35;
+}

@@ -36,7 +36,7 @@
             <a href="courses.html">Courses</a>
             <a href="certifications.html">Certifications</a>
             <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+            <a href="contact.html" class="active">Contact</a>
 
              <div class="mobile-auth">
                <button class="mobile-btn primary" onclick="openAuth()">
@@ -234,27 +234,44 @@
 
                 <form>
 
-                    <div class="grid-2">
-                        <input placeholder="Your name">
-                        <input placeholder="Email address">
-                    </div>
+                   <!-- Row 1 -->
+                   <div class="grid-2">
+                       <input type="text" placeholder="Your Name" required>
 
-                    <div class="grid-2">
-                        <select>
-                            <option>Course Guidance</option>
-                            <option>Career Help</option>
-                            <option>Technical Issue</option>
-                            <option>Partnership</option>
-                        </select>
+                       <input type="email" placeholder="Email Address" required>
+                   </div>
 
-                        <input placeholder="Subject">
-                    </div>
+                   <!-- Row 2 -->
+                   <div class="grid-2">
+                       <input
+                           type="tel"
+                           placeholder="Mobile Number"
+                           inputmode="numeric"
+                           pattern="[0-9]{10}"
+                           maxlength="10"
+                           oninput="this.value = this.value.replace(/[^0-9]/g,'')"
+                           required>
 
-                    <textarea placeholder="Tell us what you need help with..."></textarea>
+                       <select required>
+                           <option selected disabled>Select Inquiry</option>
+                           <option>Course Guidance</option>
+                           <option>Career Help</option>
+                           <option>Technical Issue</option>
+                           <option>Partnership</option>
+                       </select>
+                   </div>
 
-                    <button onclick="window.location.href='error.html'">Send Message →</button>
+                   <!-- Row 3 -->
+                   <input type="text" placeholder="Subject" required>
 
-                </form>
+                   <!-- Row 4 -->
+                   <textarea placeholder="Tell us what you need help with..." required></textarea>
+
+                   <button type="submit">
+                       Send Message →
+                   </button>
+
+               </form>
 
             </div>
 
